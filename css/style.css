@@ -1,0 +1,67 @@
+
+#topnav img{
+	float: none;
+	vertical-align: text-top;
+	width: 10%;
+	height: 10%;
+}
+
+#topnav {
+	position: absolute;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+li {
+    float: left;
+}
+
+a {
+    padding: 8px;
+    background-color: #FFFFFF;
+    color: gray;
+}
+
+li a:hover {
+    background-color: #D3D3D3;
+}
+
+#header {
+      padding-top: 650px;
+      padding-bottom: 50px;
+	  text-align: center;
+	  background-image: url("../img/12.png");
+	  color: white;
+	  font-size: 30px;
+	  display: flex;
+}
+
+#about {
+		background: black;
+		color: white;
+	  font-size: 30px;
+}
+
+#skills {
+		color: black;
+	  font-size: 30px;
+}
+
+#projects {
+	font-size: 30px;
+}
+
+#projects img{
+	width: 30%;
+	height: 30%;
+}
+
