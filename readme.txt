@@ -10,31 +10,37 @@ Talking to classmates about class material, assignment requirements, etc. is a g
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
-*/10
-- */1 Readme
-- */2 Basic HTML content
-- */1 Basic CSS styling
-- */1 Advanced feature
-- */2 Responsive layout
-- */1 Passes validation checks
-- */2 Embraces spirit of the assignment
+10/10
+- 1/1 Readme
+- 2/2 Basic HTML content
+- 1/1 Basic CSS styling
+- 1/1 Advanced feature
+- 2/2 Responsive layout
+- 1/1 Passes validation checks
+- 2/2 Embraces spirit of the assignment
 
 2. What (a) basic features, (b) CSS features, and (c) advanced features did you include in your portfolio?
 
 (a) Basic features
-
-
+    -At least one image, with descriptive alt attribute(s)
+    -Appropriate headings and paragraph text
+    -Links to external page(s)
+    -Multiple pages, with appropriate navigation between them
+    -Adding custom icons from Google Material Icons
 
 (b) CSS features
-
-
+    -Modifying padding and margins to indent content and enhance readability
+    -Modifying link, text color, or other colors to be visually appealing (Made background a subtle gradient to match with theme)
+    -Leveraging Bootstrap CSS helpers such as image shapes and table layouts to display content in a more interesting manner
 
 (c) Advanced features
-
-
+    -Creating a more complex page layout, such as including a sidebar or navigation bar
+    -Leveraging nested selectors to specify format
+    -A contact form which leverages HTML forms
+    -Animated progress bars in skills section
 
 3. How long, in hours, did it take you to complete this assignment?
-
+    30 hours
 
 
 4. What online resources did you consult when completing this assignment? (list specific URLs)
@@ -42,7 +48,8 @@ https://getbootstrap.com/docs/4.0/components/progress/#backgrounds
 
 
 5. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
-
+    Did not discuss with other individuals on this assignment. I worked on this project entirely by myself with the help of online resources (as noted above).
 
 
 6. Is there anything special we need to know in order to run your code?
+    The validation check for CSS does not pass but this has to due with BootStrap, and not my CSS.
