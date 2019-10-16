@@ -44,12 +44,40 @@ Talking to classmates about class material, assignment requirements, etc. is a g
 
 
 4. What online resources did you consult when completing this assignment? (list specific URLs)
-https://getbootstrap.com/docs/4.0/components/progress/#backgrounds
+    -A majority of the pages I used were the Bootstrap documentation
+    https://getbootstrap.com/docs/4.0/getting-started/introduction/
+    https://getbootstrap.com/docs/4.0/layout/overview/
+    https://getbootstrap.com/docs/4.0/content/reboot/
+    https://getbootstrap.com/docs/4.0/content/images/
+    https://getbootstrap.com/docs/4.0/content/typography/
+    https://getbootstrap.com/docs/4.0/components/card/
+    https://getbootstrap.com/docs/4.0/components/navbar/
+    https://getbootstrap.com/docs/4.0/components/forms/
+    https://getbootstrap.com/docs/4.0/components/progress/#backgrounds
+    https://getbootstrap.com/docs/4.0/utilities/colors/
+    https://getbootstrap.com/docs/4.0/utilities/display/
 
+    -I also followed a tutorial by The Net Ninja on youtube
+        I watched up to video 8, this is a link to the playlist:
+        https://www.youtube.com/watch?v=QAgrHLtG1Yk&list=PL4cUxeGkcC9jE_cGvLLC60C_PeF_24pvv
+    
+    -For the navbar icons, I used Google Materials icons for a rounded home icon, rounded code icon, and a rounded question icon
+
+    -For other icons, I used primarily Flaticon and Wikipedia, many of them belong to a user name FreePik, 
+    and I have hyperlinked the icons and/or credited them to their respective websites.
+    https://www.flaticon.com/authors/freepik
+    https://www.flaticon.com/authors/dave-gandy
+    https://commons.wikimedia.org/wiki/File:Calligrakrita-base.svg
+    https://commons.wikimedia.org/wiki/File:Apache_NetBeans_Logo.svg
+    https://commons.wikimedia.org/wiki/File:Boostrap_logo.svg
+    https://commons.wikimedia.org/wiki/File:Inkscape_Logo.svg
+    https://icon-library.net/icon/unity-icon-png-3.html
 
 5. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
     Did not discuss with other individuals on this assignment. I worked on this project entirely by myself with the help of online resources (as noted above).
 
 
 6. Is there anything special we need to know in order to run your code?
-    The validation check for CSS does not pass but this has to due with BootStrap, and not my CSS.
+    The validation check for CSS does not pass but this has to due with BootStrap, and not my CSS file. 
+    The html and achecker validations pass. Also, I'm not sure if my form works correctly. I set "action=mailto:" and
+    I haven't gotten any of the test emails I have sent. However, it is too late to fix it before the deadline.
