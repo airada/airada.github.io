@@ -38,7 +38,7 @@ Talking to classmates about class material, assignment requirements, etc. is a g
 
 
 4. What online resources did you consult when completing this assignment? (list specific URLs)
-
+https://getbootstrap.com/docs/4.0/components/progress/#backgrounds
 
 
 5. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
