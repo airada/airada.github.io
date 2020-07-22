@@ -54,6 +54,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+header {
+  height: 100vh;
+}
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
@@ -159,6 +163,7 @@ sup {
 }
 
 a {
+  line-height: 0;
   color: #1abc9c;
   text-decoration: none;
   background-color: transparent;
