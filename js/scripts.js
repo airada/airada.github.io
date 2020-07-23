@@ -4,6 +4,14 @@
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
     */
    
+   $(".panel-heading").parent('.panel').hover(
+    function() {
+      $(this).children('.collapse').collapse('show');
+    }, function() {
+      $(this).children('.collapse').collapse('hide');
+    }
+  );
+  
     (function($) {
     "use strict"; // Start of use strict
   

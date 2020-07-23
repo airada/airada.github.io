@@ -47,6 +47,9 @@
   box-sizing: border-box;
 }
 
+.panel, .panel-group .panel-heading+.panel-collapse>.panel-body{
+  border: none;
+}
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -55,11 +58,16 @@ html {
 }
 
 header {
-  height: 100vh;
+  height: 90vh;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
+}
+
+#avatar {
+  height: 75%;
+  width: 75%;
 }
 
 body {
@@ -4354,7 +4362,7 @@ input[type=button].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 0.125rem solid rgba(0, 0, 0, 0.125);
+  border: 0rem;
   border-radius: 0.5rem;
 }
 .card > hr {
@@ -10004,7 +10012,7 @@ h3 {
   }
 }
 .page-section {
-  padding: 6rem 0;
+  padding: 2rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
