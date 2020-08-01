@@ -1,0 +1,13 @@
+<div class="card mx-5" [id]="skills" style="width: 18rem;">
+     
+    <a href="#!"><img class="card-img-top" [src]="image_thumbnail" alt="Card image cap">
+    </a>
+    <div class="card-body">
+        <div class="d-flex">
+            <div *ngFor="let skill of skill_list">
+                <p id="{{skill}}"><a class='badge badge-pill bg-dark text-white' href='#!'>{{skill}}</a></p>
+            </div>
+        </div>
+        <p class="card-text">Untitled Project</p>
+    </div>
+</div>

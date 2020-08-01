@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+  skills: any = ["C#", "C++", "PYTHON", "JAVA", "GIT", "MYSQL", "UNITY", "UNREAL", "BLENDER"];
 
   constructor() { }
 
