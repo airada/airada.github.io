@@ -35,11 +35,20 @@
 
             <p class="Lead">Filter through my work by the skills and tools below.</p>
             <div class="row">
-                <div class="d-flex align-items-center justify-content-center" id="skill_badges"></div>
+                <div class="d-flex align-items-center justify-content-center" *ngFor="let skill of skills" >
+                    <h4 class='mx-3' id="{{skill}}"><a class='badge badge-pill bg-warning text-white' href='#!'>{{skill}}</a></h4>
+                </div>
             </div>
             
-                <div class="" id="portfolio_grid"></div>
-            
+            <div class="d-flex">
+                <app-project-preview skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/1.png"></app-project-preview>
+                <app-project-preview skills="C++,Unreal,Level Design" image_thumbnail ="/assets/img/portfolio/2.png"></app-project-preview>
+                <app-project-preview skills="Python,Django,Backend Development" image_thumbnail ="/assets/img/portfolio/3.png"></app-project-preview>
+                <app-project-preview skills="Java,Android Studio,Mobile Development" image_thumbnail ="/assets/img/portfolio/4.png"></app-project-preview>
+                <app-project-preview skills="C,Putty,System Designs" image_thumbnail ="/assets/img/portfolio/5.png"></app-project-preview>
+                <app-project-preview skills="C#,UnityVR,Oculus" image_thumbnail ="/assets/img/portfolio/6.png"></app-project-preview>
+            </div>
+                            
         </div>
     </section>
 
