@@ -36,12 +36,12 @@
             <p class="Lead">Filter through my work by the skills and tools below.</p>
             <div class="row">
                 <div class="d-flex align-items-center justify-content-center ml-4" *ngFor="let skill of skills" >
-                    <h4 id="{{skill}}"><a (click)="filterSkill(skill)"class='badge badge-pill bg-warning text-white' >{{skill}}</a></h4>
+                    <h4 ><a id="{{skill}}" (click)="filterSkill(skill)" class='badge badge-pill bg-dark text-white' >{{skill}}</a></h4>
                 </div>
             </div>
             
             <div class="row">
-                <app-project-preview *ngIf="chosen_skill.includes('C#') || chosen_skill.includes('UNITY') || chosen_skill.includes('DESIGN')" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/1.png"></app-project-preview>
+                <app-project-preview *ngIf="chosen_skill.includes('C#') || chosen_skill.includes('UNITY') || chosen_skill.includes('DESIGN')" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/1.png"> </app-project-preview>
                 <app-project-preview *ngIf="chosen_skill.includes('C++') || chosen_skill.includes('UNREAL') || chosen_skill.includes('DESIGN')" skills="C++,Unreal,Level Design" image_thumbnail ="/assets/img/portfolio/2.png"></app-project-preview>
                 <app-project-preview *ngIf="chosen_skill.includes('PYTHON') || chosen_skill.includes('BACKEND')" skills="Python,Django,Backend Development" image_thumbnail ="/assets/img/portfolio/3.png"></app-project-preview>
                 <app-project-preview *ngIf="chosen_skill.includes('JAVA') || chosen_skill.includes('MOBILE')" skills="Java,Android Studio,Mobile Development" image_thumbnail ="/assets/img/portfolio/4.png"></app-project-preview>

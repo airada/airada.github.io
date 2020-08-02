@@ -15,14 +15,23 @@ export class PortfolioComponent implements OnInit {
   }
 
   filterSkill(skill_item){
+
     if (this.chosen_skill.includes(skill_item)){
       this.chosen_skill.splice(this.chosen_skill.indexOf(skill_item), 1);
       console.log(skill_item + " was UNSELECTED");
+      var inputValue = (<HTMLInputElement>document.getElementById(skill_item)); 
+      inputValue.classList.remove('bg-warning');  
+
+      inputValue.classList.add('bg-dark');
+      
     } else {
       this.chosen_skill.push(skill_item);
       console.log(skill_item + " was SELECTED");
-    }
+      var inputValue = (<HTMLInputElement>document.getElementById(skill_item)); 
+      inputValue.classList.remove('bg-dark');  
 
+      inputValue.classList.add('bg-warning');
+    }
   }
 
 }
