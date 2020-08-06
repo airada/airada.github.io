@@ -56,7 +56,7 @@ export class PortfolioComponent implements OnInit {
     }
 
     for(let j = 0; j < this.chosen_skill.length; j++){
-      this.toggle_class(this.chosen_skill[j]);
+      this.show_class(this.chosen_skill[j]);
     }
   }
 
@@ -68,11 +68,11 @@ export class PortfolioComponent implements OnInit {
   }
 
 //Toggles hidden class
-  toggle_class(skill){
+  show_class(skill){
     console.log(skill);
     let elements = document.querySelectorAll("."+skill);
     elements.forEach(element => {
-      element.classList.toggle('hidden');
+      element.classList.remove('hidden');
       console.log(element.classList);
     });
   }
