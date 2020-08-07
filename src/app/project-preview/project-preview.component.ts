@@ -18,13 +18,4 @@ export class ProjectPreviewComponent implements OnInit {
     this.skill_list = this.skills.split(",");
   }
 
-  // ngOnChanges(changes: SimpleChanges) {
-  //   console.log(changes.show);
-  //   this.show = changes.show.currentValue;
-  //   console.log("child component: " + this.show);
-  //   }
-
-
-
-
 }

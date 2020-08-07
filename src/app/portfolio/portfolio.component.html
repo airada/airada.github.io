@@ -36,17 +36,17 @@
             <p class="Lead">Filter through my work by the skills and tools below.</p>
             <div class="row">
                 <div class="d-flex align-items-center justify-content-center ml-4" *ngFor="let skill of skill_tags" >
-                    <h4 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill bg-dark text-white' >{{skill[1]}}</a></h4>
+                    <h4 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill bg-warning text-white' >{{skill[1]}}</a></h4>
                 </div>
             </div>
             
             <div class="row">
                 <app-project-preview class="cs unity design" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/1.png"> </app-project-preview>
                 <app-project-preview class="cpp unreal design"  skills="C++,Unreal,Level Design" image_thumbnail ="/assets/img/portfolio/2.png"></app-project-preview>
-                <!-- <app-project-preview *ngIf="chosen_skill.length === 0 || chosen_skill.includes('PYTHON') || chosen_skill.includes('BACKEND')" skills="Python,Django,Backend Development" image_thumbnail ="/assets/img/portfolio/3.png"></app-project-preview>
-                <app-project-preview *ngIf="chosen_skill.length === 0 || chosen_skill.includes('JAVA') || chosen_skill.includes('MOBILE')" skills="Java,Android Studio,Mobile Development" image_thumbnail ="/assets/img/portfolio/4.png"></app-project-preview>
-                <app-project-preview *ngIf="chosen_skill.length === 0 || chosen_skill.includes('C') || chosen_skill.includes('DESIGN')" skills="C,Putty,System Designs" image_thumbnail ="/assets/img/portfolio/5.png"></app-project-preview>
-                --> <app-project-preview class="cs unity vr"  skills="C#,UnityVR,Oculus" image_thumbnail ="/assets/img/portfolio/6.png"></app-project-preview>
+                <app-project-preview class="python backend" skills="Python,Django,Backend Development" image_thumbnail ="/assets/img/portfolio/3.png"></app-project-preview>
+                <app-project-preview class="java mobile" skills="Java,Android Studio,Mobile Development" image_thumbnail ="/assets/img/portfolio/4.png"></app-project-preview>
+                <app-project-preview class="design" skills="C,Putty,System Designs" image_thumbnail ="/assets/img/portfolio/5.png"></app-project-preview>
+                <app-project-preview class="cs unity vr"  skills="C#,UnityVR,Oculus" image_thumbnail ="/assets/img/portfolio/6.png"></app-project-preview>
             </div>
                             
         </div>

@@ -6,81 +6,77 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  skill_tags: any = [["cs","C#"], ["cpp","C++"], ["python","PYTHON"],["java","JAVA"], ["unity","UNITY"],["unreal","UNREAL"],["design","DESIGN"], ["backend","BACKEND"], ["mobile","MOBILE"], ["vr","VIRTUAL REALITY"]];
+  skill_tags: any = [["clear", "CLEAR ALL"],["cs", "C#"], ["cpp", "C++"], ["python", "PYTHON"], ["java", "JAVA"], ["unity", "UNITY"], ["unreal", "UNREAL"], ["design", "DESIGN"], ["backend", "BACKEND"], ["mobile", "MOBILE"], ["vr", "VIRTUAL REALITY"]];
   chosen_skill: any = [];
-  skill_array: any = [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  ngAfterViewInit(){
-    // you'll get your through 'elements' below code
-}
+  //Skill is added to or removed from chosen list
+  add_skill(skill_item) {
+    if (skill_item == "clear"){
+      for (let i = 0; i < this.skill_tags.length; i++) {
+        this.toggle_class(this.skill_tags[i][0], false);    //removes hidden class, if it exists  
+        var inputValue = (<HTMLInputElement>document.getElementById(this.skill_tags[i][0]));
+        inputValue.removeAttribute('style');
+        inputValue.classList.add('bg-warning');
 
-  //Adds or Removes Skill to filtering list
-  add_skill(skill_item){
+      }
 
-    if (this.chosen_skill.includes(skill_item)){
+      this.chosen_skill = [];
+      return;
+    }
+    if (this.chosen_skill.includes(skill_item)) {
       this.chosen_skill.splice(this.chosen_skill.indexOf(skill_item), 1);
-      //console.log(skill_item + " was UNSELECTED");
-      this.change_btn_color(skill_item, 'bg-warning','bg-dark');
-
+      this.change_btn_color(skill_item, 'bg-warning', '#d39e00', false);
     } else {
       this.chosen_skill.push(skill_item);
-      //console.log(skill_item + " was SELECTED");
-      this.change_btn_color(skill_item, 'bg-dark','bg-warning');
-      this.filter_skill();
+      this.change_btn_color(skill_item, 'bg-warning', '#d39e00', true);
     }
 
-    console.log(this.chosen_skill);
+    this.filter_skill();
   }
 
-  change_btn_color(item, removed, added){
+  change_btn_color(item, color1, color2, push) {
     var inputValue = (<HTMLInputElement>document.getElementById(item));
-    inputValue.classList.remove(removed);  
-    inputValue.classList.add(added);
+    if (push){ inputValue.setAttribute("style","background-color: "+ color2 + ";"); } 
+    else {  inputValue.removeAttribute('style');  }
+    inputValue.classList.toggle(color1);
   }
 
-  is_chosen(skill){
-    return this.chosen_skill.includes(skill)
-  }
-  
-  // Looks for components with ALL skills NOT chosen 
-  // 1. Loop through skill tags to find which HTML elements DO NOT have the chosen skill in order to HIDE them
-  // 2. SHOW HTML elements that have the class
-  filter_skill(){
-    for(let i = 0; i < this.skill_tags.length; i++){
-      this.hide_class(this.skill_tags[i][0]);     //initially hides all HTML elements
+  // Filters projects based on the chosen skill list
+  filter_skill() {
+    let len = this.chosen_skill.length;
+
+    for (let i = 0; i < this.skill_tags.length; i++) {
+      if (len === 0) {
+        this.toggle_class(this.skill_tags[i][0], false);    //removes hidden class, if it exists   
+      } else if (len >= 1) {
+        this.toggle_class(this.skill_tags[i][0], true);     //adds hidden class to all projects
+      }
     }
 
-    for(let j = 0; j < this.chosen_skill.length; j++){
-      this.show_class(this.chosen_skill[j]);
+    if (len === 1) {
+      this.toggle_class(this.chosen_skill[0], false);
+    } else if (len > 1) {
+      let elements = document.querySelectorAll("." + this.chosen_skill[0]);
+
+      elements.forEach(element => {
+       const result = this.chosen_skill.every(val => element.classList.contains(val));
+       if (result) { element.classList.remove('hidden');}
+      }
+      )
     }
   }
 
-  hide_class(skill){
-    let elements = document.querySelectorAll("."+skill);
+  toggle_class(skill, flag) {
+    let elements = document.querySelectorAll("." + skill);
     elements.forEach(element => {
-      element.classList.add('hidden');
+      element.classList.toggle('hidden', flag);
+      console.log(skill + ": " + element.classList);
     });
   }
-
-//Toggles hidden class
-  show_class(skill){
-    console.log(skill);
-    let elements = document.querySelectorAll("."+skill);
-    elements.forEach(element => {
-      element.classList.remove('hidden');
-      console.log(element.classList);
-    });
-  }
-
- 
-
-
-
-  
 
 }
