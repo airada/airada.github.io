@@ -1,12 +1,11 @@
     <div class="col-4 animate_animated animate__fadeIn">
         <div class="card ml-0 mr-2 mt-3 " style="width: 18rem;">
-
             <a href="#!"><img class="card-img-top" [src]="image_thumbnail" alt="Card image cap">
             </a>
             <div class="card-body mb-3 p-0">
                 <div class="d-flex ">
                     <div *ngFor="let skill of skill_list">
-                        <p id="{{skill}}"><a class='badge badge-pill bg-dark text-white' href='#!'>{{skill}}</a></p>
+                        <span class="badge badge-info mr-1">{{skill}}</span>
                     </div>
                 </div>
                 <p class="card-text">Untitled Project</p>
