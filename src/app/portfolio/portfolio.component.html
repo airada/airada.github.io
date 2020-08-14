@@ -24,8 +24,8 @@
         </div>
     </nav>
 
-    <section class="page-section text-dark mt-5 mb-0" id="about">
-        <div class="container ">
+    <section class="page-section text-dark mt-5 mb-0">
+        <div class="container">
             <!-- Portfolio Section Heading-->
             <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
             <!-- Icon Divider-->
@@ -33,14 +33,14 @@
                 <div class="divider-custom-line"></div>
             </div>
 
-            <p class="Lead">Filter through my work by the skills and tools below.</p>
-            <div class="row">
+            <p class="Lead text-center">Filter through my work by the skills and tools below.</p>
+            <div class="row  d-flex align-items-center justify-content-center">
                 <div class="d-flex align-items-center justify-content-center ml-4" *ngFor="let skill of skill_tags" >
-                    <h4 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill bg-warning text-white' >{{skill[1]}}</a></h4>
+                    <h5 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill bg-warning text-white' >{{skill[1]}}</a></h5>
                 </div>
             </div>
             
-            <div class="row">
+            <div class="row  d-flex align-items-center justify-content-center">
                 <app-project-preview class="cs unity design" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/1.png"> </app-project-preview>
                 <app-project-preview class="cpp unreal design"  skills="C++,Unreal,Level Design" image_thumbnail ="/assets/img/portfolio/2.png"></app-project-preview>
                 <app-project-preview class="python backend" skills="Python,Django,Backend Development" image_thumbnail ="/assets/img/portfolio/3.png"></app-project-preview>
@@ -53,7 +53,7 @@
     </section>
 
     <!-- Footer-->
-    <footer class="footer bg-dark  text-center">
+    <footer class="footer bg-dark text-center">
         <div class="container">
             <div class="row">
                 <!-- Footer Social Icons-->

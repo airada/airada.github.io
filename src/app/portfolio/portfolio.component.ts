@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  skill_tags: any = [["clear", "CLEAR ALL"],["cs", "C#"], ["cpp", "C++"], ["python", "PYTHON"], ["java", "JAVA"], ["unity", "UNITY"], ["unreal", "UNREAL"], ["design", "DESIGN"], ["backend", "BACKEND"], ["mobile", "MOBILE"], ["vr", "VIRTUAL REALITY"]];
+  skill_tags: any = [["cs", "C#"], ["cpp", "C++"], ["python", "PYTHON"], ["java", "JAVA"], ["unity", "UNITY"], ["unreal", "UNREAL"], ["design", "DESIGN"], ["backend", "BACKEND"], ["mobile", "MOBILE"], ["vr", "VIRTUAL REALITY"], ["clear", "CLEAR ALL"]];
   chosen_skill: any = [];
 
   constructor() { }
