@@ -1,77 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Jasmine Irada | Portfolio</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-
-</head>
-
-<body id="page-top">
+<div id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-            <!-- <a class="navbar-brand js-scroll-trigger text-secondary" href="#page-top">Start Bootstrap</a> -->
-            <button
-                class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-white text-secondary rounded"
-                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-secondary"
-                            href="./index.html">MAIN</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-secondary"
-                            href="./portfolio.html">Portfolio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded js-scroll-trigger text-secondary"
-                            href="#resume">Resume <i class="fas fa-download"></i></a></li>
-                </ul>
-            </div>
+
+        <!-- <a class="navbar-brand js-scroll-trigger text-secondary" href="#page-top">Start Bootstrap</a> -->
+        <button
+            class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-white text-secondary rounded"
+            type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="d-flex ml-auto">
+                <li class="nav-item mt-2 mx-0 mx-lg-1"><a
+                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary text-80" routerLink="/About"
+                        routerLinkActive="active">01. about</a></li>
+                <li class="nav-item mt-2 mx-0 mx-lg-1"><a
+                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary  text-80" routerLink="/Portfolio"
+                        routerLinkActive="active">02. portfolio</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded js-scroll-trigger text-secondary  text-80"
+                        href="#resume">resume <i class="fas fa-download"></i></a></li>
+            </ul>
         </div>
+
     </nav>
+
+    <!-- Sidebar -->
+    <!-- <div id="sidebar">
+
+        <ul class="my-auto py-auto">
+            <li class=" my-auto mx-0 mx-lg-1"><a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-github fa-lg"
+                        ></i></a></li>
+            <li class=" my-auto mx-0 mx-lg-1"><a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-itch-io fa-lg"
+                       ></i></a></li>
+            <li class=" my-auto mx-0 mx-lg-1"><a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin fa-lg"
+                        ></i></a></li>
+            <li class="my-auto mx-0 mx-lg-1"> <a class="btn btn-social mx-1" href="#!"><i class="fas fa-fw fa-envelope fa-lg"
+                        ></i></a></li>
+        </ul>
+    </div> -->
+
     <!-- Masthead-->
-    <header class="d-flex align-items-end justify-content-center bg-white text-secondary text-center">
-        <div class="container d-flex align-items-center justify-content-center flex-column">
+    <header class="d-flex align-items-center justify-content-center bg-white text-secondary text-center text-lg-left">
+        <div class="container justify-content-lg-left justify-content-center flex-column">
             <!-- Masthead Avatar Image-->
             <!-- Masthead Heading-->
-            <h1 class=" text-uppercase mb-0">Jasmine Irada</h1>
-
-            <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mt-2 mb-0" style="color:#055B5C;">Designer - Game
+            <h4 class=" text-uppercase mb-0 ml-5">Jasmine Irada</h4>
+              <p class="masthead-subheading font-weight-light mb-0 text-dark">Designer - Game
                 Programmer - VR developer</p>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-secondary mb-2">
+          
+            <!-- <div class="divider-custom divider-secondary mb-2 float-left">
                 <div class="divider-custom-line"></div>
-            </div>
+            </div>  -->
 
-
-            <div class="col-lg-4 mb-5 mb-lg-0 mt-0 pb-5">
+              
+            <div class="col-lg-4 mb-5 ml-0 mb-lg-0 mt-0 ">
                 <a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-github fa-lg"
-                        style="color:#6EC6CA;"></i></a>
+                        style="color:#87cdde;"></i></a>
                 <a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-itch-io fa-lg"
-                        style="color:#6EC6CA;"></i></a>
+                        style="color:#87cdde;"></i></a>
                 <a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin fa-lg"
-                        style="color:#6EC6CA;"></i></a>
+                        style="color:#87cdde;"></i></a>
                 <a class="btn btn-social mx-1" href="#!"><i class="fas fa-fw fa-envelope fa-lg"
-                        style="color:#6EC6CA;"></i></a>
+                        style="color:#87cdde;"></i></a>
             </div>
 
         </div>
@@ -92,11 +83,11 @@
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center">
-                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="1500" data-aos-easing="ease-in-out"
                         data-aos-once="true" data-aos-anchor-placement="top-center">
                         <div class="card mx-auto mr-lg-5" style="width: 13rem;height: 20rem;">
-                            <img class="card-img-top mx-auto" style="height:10rem; width:10rem;"
-                                src="assets/img/avataaars.svg" alt="Card image cap">
+                            <img class="card-img-top mx-auto" style="height:8rem; width:8rem;"
+                                src="/assets/img/avataaars.svg" alt="Card image cap">
                             <div class="card-body">
                                 <div class="d-none d-md-block">
                                     <p class="card-text text-center">Hi! My name is Arielle <b>Jasmine</b>
@@ -117,12 +108,12 @@
                             <!--https://fontawesome.com/icons/graduation-cap?style=solid-->
                             <!--https://fontawesome.com/license-->
                             <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
-                                style="height:8rem; width:8rem;" src="assets/img/graduation-cap-solid.svg"
+                                style="height:6rem; width:6rem;" src="assets/img/graduation-cap-solid.svg"
                                 alt="Card image cap">
                             <div class="card-body">
                                 <div class="d-none d-md-block">
                                     <p class="card-text text-center"> I graduated from the University of
-                                            California, Irvine (UCI) with a B.S. in Computer Science.</p>
+                                        California, Irvine (UCI) with a B.S. in Computer Science.</p>
                                 </div>
                                 <div class="d-md-none"><small>
                                         <p class="card-text text-center"> I graduated from the University of
@@ -137,44 +128,52 @@
 
 
                 <div class="col-lg-6 d-flex justify-content-center">
-                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="3000" data-aos-easing="ease-in-out"
+                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="1500" data-aos-easing="ease-in-out"
                         data-aos-once="true" data-aos-anchor-placement="top-center">
                         <div class="card mx-auto mr-lg-5" style="width: 13rem;height: 20rem;">
                             <!--https://fontawesome.com/icons/lightbulb?style=regular-->
                             <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
-                                style="height:8rem; width:8rem;" src="assets/img/lightbulb-regular.svg"
+                                style="height:6rem; width:6rem;" src="assets/img/lightbulb-regular.svg"
                                 alt="Card image cap">
                             <div class="card-body">
-                                <div class="d-none d-md-block"><p class="card-text text-center">I create immersive experiences
-                                    with accessible, meaningful design.
-                                </p></div>
-                                <div class="d-md-none"><small><p class="card-text text-center">I create immersive experiences
-                                    with accessible, meaningful design.
-                                </p></small></div>
-                                
+                                <div class="d-none d-md-block">
+                                    <p class="card-text text-center">I create immersive experiences
+                                        with accessible, meaningful design.
+                                    </p>
+                                </div>
+                                <div class="d-md-none"><small>
+                                        <p class="card-text text-center">I create immersive experiences
+                                            with accessible, meaningful design.
+                                        </p>
+                                    </small></div>
+
                             </div>
                         </div>
                     </div>
-                    
-                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="2000" data-aos-easing="ease-in-out"
+
+                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="1500" data-aos-easing="ease-in-out"
                         data-aos-once="true" data-aos-anchor-placement="top-center">
                         <div class="card mx-auto ml-lg-5" style="width: 13rem;height:20rem;">
                             <!--https://fontawesome.com/icons/laptop-code?style=solid-->
                             <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
-                                style="height:8rem; width:8rem;" src="assets/img/laptop-code-solid.svg"
+                                style="height:6rem; width:6rem;" src="assets/img/laptop-code-solid.svg"
                                 alt="Card image cap">
                             <div class="card-body">
-                                <div class="d-none d-md-block"><p class="card-text text-center">I'm looking for opportunities to make an
-                                    impact and improve as a developer.</p></div>
-                                    <div class="d-md-none"><small><p class="card-text text-center">I'm looking for opportunities to make an
-                                        impact and improve as a developer.</p></small></div>
-                                
+                                <div class="d-none d-md-block">
+                                    <p class="card-text text-center">I'm looking for opportunities to make an
+                                        impact and improve as a developer.</p>
+                                </div>
+                                <div class="d-md-none"><small>
+                                        <p class="card-text text-center">I'm looking for opportunities to make an
+                                            impact and improve as a developer.</p>
+                                    </small></div>
+
                             </div>
                         </div>
                     </div>
 
 
-                    
+
 
                 </div>
             </div>
@@ -182,19 +181,15 @@
     </section>
 
     <!-- Portfolio Section-->
-    <section class="page-section portfolio" id="portfolio">
+    <!-- <section class="page-section portfolio" id="portfolio">
         <div class="container">
-            <!-- Portfolio Section Heading-->
             <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out"
                 data-aos-once="true" data-aos-anchor-placement="top-center">
                 <h2 class=" text-center text-uppercase text-secondary mb-0">Featured Work</h2>
             </div>
-            <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
             </div>
-            <!-- Portfolio Item 1-->
-
 
             <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
                 data-aos-once="true" data-aos-anchor-placement="top-center">
@@ -251,7 +246,7 @@
                     <div class="col col-md-6 mb-5">
                         <div class="row mt-3 mt-md-0 mb-0 mx-auto mx-sm-auto">
                             <p class="lead text-left mb-lg-5">Freelancer is a free bootstrap theme created by Start
-                                Bootstrap. The download includes the complete source files including HTML, CSS, and 
+                                Bootstrap. The download includes the complete source files including HTML, CSS, and
                                 JavaScript as well as optional SASS stylesheets for easy customization.</p>
                             <p class="d-none d-lg-block text-uppercase mt-lg-5">Play it here:</p>
                             <p class="d-lg-none mb-0 text-uppercase mt-lg-5 "><small>Play it here:</small></p>
@@ -271,8 +266,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Portfolio Item 1-->
 
 
             <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
@@ -355,9 +348,6 @@
                 </div>
             </div>
 
-            <!-- Portfolio Item 1-->
-
-
             <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
                 data-aos-once="true" data-aos-anchor-placement="top-center">
 
@@ -438,7 +428,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- Footer-->
@@ -461,7 +451,7 @@
         </div>
     </footer>
     <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-white">
+    <div class="copyright bg-dark py-4 text-center text-white">
         <div class="container"><small>Copyright © Jasmine Irada 2020</small></div>
     </div>
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
@@ -587,21 +577,4 @@
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Contact form JS-->
-    <script src="assets/mail/jqBootstrapValidation.js"></script>
-    <script src="assets/mail/contact_me.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-</body>
-
-</html>
+</div>

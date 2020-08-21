@@ -1,0 +1,29 @@
+.hidden {
+    display: none;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
+  }
+
+  ul, li {
+    list-style-type: none; 
+    margin: none;
+    padding: none;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    position: fixed;
+    bottom: 20%;
+}
+
+.text-80 {
+    font-size: 80%;
+    margin: 0;
+    padding: 0;
+}
