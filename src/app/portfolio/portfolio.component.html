@@ -1,0 +1,121 @@
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+
+        <!-- <a class="navbar-brand js-scroll-trigger text-secondary" href="#page-top">Start Bootstrap</a> -->
+        <button
+            class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-white text-secondary rounded"
+            type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="d-flex ml-auto">
+                <li class="nav-item mt-2 mx-0 mx-lg-1"><a
+                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary text-80" routerLink="/About"
+                        routerLinkActive="active">01. about</a></li>
+                <li class="nav-item mt-2 mx-0 mx-lg-1"><a
+                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary  text-80" routerLink="/Portfolio"
+                        routerLinkActive="active">02. portfolio</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded js-scroll-trigger text-secondary  text-80"
+                        href="#resume">resume <i class="fas fa-download"></i></a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <section class="page-section flex-wrapper text-dark mt-5 mb-0">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <p class="Lead text-center">To be added.</p>
+            <!-- <div class="row  d-flex align-items-center justify-content-center">
+                <div class="d-flex align-items-center justify-content-center ml-4" *ngFor="let skill of skill_tags" >
+                    <h5 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill bg-warning text-white' >{{skill[1]}}</a></h5>
+                </div>
+            </div>
+            
+            <div class="row  d-flex align-items-center justify-content-center">
+                <app-project-preview class="cs unity design" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/1.png"> </app-project-preview>
+                <app-project-preview class="cpp unreal design"  skills="C++,Unreal,Level Design" image_thumbnail ="/assets/img/portfolio/2.png"></app-project-preview>
+                <app-project-preview class="python backend" skills="Python,Django,Backend Development" image_thumbnail ="/assets/img/portfolio/3.png"></app-project-preview>
+                <app-project-preview class="java mobile" skills="Java,Android Studio,Mobile Development" image_thumbnail ="/assets/img/portfolio/4.png"></app-project-preview>
+                <app-project-preview class="design" skills="C,Putty,System Designs" image_thumbnail ="/assets/img/portfolio/5.png"></app-project-preview>
+                <app-project-preview class="cs unity vr"  skills="C#,UnityVR,Oculus" image_thumbnail ="/assets/img/portfolio/6.png"></app-project-preview>
+            </div>
+                             -->
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer bg-dark text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Social Icons-->
+                <div class="col mb-5 mb-lg-0">
+                    <h4 class=" mb-4">Diving Deep into Learning</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-github "
+                            style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-itch-io "
+                            style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin"
+                            style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fas fa-fw fa-envelope"
+                            style="color:#FFFFFF;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white bg-dark">
+        <div class="container"><small>Copyright © Jasmine Irada 2020</small></div>
+    </div>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+    <div class="scroll-to-top d-lg-none position-fixed">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
+                class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog"
+        aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                                    id="portfolioModal1Label">Log Cabin</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="" />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
+                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                </p>
+                                <button class="btn btn-primary" data-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
