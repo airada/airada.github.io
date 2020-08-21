@@ -1,9 +1,9 @@
 header {
-    background-image: url("assets\header_final.png");
-    background-position: center center;
+    background-image: url("assets\test.png");
+    background-position: top center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 80%;
+    background-size: cover;
+    background-color: black;
 }
 
 ul, li {
@@ -17,4 +17,10 @@ ul, li {
     max-width: 250px;
     position: fixed;
     bottom: 20%;
+}
+
+.text-80 {
+    font-size: 80%;
+    margin: 0;
+    padding: 0;
 }
