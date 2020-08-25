@@ -1,6 +1,6 @@
-# AiradaPortfolio
+# Jasmine Irada | Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+This is my personal website used to host my portfolio online. It was created using Angular 8 and Bootstrap. The **About** section displays a short about section, featured work, and any achievements or awards. The **Portfolio** section includes a multifilter to filter through my projects using skill and/or tool tags.
 
 ## Development server
 

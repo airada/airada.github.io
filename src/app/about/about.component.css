@@ -1,5 +1,5 @@
 header {
-    background-image: url("assets\test.png");
+    background-image: url("src\assets\fish.png");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,13 +10,6 @@ ul, li {
     list-style-type: none; 
     margin: none;
     padding: none;
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    position: fixed;
-    bottom: 20%;
 }
 
 .text-80 {
