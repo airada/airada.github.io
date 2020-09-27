@@ -6,6 +6,18 @@ header {
     background-color: black;
 }
 
+.card-size {
+    width: 13rem;
+    height: 20rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-size {
+        width: 10rem;
+        height: 15rem;
+    }
+  }
+
 ul, li {
     list-style-type: none; 
     margin: none;
