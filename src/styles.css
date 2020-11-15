@@ -10064,6 +10064,12 @@ h3 {
   font-size: 1.25rem;
 }
 
+.btn-social-custom {
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+}
+
 .btn-social {
   border-radius: 100%;
   display: inline-flex;

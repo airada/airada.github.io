@@ -1,6 +1,6 @@
 <div id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top my-0 py-0" id="mainNav">
 
         <button
             class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-white text-secondary rounded"
@@ -11,37 +11,51 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <a class="navbar-brand text-white ml-5" href="#">Jasmine Irada</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <ul class="d-flex ml-auto">
                 <li class="nav-item mt-2 mx-2 mx-lg-1"><a
-                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary text-80" routerLink="/About"
-                        routerLinkActive="active">01. about</a></li>
+                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-white text-80" routerLink="/About"
+                        routerLinkActive="active">about</a></li>
                 <li class="nav-item mt-2 mx-2 mx-lg-1"><a
-                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary  text-80" routerLink="/Portfolio"
-                        routerLinkActive="active">02. portfolio</a></li>
-                <li class="nav-item mx-2 mt-2 mx-lg-1"><a class="nav-link rounded js-scroll-trigger text-secondary  text-80"
-                    href="https://drive.google.com/file/d/1M2HDv7W1biawy5lCOmgKntVCTParV18W/view?usp=sharing">resume</a></li>
+                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-white text-80"
+                        routerLink="/Portfolio" routerLinkActive="active">portfolio</a></li>
+                <li class="nav-item mx-2 mt-2 mx-lg-1"><a class="nav-link rounded js-scroll-trigger text-white text-80"
+                        href="https://drive.google.com/file/d/1M2HDv7W1biawy5lCOmgKntVCTParV18W/view?usp=sharing">resume</a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <!--Header-->
-    <header class="d-flex align-items-center justify-content-center bg-white text-secondary text-center text-lg-left">
-        <div class="container justify-content-lg-left justify-content-center flex-column">
-            <h4 class=" text-uppercase mb-0 ml-5">Jasmine Irada</h4>
-              <p class="masthead-subheading font-weight-light mb-0 text-dark">Designer - Programmer - VR developer</p>
 
-            <!--Contact links-->
-            <div class="col-lg-4 mb-5 ml-0 mb-lg-0 mt-0 ">
-                <a class="btn btn-social mx-1" href="https://github.com/airada"><i class="fab fa-fw fa-github fa-lg"
-                        style="color:#87cdde;"></i></a>
-                <a class="btn btn-social mx-1" href="https://rninchan.itch.io/"><i class="fab fa-fw fa-itch-io fa-lg"
-                        style="color:#87cdde;"></i></a>
-                <a class="btn btn-social mx-1" href="https://www.linkedin.com/in/jasmineirada/"><i class="fab fa-fw fa-linkedin fa-lg"
-                        style="color:#87cdde;"></i></a>
-                <a class="btn btn-social mx-1" href="mailto:jasmineirada@gmail.com"><i class="fas fa-fw fa-envelope fa-lg"
-                        style="color:#87cdde;"></i></a>
+    <div class="sidebar fixed-bottom d-flex flex-column text-white">
+        <a class="btn-social-custom mx-2" target="_blank" href="https://github.com/airada"><i
+                class="fab fa-fw fa-github fa-lg" style="color:#FF6600;"></i></a>
+        <a class="btn-social-custom mx-2" target="_blank" href="https://rninchan.itch.io/"><i
+                class="fab fa-fw fa-itch-io fa-lg" style="color:#FF6600;"></i></a>
+        <a class="btn-social-custom mx-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"><i
+                class="fab fa-fw fa-linkedin fa-lg" style="color:#FF6600;"></i></a>
+        <a class="btn-social-custom mx-2" target="_blank" href="mailto:jasmineirada@gmail.com"><i
+                class="fas fa-fw fa-envelope fa-lg" style="color:#FF6600;"></i></a>
+    </div>
+
+
+    <!--Header-->
+    <header>
+        <div class="container">
+            <div class="overlay bottom-align-text text-white text-center mb-5 pb-5">
+                <p>Jasmine Irada</p>
+                <h2>SOFTWARE ENGINEER</h2>
+                <p>Diving deep—into technology, design, and learning.</p>
             </div>
+            <img src="/assets/drawing3anim-svgator.svg" />
+
         </div>
+
     </header>
 
     <!-- About Section-->
@@ -88,7 +102,7 @@
                             <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
                                 style="height:6rem; width:6rem;" src="assets/img/graduation-cap-solid.svg"
                                 alt="Card image cap">
-                            
+
                             <div class="card-body">
                                 <div class="d-none d-md-block">
                                     <p class="card-text text-center"> I graduated from the University of
@@ -410,14 +424,14 @@
                 <!-- Footer Social Icons-->
                 <div class="col mb-5 mb-lg-0">
                     <h4 class=" mb-4">Diving Deep into Learning</h4>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/airada"><i class="fab fa-fw fa-github "
-                            style="color:#FFFFFF;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://rninchan.itch.io/"><i class="fab fa-fw fa-itch-io "
-                            style="color:#FFFFFF;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/jasmineirada/"><i class="fab fa-fw fa-linkedin"
-                            style="color:#FFFFFF;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:jasmineirada@gmail.com"><i class="fas fa-fw fa-envelope"
-                            style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/airada"><i
+                            class="fab fa-fw fa-github " style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://rninchan.itch.io/"><i
+                            class="fab fa-fw fa-itch-io " style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/jasmineirada/"><i
+                            class="fab fa-fw fa-linkedin" style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:jasmineirada@gmail.com"><i
+                            class="fas fa-fw fa-envelope" style="color:#FFFFFF;"></i></a>
                 </div>
             </div>
         </div>
@@ -431,7 +445,7 @@
         <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
                 class="fa fa-chevron-up"></i></a>
     </div>
-    
+
     <!-- Portfolio Modals-->
     <!-- Portfolio Modal 1-->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog"
