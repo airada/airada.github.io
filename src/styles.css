@@ -173,12 +173,12 @@ sup {
 
 a {
   line-height: 0;
-  color: #1abc9c;
+  color:#f8f9fa;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #117964;
+  color: gray;
   text-decoration: underline;
 }
 
