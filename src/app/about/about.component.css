@@ -1,9 +1,42 @@
 header {
-    background-image: url("src\assets\fish.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
+    background-color: #0b2228ff;
+}
+
+.navbar {
+    background-color: #0b2228ff;
+}
+
+.sidebar {
+    width: 100px;
+    position: fixed;
+    bottom: 75px;
+    left: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Style sidebar links */
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* Style links on mouse-over */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+.bottom-align-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+img {
+    width: 100%;
 }
 
 .card-size {
