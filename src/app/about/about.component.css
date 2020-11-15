@@ -1,31 +1,38 @@
-header {
+header, section, .navbar, footer {
     background-color: #0b2228ff;
 }
 
-.navbar {
-    background-color: #0b2228ff;
+.name-text {
+    font-size: large;
+}
+.card {
+    background-color:#f8f9fa;
+}
+
+.copyright {
+    background-color:#051114ff;
 }
 
 .sidebar {
-    width: 100px;
+    width: 75px;
     position: fixed;
     bottom: 75px;
     left: 0;
     overflow-x: hidden;
-  }
+}
   
   /* Style sidebar links */
   .sidebar a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
+    color:#FF6600;
     display: block;
   }
   
   /* Style links on mouse-over */
   .sidebar a:hover {
-    color: #f1f1f1;
+    color:#803300;
   }
 
 .bottom-align-text {
