@@ -54,7 +54,7 @@ i a:hover {
 }
 
 .sidebar {
-    width: 75px;
+    width: 100px;
     position: fixed;
     bottom: 75px;
     left: 0;
@@ -63,7 +63,6 @@ i a:hover {
   
   /* Style sidebar links */
   .sidebar a {
-    padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
     color:#fd7e14;
