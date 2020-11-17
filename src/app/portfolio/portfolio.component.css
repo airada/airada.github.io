@@ -1,3 +1,17 @@
+header, section, .navbar, footer {
+    background-color: #0b2228ff;
+}
+
+.navbar-nav li a {
+    text-align: right;
+    font-weight: normal;
+}
+.navbar-nav {
+    font-size: small;
+}
+.copyright {
+    background-color:#051114ff;
+}
 .hidden {
     display: none;
 }
