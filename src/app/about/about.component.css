@@ -12,6 +12,24 @@ header {
     background-color: #0b2228ff;
 }
 
+a.badge:hover, a.badge-pill:hover {
+    background-color: transparent;
+    color: white;
+    font-weight: normal;
+}
+
+a.badge, a.badge-pill, a.border {
+    background-color: #fd7e14;
+    font-weight: normal;
+}
+
+i a {
+    color: #fd7e14;
+}
+
+i a:hover {
+    color: #803300;
+}
 .navbar-nav li a {
     text-align: right;
     font-weight: normal;
@@ -48,7 +66,7 @@ header {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color:#FF6600;
+    color:#fd7e14;
     display: block;
   }
   
