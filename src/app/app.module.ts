@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
+import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ProjectPreviewComponent } from './project-preview/project-preview.compo
     PortfolioComponent,
     AboutComponent,
     ProjectPreviewComponent,
+    FiltersComponent,
   ],
   imports: [
     BrowserModule,
