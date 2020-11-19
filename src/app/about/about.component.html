@@ -1,55 +1,67 @@
 <div id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
-
-        <button
-            class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-white text-secondary rounded"
-            type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="d-flex ml-auto">
-                <li class="nav-item mt-2 mx-2 mx-lg-1"><a
-                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary text-80" routerLink="/About"
-                        routerLinkActive="active">01. about</a></li>
-                <li class="nav-item mt-2 mx-2 mx-lg-1"><a
-                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary  text-80" routerLink="/Portfolio"
-                        routerLinkActive="active">02. portfolio</a></li>
-                <li class="nav-item mx-2 mt-2 mx-lg-1"><a class="nav-link rounded js-scroll-trigger text-secondary  text-80"
-                    href="https://drive.google.com/file/d/1M2HDv7W1biawy5lCOmgKntVCTParV18W/view?usp=sharing">resume</a></li>
-            </ul>
+        <div class="container">
+            <a class="js-scroll-trigger" href="#page-top">JASMINE IRADA</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a
+                            class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/About"
+                            routerLinkActive="active">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a
+                            class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/Portfolio"
+                            routerLinkActive="active">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a
+                            class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" target="_blank"
+                            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">Resume</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!--Header-->
-    <header class="d-flex align-items-center justify-content-center bg-white text-secondary text-center text-lg-left">
-        <div class="container justify-content-lg-left justify-content-center flex-column">
-            <h4 class=" text-uppercase mb-0 ml-5">Jasmine Irada</h4>
-              <p class="masthead-subheading font-weight-light mb-0 text-dark">Designer - Programmer - VR developer</p>
 
-            <!--Contact links-->
-            <div class="col-lg-4 mb-5 ml-0 mb-lg-0 mt-0 ">
-                <a class="btn btn-social mx-1" href="https://github.com/airada"><i class="fab fa-fw fa-github fa-lg"
-                        style="color:#87cdde;"></i></a>
-                <a class="btn btn-social mx-1" href="https://rninchan.itch.io/"><i class="fab fa-fw fa-itch-io fa-lg"
-                        style="color:#87cdde;"></i></a>
-                <a class="btn btn-social mx-1" href="https://www.linkedin.com/in/jasmineirada/"><i class="fab fa-fw fa-linkedin fa-lg"
-                        style="color:#87cdde;"></i></a>
-                <a class="btn btn-social mx-1" href="mailto:jasmineirada@gmail.com"><i class="fas fa-fw fa-envelope fa-lg"
-                        style="color:#87cdde;"></i></a>
+    <div class="sidebar d-none d-lg-block pt-2 pl-5 fixed-bottom text-white">
+        <a class="btn-social-custom mx-2" target="_blank" href="https://github.com/airada"><i
+                class="fab fa-fw fa-github fa-lg"></i></a>
+        <a class="btn-social-custom mx-2" target="_blank" href="https://rninchan.itch.io/"><i
+                class="fab fa-fw fa-itch-io fa-lg"></i></a>
+        <a class="btn-social-custom mx-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"><i
+                class="fab fa-fw fa-linkedin fa-lg"></i></a>
+        <a class="btn-social-custom mx-2" target="_blank" href="mailto:jasmineirada@gmail.com"><i
+                class="fas fa-fw fa-envelope fa-lg"></i></a>
+    </div>
+
+
+    <!--Header-->
+    <header>
+        <div class="container d-flex align-items-center justify-content-center">
+            <div class="d-none d-md-block bottom-align-text text-white text-center p-5 mb-lg-5">
+                <p class="name-text text-light">JASMINE IRADA</p>
+                <h4>SOFTWARE ENGINEER</h4>
+                <p>Diving deep into the intersection between technology, art, and design.</p>
+            </div>
+            <div class="d-md-none bottom-align-text text-white text-left ml-3 mb-md-5">
+                <p class="name-text text-light">JASMINE IRADA</p>
+                <h4>SOFTWARE ENGINEER</h4>
+                <p>Diving deep into the intersection between technology, art, and design.</p>
             </div>
         </div>
+
     </header>
 
     <!-- About Section-->
-    <section class="page-section text-dark mb-0">
-        <div class="container">
+    <section class="text-dark p-3">
+        <div class="container bg-light border rounded p-3">
             <!-- About Section Heading-->
-            <div data-aos="zoom-in" data-aos-delay="10" data-aos-duration="500" data-aos-easing="ease-in-out"
-                data-aos-once="true" data-aos-anchor-placement="top-center">
+            <div data-aos="zoom-in" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true"
+                data-aos-anchor-placement="top-center">
                 <h2 class="text-center text-uppercase text-dark">ABOUT ME </h2>
             </div>
             <div class="divider-custom divider-dark">
@@ -60,8 +72,8 @@
             <div class="row">
                 <div class="col-lg-6 d-flex justify-content-center">
                     <!--First element-->
-                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="1500" data-aos-easing="ease-in-out"
-                        data-aos-once="true" data-aos-anchor-placement="top-center">
+                    <div data-aos="flip-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <div class="card mx-auto mr-lg-5 card-size">
                             <img class="card-img-top mx-auto" style="height:8rem; width:8rem;"
                                 src="/assets/img/avataaars.svg" alt="Card image cap">
@@ -80,15 +92,15 @@
                     </div>
 
                     <!--Second element-->
-                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="1500" data-aos-easing="ease-in-out"
-                        data-aos-once="true" data-aos-anchor-placement="top-center">
+                    <div data-aos="flip-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <div class="card mx-auto ml-lg-5 card-size">
                             <!--https://fontawesome.com/icons/graduation-cap?style=solid-->
                             <!--https://fontawesome.com/license-->
                             <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
                                 style="height:6rem; width:6rem;" src="assets/img/graduation-cap-solid.svg"
                                 alt="Card image cap">
-                            
+
                             <div class="card-body">
                                 <div class="d-none d-md-block">
                                     <p class="card-text text-center"> I graduated from the University of
@@ -105,8 +117,8 @@
 
                 <div class="col-lg-6 d-flex justify-content-center">
                     <!--Third element-->
-                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="1500" data-aos-easing="ease-in-out"
-                        data-aos-once="true" data-aos-anchor-placement="top-center">
+                    <div data-aos="flip-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <div class="card mx-auto mr-lg-5 card-size">
                             <!--https://fontawesome.com/icons/lightbulb?style=regular-->
                             <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
@@ -115,13 +127,13 @@
 
                             <div class="card-body">
                                 <div class="d-none d-md-block">
-                                    <p class="card-text text-center">I create immersive experiences
-                                        with accessible, meaningful design.
+                                    <p class="card-text text-center">I transform creative visions into impactful,
+                                        successful products.
                                     </p>
                                 </div>
                                 <div class="d-md-none"><small>
-                                        <p class="card-text text-center">I create immersive experiences
-                                            with accessible, meaningful design.
+                                        <p class="card-text text-center">I transform creative visions into impactful,
+                                            successful products.
                                         </p>
                                     </small></div>
                             </div>
@@ -129,8 +141,8 @@
                     </div>
 
                     <!--Fourth element-->
-                    <div data-aos="flip-up" data-aos-delay="10" data-aos-duration="1500" data-aos-easing="ease-in-out"
-                        data-aos-once="true" data-aos-anchor-placement="top-center">
+                    <div data-aos="flip-up" data-aos-duration="750" data-aos-easing="ease-in-out" data-aos-once="true"
+                        data-aos-anchor-placement="top-center">
                         <div class="card mx-auto ml-lg-5 card-size">
                             <!--https://fontawesome.com/icons/laptop-code?style=solid-->
                             <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
@@ -139,12 +151,12 @@
 
                             <div class="card-body">
                                 <div class="d-none d-md-block">
-                                    <p class="card-text text-center">I'm looking for opportunities to make an
-                                        impact and improve as a developer.</p>
+                                    <p class="card-text text-center">I'm looking for opportunities that
+                                        allow me to grow as a developer.</p>
                                 </div>
                                 <div class="d-md-none"><small>
-                                        <p class="card-text text-center">I'm looking for opportunities to make an
-                                            impact and improve as a developer.</p>
+                                        <p class="card-text text-center">I'm looking for opportunities that
+                                            allow me to grow as a developer.</p>
                                     </small></div>
                             </div>
                         </div>
@@ -155,11 +167,11 @@
     </section>
 
     <!-- Portfolio Section-->
-    <!-- <section class="page-section portfolio" id="portfolio">
+    <section class="page-section portfolio" id="portfolio">
         <div class="container">
             <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out"
                 data-aos-once="true" data-aos-anchor-placement="top-center">
-                <h2 class=" text-center text-uppercase text-secondary mb-0">Featured Work</h2>
+                <h2 class=" text-center text-white text-uppercase mb-0">Featured Work</h2>
             </div>
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -171,22 +183,17 @@
                 <div class="row">
                     <div class="col-md-6 mt-md-5"></div>
                     <div class="col-md-6 mt-md-5">
-                        <h4 class="text-center text-sm-center text-md-right text-uppercase text-secondary mb-0">Escaping the Negativity</h4>
+                        <h4 class="text-center text-sm-center text-md-right text-uppercase text-white mb-0">Mimi AI: Happy For You</h4>
                     </div>
                 </div>
 
                 <div class="row ">
                     <div class="col-md-6 mt-3"></div>
-                    <div class="col col-md-6 mt-md-3 d-flex align-items-center">
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-warning text-white" href="#!">C#</a>
-                        </h6>
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-danger text-white" href="#!">Unity</a>
-                        </h6>
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-primary text-white" href="#!">Design</a>
-                        </h6>
+                    <div class="col col-md-6 mt-md-3 my-2 text-white d-flex align-items-center">
+                        <a class=" badge badge-pill " href="#!">Python</a>
+                        <a class=" badge badge-pill " href="#!">Angular</a>
+                        <a class=" badge badge-pill " href="#!">Bootstrap</a>
+                        <a class=" badge badge-pill " href="#!">Design</a>
                     </div>
                 </div>
                 <div class="row">
@@ -195,127 +202,28 @@
                             data-target="#portfolioModal1">
                             <div
                                 class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-external-link-alt fa-3x"></i></div>
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <!-- <i class="fas fa-external-link-alt fa-3x"></i> -->
+                                </div>
                             </div>
-                            <img class="img-fluid " src="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png" alt="" />
+                            <img class="img-fluid "
+                                src="/assets/img/portfolio/mimi/prototype.png" alt="" />
                         </div>
-                        <div class="row mb-lg-0 mt-3 ">
-                            <div class="col-6 ">
-                                <a class="btn pl-3 pl-lg-0 d-flex align-items-center" href="https://github.com/airada/AH_2019"><i
-                                        class="fas fa-fw fa-code fa-lg" style="color:#87cdde;"></i>
-                                    <div class="px-3 text-dark">CODE</div>
-                                </a>
-                            </div>
-                            <div class="col-6 ">
-                                <a class="btn pl-3 d-flex align-items-center" href="https://www.youtube.com/watch?v=tu56e_c6KOc&feature=youtu.be"><i
-                                        class="fab fa-fw fa-youtube fa-lg" style="color:#87cdde;"></i>
-                                    <div class="px-3 text-dark">DEMO</div>
-                                </a> </div>
-
-                        </div>
-
                     </div>
                     <div class="col col-md-6 mb-5">
-                        <div class="row mt-3 mt-md-0 mb-0 mx-auto mx-sm-auto">
-                            <p class="lead text-left mb-lg-5">Freelancer is a free bootstrap theme created by Start
-                                Bootstrap. The download includes the complete source files including HTML, CSS, and
-                                JavaScript as well as optional SASS stylesheets for easy customization.</p>
-                             <p class="d-none d-lg-block text-uppercase mt-lg-5">Play it here:</p>
-                            <p class="d-lg-none mb-0 text-uppercase mt-lg-5 "><small>Play it here:</small></p>
-                        </div>
-                         <div class="row d-lg-none mx-auto mx-sm-auto d-flex ">
-                            <a class="pr-3 pr-md-2" href="#!"><i class="fab fa-itch-io fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-steam fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-app-store-ios fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-google-play fa-lg"></i></a>
-                        </div>
-                        <div class="row d-none d-lg-flex mx-auto mx-sm-auto align-items-center justify-content-left">
-                            <a class="pr-3" href="#!"><i class="fab fa-itch-io fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-steam fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-app-store-ios fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-google-play fa-2x"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
-                data-aos-once="true" data-aos-anchor-placement="top-center">
-
-                <div class="row">
-                    <div class="col-md-6 mt-md-5"></div>
-                    <div class="col-md-6 mt-md-5">
-                        <h4 class="text-center text-sm-center text-md-right text-uppercase text-secondary mb-0">Second
-                            Best
-                            Project Ever</h4>
-                    </div>
-                </div>
-
-                <div class="row ">
-                    <div class="col-md-6 mt-3"></div>
-                    <div class="col col-md-6 mt-md-3 d-flex align-items-center">
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-warning text-white" href="#!">C++</a>
-                        </h6>
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-danger text-white" href="#!">Unreal</a>
-                        </h6>
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-primary text-white" href="#!">Level Design</a>
-                        </h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="portfolio-item justify-content-center" data-toggle="modal"
-                            data-target="#portfolioModal2">
-                            <div
-                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i
-                                        class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid " src="assets/img/portfolio/cake.png" alt="" />
-                        </div>
-                        <div class="row mb-lg-0 mt-3 ">
-                            <div class="col-6 ">
-                                <a class="pl-3 pl-lg-0 d-flex align-items-center" href="#!"><i
-                                        class="fas fa-fw fa-code fa-2x" style="color:#6EC6CA;"></i>
-                                    <div class="px-2 text-dark">CODE</div>
-                                </a>
-                            </div>
-                            <div class="col-6 ">
-                                <a class="pl-3 d-flex align-items-center" href="#!"><i
-                                        class="fab fa-fw fa-youtube fa-2x" style="color:#6EC6CA;"></i>
-                                    <div class="px-2 text-dark">DEMO</div>
-                                </a> </div>
-
+                        <div class="row text-white mt-3 mt-md-0 mb-0 mx-auto mx-sm-auto">
+                            <p class="lead text-left">Game-based task-list system with user achievements and motivational chatbot companion. <br> 
+                                Self-taught NLP and deep learning concepts to deploy chatbot using PyTorch and NLTK.
+                                I'm currently improving prototype design and incorporating game and task-list features.</p>
                         </div>
 
-                    </div>
-                    <div class="col col-md-6 mb-5">
-                        <div class="row mt-3 mt-md-0 mb-0 mx-auto mx-sm-auto">
-                            <p class="lead text-left mb-lg-5">Freelancer is a free bootstrap theme created by Start
-                                Bootstrap. The
-                                download
-                                includes the complete source files including HTML, CSS, and JavaScript as well as
-                                optional SASS
-                                stylesheets for easy customization.</p>
-                            <p class="d-none d-lg-block text-uppercase mt-lg-5">Play it here:</p>
-                            <p class="d-lg-none mb-0 text-uppercase mt-lg-5 "><small>Play it here:</small></p>
+                        <div class="mt-5">
+                            <a class="mx-2" href="https://github.com/airada/happy-for-you"><i
+                                    class="fab fa-github fa-2x"></i></a>
+                            <a class="mx-2" href="https://mimi-ai.herokuapp.com/"><i
+                                    class="fas fa-external-link-alt fa-2x"></i></a>
                         </div>
-                        <div class="row d-lg-none mx-auto mx-sm-auto d-flex ">
-                            <a class="pr-3 pr-md-2" href="#!"><i class="fab fa-itch-io fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-steam fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-app-store-ios fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-google-play fa-lg"></i></a>
-                        </div>
-                        <div class="row d-none d-lg-flex mx-auto mx-sm-auto align-items-center justify-content-left">
-                            <a class="pr-3" href="#!"><i class="fab fa-itch-io fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-steam fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-app-store-ios fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-google-play fa-2x"></i></a>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -326,104 +234,132 @@
                 <div class="row">
                     <div class="col-md-6 mt-md-5"></div>
                     <div class="col-md-6 mt-md-5">
-                        <h4 class="text-center text-sm-center text-md-right text-uppercase text-secondary mb-0">Third
-                            Best
-                            Project Ever</h4>
+                        <h4 class="text-center text-sm-center text-md-right text-uppercase text-white mb-0">Crystal
+                            Crysis</h4>
                     </div>
                 </div>
 
                 <div class="row ">
                     <div class="col-md-6 mt-3"></div>
-                    <div class="col col-md-6 mt-md-3 d-flex align-items-center">
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-warning text-white" href="#!">C#</a>
-                        </h6>
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-danger text-white" href="#!">UnityVR</a>
-                        </h6>
-                        <h6 class="">
-                            <a class=" badge badge-pill bg-primary text-white" href="#!">Oculus Quest</a>
-                        </h6>
+                    <div class="col col-md-6 mt-md-3 my-2 text-white d-flex align-items-center">
+                        <a class=" badge badge-pill " href="#!">C#</a>
+                        <a class=" badge badge-pill " href="#!">Unity</a>
+                        <a class=" badge badge-pill " href="#!">Art</a>
+                        <a class=" badge badge-pill " href="#!">Project Management</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="portfolio-item justify-content-center" data-toggle="modal"
-                            data-target="#portfolioModal3">
+                            data-target="#portfolioModal1">
                             <div
                                 class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i
-                                        class="fas fa-plus fa-3x"></i></div>
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <!-- <i class="fas fa-external-link-alt fa-3x"></i> -->
+                                </div>
                             </div>
-                            <img class="img-fluid " src="assets/img/portfolio/circus.png" alt="" />
+                            <img class="img-fluid " src="/assets/img/portfolio/obviouspalace/start_screen.png" alt="" />
                         </div>
-                        <div class="row mb-lg-0 mt-3 ">
-                            <div class="col-6 ">
-                                <a class="pl-3 pl-lg-0 d-flex align-items-center" href="#!"><i
-                                        class="fas fa-fw fa-code fa-2x" style="color:#6EC6CA;"></i>
-                                    <div class="px-3 text-dark">CODE</div>
-                                </a>
-                            </div>
-                            <div class="col-6 ">
-                                <a class="pl-3 d-flex align-items-center" href="#!"><i
-                                        class="fab fa-fw fa-youtube fa-2x" style="color:#6EC6CA;"></i>
-                                    <div class="px-3 text-dark">DEMO</div>
-                                </a> </div>
+                    </div>
+                    <div class="col col-md-6 mb-5">
+                        <div class="row text-white mt-3 mt-md-0 mb-0 mx-auto mx-sm-auto">
+                            <p>2D Run 'N Gun <br> <i><a href="https://jasmineirada.com/obviouspalace/">Obvious
+                                        Palace</a></i></p>
+                            <p class="lead text-left">Full-fledged game complete with a promotional website and a demo
+                                reel. I managed a team of 6 to meet sprint
+                                deadlines and uphold high quality communication and collaborative workflows between
+                                different roles.</p>
+                        </div>
 
+                        <div class="mt-5">
+                            <a class="mx-2" href="https://github.com/magks/magic-missile"><i
+                                    class="fab fa-github fa-2x"></i></a>
+                            <a class="mx-2" href="https://jasmineirada.com/obviouspalace/"><i
+                                    class="fas fa-external-link-alt fa-2x"></i></a>
                         </div>
 
                     </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                data-aos-once="true" data-aos-anchor-placement="top-center">
+
+                <div class="row">
+                    <div class="col-md-6 mt-md-5"></div>
+                    <div class="col-md-6 mt-md-5">
+                        <h4 class="text-center text-sm-center text-md-right text-uppercase text-white mb-0">Escaping the
+                            Negativity</h4>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-6 mt-3"></div>
+                    <div class="col col-md-6 mt-md-3 my-2 text-white d-flex align-items-center">
+                        <a class=" badge badge-pill " href="#!">C#</a>
+                        <a class=" badge badge-pill " href="#!">Unity</a>
+                        <a class=" badge badge-pill " href="#!">Design</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="portfolio-item justify-content-center" data-toggle="modal"
+                            data-target="#portfolioModal1">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <!-- <i class="fas fa-external-link-alt fa-3x"></i> -->
+                                </div>
+                            </div>
+                            <img class="img-fluid "
+                                src="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png" alt="" />
+                        </div>
+                    </div>
                     <div class="col col-md-6 mb-5">
-                        <div class="row mt-3 mt-md-0 mb-0 mx-auto mx-sm-auto">
-                            <p class="lead text-left mb-lg-5">Freelancer is a free bootstrap theme created by Start
-                                Bootstrap. The
-                                download
-                                includes the complete source files including HTML, CSS, and JavaScript as well as
-                                optional SASS
-                                stylesheets for easy customization.</p>
-                            <p class="d-none d-lg-block text-uppercase mt-lg-5">Play it here:</p>
-                            <p class="d-lg-none mb-0 text-uppercase mt-lg-5 "><small>Play it here:</small></p>
+                        <div class="row text-white mt-3 mt-md-0 mb-0 mx-auto mx-sm-auto">
+                            <p><b>BEST GAME SPONSORED BY ACTIVISION</b><br>
+                                <i><a href="https://devpost.com/software/escaping-the-negativity">AthenaHacks
+                                        2019</a></i></p>
+                            <p class="lead text-left">A maze game symbolizing deep-seated negativity, based on struggles
+                                for women in technology.</p>
                         </div>
-                        <div class="row d-lg-none mx-auto mx-sm-auto d-flex ">
-                            <a class="pr-3 pr-md-2" href="#!"><i class="fab fa-itch-io fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-steam fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-app-store-ios fa-lg"></i></a>
-                            <a class="px-3 px-md-2" href="#!"><i class="fab fa-google-play fa-lg"></i></a>
-                        </div>
-                        <div class="row d-none d-lg-flex mx-auto mx-sm-auto align-items-center justify-content-left">
-                            <a class="pr-3" href="#!"><i class="fab fa-itch-io fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-steam fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-app-store-ios fa-2x"></i></a>
-                            <a class="pr-3" href="#!"><i class="fab fa-google-play fa-2x"></i></a>
+
+                        <div class="mt-5">
+                            <a class="mx-2" href="https://github.com/airada/AH_2019"><i
+                                    class="fab fa-github fa-2x"></i></a>
+                            <a class="mx-2" href="https://devpost.com/software/escaping-the-negativity"><i
+                                    class="fas fa-external-link-alt fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 
     <!-- Footer-->
-    <footer class="footer bg-dark  text-center">
+    <footer class="footer text-center">
         <div class="container">
             <div class="row">
                 <!-- Footer Social Icons-->
                 <div class="col mb-5 mb-lg-0">
-                    <h4 class=" mb-4">Diving Deep into Learning</h4>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/airada"><i class="fab fa-fw fa-github "
+                    <p class="name-custom mb-4">Diving Deep into Learning</p>
+                    <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://github.com/airada"><i
+                            class="fab fa-fw fa-github " style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://rninchan.itch.io/"><i
+                            class="fab fa-fw fa-itch-io " style="color:#FFFFFF;"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" target="_blank"
+                        href="https://www.linkedin.com/in/jasmineirada/"><i class="fab fa-fw fa-linkedin"
                             style="color:#FFFFFF;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://rninchan.itch.io/"><i class="fab fa-fw fa-itch-io "
-                            style="color:#FFFFFF;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/jasmineirada/"><i class="fab fa-fw fa-linkedin"
-                            style="color:#FFFFFF;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:jasmineirada@gmail.com"><i class="fas fa-fw fa-envelope"
+                    <a class="btn btn-outline-light btn-social mx-1" target="_blank"
+                        href="mailto:jasmineirada@gmail.com"><i class="fas fa-fw fa-envelope"
                             style="color:#FFFFFF;"></i></a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Copyright Section-->
-    <div class="copyright bg-dark py-4 text-center text-white">
+    <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright © Jasmine Irada 2020</small></div>
     </div>
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
@@ -431,7 +367,7 @@
         <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
                 class="fa fa-chevron-up"></i></a>
     </div>
-    
+
     <!-- Portfolio Modals-->
     <!-- Portfolio Modal 1-->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog"

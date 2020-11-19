@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProjectPreviewComponent implements OnInit {
   @Input() skills: string;
   @Input() image_thumbnail: any;
+  @Input() title: string;
   
   skill_list: Array<string>;
 

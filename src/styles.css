@@ -173,13 +173,12 @@ sup {
 
 a {
   line-height: 0;
-  color: #1abc9c;
+  color:#f8f9fa;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #117964;
-  text-decoration: underline;
+  color: var(--orange);
 }
 
 a:not([href]) {
@@ -10064,6 +10063,12 @@ h3 {
   font-size: 1.25rem;
 }
 
+.btn-social-custom {
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+}
+
 .btn-social {
   border-radius: 100%;
   display: inline-flex;
@@ -10103,13 +10108,13 @@ h3 {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #1abc9c;
+  color: var(--orange);
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #1abc9c;
+  color: var(--orange);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10131,11 +10136,11 @@ h3 {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #1abc9c;
+    background: var(--orange);
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #1abc9c;
+    background: #803300;
   }
 
   #mainNav.navbar-shrink {
@@ -10187,11 +10192,12 @@ h3 {
   top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
-  opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  opacity: 0.25;
+  background-color: #ffe6d5;
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
-  opacity: 1;
+  opacity: 0;
+  background-color: #ffe6d5;
 }
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
   font-size: 1.5rem;
