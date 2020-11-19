@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PortfolioComponent } from '../app/portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
+import { FiltersComponent } from './filters/filters.component';
 
 
 
@@ -11,7 +12,8 @@ import { ProjectPreviewComponent } from './project-preview/project-preview.compo
 const routes: Routes = [
   {path: 'Portfolio', component: PortfolioComponent},
   {path: 'About', component: AboutComponent},
-  {path: 'ProjectPreview', component: ProjectPreviewComponent}
+  {path: 'ProjectPreview', component: ProjectPreviewComponent},
+  {path: 'Filters', component: FiltersComponent}
 
 ];
 

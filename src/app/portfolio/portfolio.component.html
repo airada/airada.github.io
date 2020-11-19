@@ -34,22 +34,26 @@
                 <div class="divider-custom-line"></div>
             </div>
 
-            <p class="Lead text-center ">To be added.</p>
+            <div class="d-flex align-items-center justify-content-center">
+                <app-filters (selected_event)="get_selected($event)" title="Languages" items="Python,Java,C#,JavaScript,HTML/CSS"></app-filters>
+                <app-filters (selected_event)="get_selected($event)" title="Frameworks" items="Angular,Bootstrap,Jasmine,Flask"></app-filters>  
+                <app-filters (selected_event)="get_selected($event)" title="Software" items="Unity,Blender"></app-filters>    
+            </div>
+
             <!-- <div class="row  d-flex align-items-center justify-content-center">
                 <div class="d-flex align-items-center justify-content-center ml-4" *ngFor="let skill of skill_tags" >
-                    <h5 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill bg-warning text-white' >{{skill[1]}}</a></h5>
+                    <h5 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill border text-white' >{{skill[1]}}</a></h5>
                 </div>
-            </div>
+            </div> -->
             
-            <div class="row  d-flex align-items-center justify-content-center">
-                <app-project-preview class="cs unity design" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/1.png"> </app-project-preview>
-                <app-project-preview class="cpp unreal design"  skills="C++,Unreal,Level Design" image_thumbnail ="/assets/img/portfolio/2.png"></app-project-preview>
-                <app-project-preview class="python backend" skills="Python,Django,Backend Development" image_thumbnail ="/assets/img/portfolio/3.png"></app-project-preview>
-                <app-project-preview class="java mobile" skills="Java,Android Studio,Mobile Development" image_thumbnail ="/assets/img/portfolio/4.png"></app-project-preview>
-                <app-project-preview class="design" skills="C,Putty,System Designs" image_thumbnail ="/assets/img/portfolio/5.png"></app-project-preview>
-                <app-project-preview class="cs unity vr"  skills="C#,UnityVR,Oculus" image_thumbnail ="/assets/img/portfolio/6.png"></app-project-preview>
+            <div class="row d-flex align-items-center justify-content-center">
+                <app-project-preview class="cs unity design" title="Crystal Crysis" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/obviouspalace/start_screen.png"> </app-project-preview>
+                <app-project-preview class="unity design pm" title="Escaping the Negativity" skills="Unity,Art,Design,Project Management" image_thumbnail ="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png"></app-project-preview>
+                <app-project-preview class="python flask js htmlcss bootstrap" title="Mimi AI: Happy For You" skills="Python,Flask,JavaScript,HTML/CSS,Bootstrap" image_thumbnail ="/assets/img/portfolio/mimi/prototype.png"></app-project-preview>
+                <app-project-preview class="htmlcss bootstrap angular design" title="Personal Website" skills="HTML/CSS,Bootstrap,Angular,Design" image_thumbnail ="/assets/fish3.png"></app-project-preview>
+                <app-project-preview class="htmlcss js design" title="Digital Root" skills="HTML/CSS,JavaScript" image_thumbnail ="/assets/img/portfolio/digitalroot.png"></app-project-preview>
             </div>
-                             -->
+                            
         </div>
     </section>
 
