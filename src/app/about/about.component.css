@@ -1,10 +1,85 @@
-header {
-    background-image: url("src\assets\fish.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
+header, section, .navbar, footer {
+    background-color: #0b2228ff;
 }
+
+
+header {
+    background: url('src\assets\fish.svg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-color: #0b2228ff;
+}
+
+a.badge:hover, a.badge-pill:hover {
+    background-color: transparent;
+    color: white;
+    font-weight: normal;
+}
+
+a.badge, a.badge-pill, a.border {
+    background-color: #fd7e14;
+    font-weight: normal;
+}
+
+i a {
+    color: #fd7e14;
+}
+
+i a:hover {
+    color: #803300;
+}
+.navbar-nav li a {
+    text-align: right;
+    font-weight: normal;
+}
+
+.overlay {
+    background-color: #164450;
+}
+
+.navbar-nav {
+    font-size: small;
+}
+.name-text {
+    font-size: large;
+}
+.card {
+    background-color:#f8f9fa;
+}
+
+.copyright {
+    background-color:#051114ff;
+}
+
+.sidebar {
+    width: 100px;
+    position: fixed;
+    bottom: 75px;
+    left: 0;
+    overflow-x: hidden;
+}
+  
+  /* Style sidebar links */
+  .sidebar a {
+    text-decoration: none;
+    font-size: 20px;
+    color:#fd7e14;
+    display: block;
+  }
+  
+  /* Style links on mouse-over */
+  .sidebar a:hover {
+    color:#803300;
+  }
+
+.bottom-align-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 
 .card-size {
     width: 13rem;

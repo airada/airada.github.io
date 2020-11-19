@@ -1,56 +1,64 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
-        <button
-            class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-white text-secondary rounded"
-            type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="d-flex ml-auto">
-                <li class="nav-item mt-2 mx-0 mx-lg-1"><a
-                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary text-80" routerLink="/About"
-                        routerLinkActive="active">01. about</a></li>
-                <li class="nav-item mt-2 mx-0 mx-lg-1"><a
-                        class="nav-link px-0 px-lg-3 rounded js-scroll-trigger text-secondary  text-80" routerLink="/Portfolio"
-                        routerLinkActive="active">02. portfolio</a></li>
-                <li class="nav-item mx-0 mt-2 mx-lg-1"><a class="nav-link rounded js-scroll-trigger text-secondary  text-80"
-                    href="https://drive.google.com/file/d/1M2HDv7W1biawy5lCOmgKntVCTParV18W/view?usp=sharing">resume</a></li>
-            </ul>
+        <div class="container">
+            <a class="js-scroll-trigger" href="#page-top">JASMINE IRADA</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a
+                            class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/About"
+                            routerLinkActive="active">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a
+                            class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/Portfolio"
+                            routerLinkActive="active">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a
+                            class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" target="_blank"
+                            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">Resume</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <section class="page-section flex-wrapper text-dark mt-5 mb-0">
+    <section class="page-section flex-wrapper text-white mt-5 mb-0">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <h2 class="text-center text-uppercase mb-0">Portfolio</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
             </div>
 
-            <p class="Lead text-center">To be added.</p>
+            <div class="d-flex align-items-center justify-content-center">
+                <app-filters (selected_event)="get_selected($event)" title="Languages" items="Python,Java,C#,JavaScript,HTML/CSS"></app-filters>
+                <app-filters (selected_event)="get_selected($event)" title="Frameworks" items="Angular,Bootstrap,Jasmine,Flask"></app-filters>  
+                <app-filters (selected_event)="get_selected($event)" title="Software" items="Unity,Blender"></app-filters>    
+            </div>
+
             <!-- <div class="row  d-flex align-items-center justify-content-center">
                 <div class="d-flex align-items-center justify-content-center ml-4" *ngFor="let skill of skill_tags" >
-                    <h5 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill bg-warning text-white' >{{skill[1]}}</a></h5>
+                    <h5 ><a id="{{skill[0]}}" (click)="add_skill(skill[0])" class='badge badge-pill border text-white' >{{skill[1]}}</a></h5>
                 </div>
-            </div>
+            </div> -->
             
-            <div class="row  d-flex align-items-center justify-content-center">
-                <app-project-preview class="cs unity design" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/1.png"> </app-project-preview>
-                <app-project-preview class="cpp unreal design"  skills="C++,Unreal,Level Design" image_thumbnail ="/assets/img/portfolio/2.png"></app-project-preview>
-                <app-project-preview class="python backend" skills="Python,Django,Backend Development" image_thumbnail ="/assets/img/portfolio/3.png"></app-project-preview>
-                <app-project-preview class="java mobile" skills="Java,Android Studio,Mobile Development" image_thumbnail ="/assets/img/portfolio/4.png"></app-project-preview>
-                <app-project-preview class="design" skills="C,Putty,System Designs" image_thumbnail ="/assets/img/portfolio/5.png"></app-project-preview>
-                <app-project-preview class="cs unity vr"  skills="C#,UnityVR,Oculus" image_thumbnail ="/assets/img/portfolio/6.png"></app-project-preview>
+            <div class="row d-flex align-items-center justify-content-center">
+                <app-project-preview class="cs unity design" title="Crystal Crysis" skills="C#,Unity,3D Design" image_thumbnail="/assets/img/portfolio/obviouspalace/start_screen.png"> </app-project-preview>
+                <app-project-preview class="unity design pm" title="Escaping the Negativity" skills="Unity,Art,Design,Project Management" image_thumbnail ="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png"></app-project-preview>
+                <app-project-preview class="python flask js htmlcss bootstrap" title="Mimi AI: Happy For You" skills="Python,Flask,JavaScript,HTML/CSS,Bootstrap" image_thumbnail ="/assets/img/portfolio/mimi/prototype.png"></app-project-preview>
+                <app-project-preview class="htmlcss bootstrap angular design" title="Personal Website" skills="HTML/CSS,Bootstrap,Angular,Design" image_thumbnail ="/assets/fish3.png"></app-project-preview>
+                <app-project-preview class="htmlcss js design" title="Digital Root" skills="HTML/CSS,JavaScript" image_thumbnail ="/assets/img/portfolio/digitalroot.png"></app-project-preview>
             </div>
-                             -->
+                            
         </div>
     </section>
 
     <!-- Footer-->
-    <footer class="footer bg-dark text-center">
+    <footer class="footer text-center">
         <div class="container">
             <div class="row">
                 <!-- Footer Social Icons-->
@@ -69,7 +77,7 @@
         </div>
     </footer>
     <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-white bg-dark">
+    <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright © Jasmine Irada 2020</small></div>
     </div>
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->

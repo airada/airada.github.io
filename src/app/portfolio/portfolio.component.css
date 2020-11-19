@@ -1,3 +1,25 @@
+header, section, .navbar, footer {
+    background-color: #0b2228ff;
+}
+
+.navbar-nav li a {
+    text-align: right;
+    font-weight: normal;
+}
+.navbar-nav {
+    font-size: small;
+}
+.copyright {
+    background-color:#051114ff;
+}
+
+a.badge:hover, a.badge-pill:hover {
+    background-color: #fd7e14;
+}
+
+a.badge:active, a.badge-pill:active {
+    background-color: #803300;
+}
 .hidden {
     display: none;
 }
