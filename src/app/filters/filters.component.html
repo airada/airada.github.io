@@ -1,13 +1,12 @@
 <div class="container">
     <form class="dropdown p-0">
-        <div class="row mx-auto">
-            <div (click)="input.focus()" class="textarea mt-2 d-flex flex-wrap">
+        <div (click)="input.focus()" class="row mx-auto">
+            <div class="textarea mt-2 d-flex flex-wrap">
                 <div class="mt-2 mx-2">
                     <span><i class="fas fa-tags fa-lg"></i></span>
                 </div>
-
-                <div *ngFor="let selected_item of selected_list">
-                    <div class="col mt-2 mx-1 p-0">
+                <div class="d-flex align-items-center" *ngFor="let selected_item of selected_list">
+                    <div class="col p-0 mx-1">
                         <span class="badge badge-pill"
                             (click)="add_selected(item_list.indexOf(selected_item), selected_item)">{{selected_item}}
                             <i class="far fa-times-circle fa-lg"></i></span>
@@ -15,16 +14,18 @@
                 </div>
 
                 <div class="mt-2 ml-0 p-0" style="min-width: 10%;">
-                    <span #input contenteditable="true" class="text"></span>
+                    <input #input type="text" placeholder="&#xf055; Add skills" size="6">
                 </div>
             </div>
             <div class="col p-0 d-flex justify-content-end">
-                <span class="pt-2 my-auto mr-2"><i class="fas fa-caret-down fa-2x" style="color:white;"></i></span>
+                <span class="pt-2 my-auto mr-2" (click)="toggle_content();">
+                    <i class="fas fa-caret-down fa-2x" style="color:white;"></i>
+            </span>
             </div>
         </div>
 
-        <div class="row mx-auto">
-            <div class="dropdown-content bg-white" style="left:0;">
+        <div class="row mx-auto" >
+            <div id="dropdown-content" class="dropdown-content bg-white hide" style="left:0;">
                 <div *ngFor="let item of item_list">
                     <div [id]="item_list.indexOf(item)" class="dropdown-item"
                         (click)="add_selected(item_list.indexOf(item), item)">
@@ -35,6 +36,7 @@
                             </label>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
