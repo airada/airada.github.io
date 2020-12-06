@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, ViewChild, ElementRef, EventEmitter, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -6,6 +6,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
+  @ViewChild('input') userInput: ElementRef;
   @Input() title: string;
   @Input() items: string;
   @Output() selected_event = new EventEmitter<string>();
@@ -19,15 +20,41 @@ export class FiltersComponent implements OnInit {
     this.item_list = this.items.split(",");
   }
 
-  change_btn_color(item) {
+  @HostListener('keyup') onKeyUp() {
+    this.resize();
+  }
+
+  @HostListener('focus') onFocus() {
+    this.resize();
+  }
+
+  private resize() {
+    this.userInput.nativeElement.setAttribute('size', this.userInput.nativeElement.value.length);
+  }
+
+  show_content () {
+    var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
+    inputValue.classList.remove('hide');
+  }
+
+  hide_content () {
+    var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
+    inputValue.classList.add('hide');
+  }
+
+  toggle_content() {
+    var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
+    inputValue.classList.toggle('hide');
+  }
+
+  change_bg_color(item) {
     console.log(item);
     var inputValue = (<HTMLInputElement>document.getElementById(item));
     inputValue.classList.toggle('bg-selected');
-    
   }
 
   add_selected(component, item) {
-    this.change_btn_color(component);
+    this.change_bg_color(component);
     if (this.selected_list.indexOf(item) == -1) {
       this.selected_list.push(item);
     } else {
