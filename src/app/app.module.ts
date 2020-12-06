@@ -7,6 +7,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 import { FiltersComponent } from './filters/filters.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select'; 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,15 @@ import { FiltersComponent } from './filters/filters.component';
     PortfolioComponent,
     AboutComponent,
     ProjectPreviewComponent,
-    FiltersComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

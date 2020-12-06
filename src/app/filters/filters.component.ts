@@ -10,7 +10,8 @@ export class FiltersComponent implements OnInit {
   @Input() items: string;
   @Output() selected_event = new EventEmitter<string>();
   item_list: Array<string>;
-
+  selected_list: any = [];
+  
   constructor() { 
   }
 
@@ -18,7 +19,21 @@ export class FiltersComponent implements OnInit {
     this.item_list = this.items.split(",");
   }
 
-  add_selected(item) {
+  change_btn_color(item) {
+    console.log(item);
+    var inputValue = (<HTMLInputElement>document.getElementById(item));
+    inputValue.classList.toggle('bg-selected');
+    
+  }
+
+  add_selected(component, item) {
+    this.change_btn_color(component);
+    if (this.selected_list.indexOf(item) == -1) {
+      this.selected_list.push(item);
+    } else {
+      this.selected_list.splice(this.selected_list.indexOf(item), 1);
+    }
+    
     switch(item) { 
       case "C#": { 
         this.selected_event.emit("cs");
@@ -41,8 +56,6 @@ export class FiltersComponent implements OnInit {
         break; 
       } 
    } 
-    
+
   }
-
-
 }
