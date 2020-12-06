@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import {FormControl} from '@angular/forms';
+
+
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -9,6 +12,8 @@ export class PortfolioComponent implements OnInit {
   skill_tags: any = [["cs", "C#"], ["cpp", "C++"], ["python", "PYTHON"], ["java", "JAVA"], ["unity", "UNITY"], ["unreal", "UNREAL"], ["design", "DESIGN"], ["backend", "BACKEND"], ["mobile", "MOBILE"], ["vr", "VIRTUAL REALITY"], ["clear", "CLEAR ALL"]];
   chosen_skill: any = [];
   selected_skill: any;
+  toppings = new FormControl();
+  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
 
   constructor() { }
 
@@ -92,7 +97,6 @@ export class PortfolioComponent implements OnInit {
     let elements = document.querySelectorAll("." + skill);
     elements.forEach(element => {
       element.classList.toggle('hidden', flag);
-      console.log(skill + ": " + element.classList);
     });
   }
 

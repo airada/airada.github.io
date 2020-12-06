@@ -1,14 +1,44 @@
-<div class="dropdown mx-3">
-    <button class="btn  border text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      {{title}}
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <div *ngFor="let item of item_list">
-            <div class="checkbox dropdown-item my-3" >
-                <label>
-                    <input type="checkbox" (click)="add_selected(item)"> {{item}}
-                </label>
+<div class="container">
+    <form class="dropdown p-0">
+        <div class="row mx-auto">
+            <div (click)="input.focus()" class="textarea mt-2 d-flex flex-wrap">
+                <div class="mt-2 mx-2">
+                    <span><i class="fas fa-tags fa-lg"></i></span>
+                </div>
+
+                <div *ngFor="let selected_item of selected_list">
+                    <div class="col mt-2 mx-1 p-0">
+                        <span class="badge badge-pill"
+                            (click)="add_selected(item_list.indexOf(selected_item), selected_item)">{{selected_item}}
+                            <i class="far fa-times-circle fa-lg"></i></span>
+                    </div>
+                </div>
+
+                <div class="mt-2 ml-0 p-0" style="min-width: 10%;">
+                    <span #input contenteditable="true" class="text"></span>
+                </div>
+            </div>
+            <div class="col p-0 d-flex justify-content-end">
+                <span class="pt-2 my-auto mr-2"><i class="fas fa-caret-down fa-2x" style="color:white;"></i></span>
             </div>
         </div>
-    </div>
+
+        <div class="row mx-auto">
+            <div class="dropdown-content bg-white" style="left:0;">
+                <div *ngFor="let item of item_list">
+                    <div [id]="item_list.indexOf(item)" class="dropdown-item"
+                        (click)="add_selected(item_list.indexOf(item), item)">
+                        <div class="checkbox-hide">
+                            <label>
+                                <input type="checkbox" (click)="add_selected(item_list.indexOf(item), item)">
+                                {{item}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+    </form>
 </div>
