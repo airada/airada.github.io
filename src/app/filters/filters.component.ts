@@ -11,13 +11,16 @@ export class FiltersComponent implements OnInit {
   @Input() items: string;
   @Output() selected_event = new EventEmitter<string>();
   item_list: Array<string>;
+  suggestion_list: Array<string>;
   selected_list: any = [];
+  searchInput: string = "";
   
   constructor() { 
   }
 
   ngOnInit() {
     this.item_list = this.items.split(",");
+    this.suggestion_list = this.item_list.slice();
   }
 
   @HostListener('keyup') onKeyUp() {
@@ -26,6 +29,50 @@ export class FiltersComponent implements OnInit {
 
   @HostListener('focus') onFocus() {
     this.resize();
+  }
+
+  reset_list(){
+    this.suggestion_list = this.item_list.slice();
+  }
+
+  update_suggestions(list) {
+    this.suggestion_list.splice(0, this.suggestion_list.indexOf(list[0]));
+    var last = this.suggestion_list.indexOf(list.pop());
+    console.log(last);
+    this.suggestion_list.splice(last + 1, this.suggestion_list.length - last);
+
+  }
+
+  search(str) {
+    var suggestions = [];
+    const regex : RegExp = new RegExp('^'+str+'+');
+
+    for(let i = 0; i < this.suggestion_list.length; i++) {
+      if(this.suggestion_list[i].toLocaleLowerCase().search(regex) == -1) {
+        console.log("mismatch")
+      } else {
+        suggestions.push(this.suggestion_list[i]);
+        console.log("match");
+      }
+    }
+    console.log(suggestions);
+    this.update_suggestions(suggestions);
+  }
+
+  modelChange(str) {
+    if (!str){
+      this.reset_list();
+      return;
+    }
+    this.searchInput = str;
+    console.log("searching:", this.searchInput)
+    this.search(this.searchInput.toLowerCase());
+  }
+
+  value(item){
+    console.log("selecting: ", item);
+    this.userInput.nativeElement.value = "";
+    this.reset_list();
   }
 
   private resize() {
@@ -55,6 +102,7 @@ export class FiltersComponent implements OnInit {
 
   add_selected(component, item) {
     this.change_bg_color(component);
+    this.reset_list();
     if (this.selected_list.indexOf(item) == -1) {
       this.selected_list.push(item);
     } else {
