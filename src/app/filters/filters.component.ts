@@ -76,7 +76,16 @@ export class FiltersComponent implements OnInit {
   }
 
   value(item){
-    console.log("selecting: ", item);
+    const str = item.toLowerCase().charAt(0).toUpperCase() + item.toLowerCase().slice(1);
+    console.log("selecting: ", str);
+
+    if(this.item_list.includes(str) && (this.selected_list.includes(str) == false)) {
+      this.selected_list.push(str);
+    } else if (this.selected_list.includes(str)) {
+      this.selected_list.splice(this.selected_list.indexOf(str), 1);
+    }
+    console.log("select_list:", this.selected_list);
+    
     this.userInput.nativeElement.value = "";
     this.reset_list();
   }
