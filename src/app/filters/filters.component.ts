@@ -14,8 +14,9 @@ export class FiltersComponent implements OnInit {
   suggestion_list: Array<string>;
   selected_list: any = [];
   searchInput: string = "";
-  
-  constructor() { 
+  arrowkeyLocation = 0;
+
+  constructor() {
   }
 
   ngOnInit() {
@@ -31,7 +32,25 @@ export class FiltersComponent implements OnInit {
     this.resize();
   }
 
-  reset_list(){
+  keydown(event: KeyboardEvent) {
+    switch (event.keyCode) {
+        case 38: // this is the ascii of arrow up
+                 this.arrowkeyLocation--;
+                 console.log(this.arrowkeyLocation);
+                 break;
+        case 40: // this is the ascii of arrow down
+                 this.arrowkeyLocation++;
+                 console.log(this.arrowkeyLocation);
+                 break;
+    }
+}
+
+  reset_input() {
+    this.userInput.nativeElement.value = "";
+    this.userInput.nativeElement.setAttribute('size', 6);
+  }
+
+  reset_list() {
     this.suggestion_list = this.item_list.slice();
   }
 
@@ -42,7 +61,7 @@ export class FiltersComponent implements OnInit {
 
   }
 
-  includeBG(item){
+  includeBG(item) {
     if (this.selected_list.includes(item)) {
       return "dropdown-item bg-selected";
     } else {
@@ -52,10 +71,10 @@ export class FiltersComponent implements OnInit {
 
   search(str) {
     var suggestions = [];
-    const regex : RegExp = new RegExp('^'+str+'+');
+    const regex: RegExp = new RegExp('^' + str + '+');
 
-    for(let i = 0; i < this.suggestion_list.length; i++) {
-      if(this.suggestion_list[i].toLocaleLowerCase().search(regex) != -1) {
+    for (let i = 0; i < this.suggestion_list.length; i++) {
+      if (this.suggestion_list[i].toLocaleLowerCase().search(regex) != -1) {
         suggestions.push(this.suggestion_list[i]);
       }
     }
@@ -66,7 +85,7 @@ export class FiltersComponent implements OnInit {
   modelChange(str) {
     this.show_content();
 
-    if (!str){
+    if (!str) {
       this.reset_list();
       return;
     }
@@ -75,18 +94,18 @@ export class FiltersComponent implements OnInit {
     this.search(this.searchInput.toLowerCase());
   }
 
-  value(item){
+  value(item) {
     const str = item.toLowerCase().charAt(0).toUpperCase() + item.toLowerCase().slice(1);
     console.log("selecting: ", str);
 
-    if(this.item_list.includes(str) && (this.selected_list.includes(str) == false)) {
+    if (this.item_list.includes(str) && (this.selected_list.includes(str) == false)) {
       this.selected_list.push(str);
     } else if (this.selected_list.includes(str)) {
       this.selected_list.splice(this.selected_list.indexOf(str), 1);
     }
     console.log("select_list:", this.selected_list);
-    
-    this.userInput.nativeElement.value = "";
+
+    this.reset_input();
     this.reset_list();
   }
 
@@ -94,12 +113,12 @@ export class FiltersComponent implements OnInit {
     this.userInput.nativeElement.setAttribute('size', this.userInput.nativeElement.value.length);
   }
 
-  show_content () {
+  show_content() {
     var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
     inputValue.classList.remove('hide');
   }
 
-  hide_content () {
+  hide_content() {
     var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
     inputValue.classList.add('hide');
   }
@@ -109,42 +128,37 @@ export class FiltersComponent implements OnInit {
     inputValue.classList.toggle('hide');
   }
 
-  // change_bg_color(item) {
-  //   console.log(item);
-  //   var inputValue = (<HTMLInputElement>document.getElementById(item));
-  //   inputValue.classList.toggle('bg-selected');
-  // }
-
-  add_selected(component, item) {
+  add_selected(item) {
+    this.reset_input();
     this.reset_list();
     if (this.selected_list.indexOf(item) == -1) {
       this.selected_list.push(item);
     } else {
       this.selected_list.splice(this.selected_list.indexOf(item), 1);
     }
-    
-    switch(item) { 
-      case "C#": { 
+
+    switch (item) {
+      case "C#": {
         this.selected_event.emit("cs");
-        break; 
+        break;
       }
-      case "Project Management": { 
+      case "Project Management": {
         this.selected_event.emit("pm");
-        break; 
+        break;
       }
-      case "HTML/CSS": { 
+      case "HTML/CSS": {
         this.selected_event.emit("htmlcss");
-        break; 
+        break;
       }
-      case "JavaScript": { 
+      case "JavaScript": {
         this.selected_event.emit("js");
-        break; 
+        break;
       }
-      default: { 
+      default: {
         this.selected_event.emit(item.toLowerCase());
-        break; 
-      } 
-   } 
+        break;
+      }
+    }
 
   }
 }
