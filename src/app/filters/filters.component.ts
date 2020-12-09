@@ -38,9 +38,16 @@ export class FiltersComponent implements OnInit {
   update_suggestions(list) {
     this.suggestion_list.splice(0, this.suggestion_list.indexOf(list[0]));
     var last = this.suggestion_list.indexOf(list.pop());
-    console.log(last);
     this.suggestion_list.splice(last + 1, this.suggestion_list.length - last);
 
+  }
+
+  includeBG(item){
+    if (this.selected_list.includes(item)) {
+      return "dropdown-item bg-selected";
+    } else {
+      return "dropdown-item";
+    }
   }
 
   search(str) {
@@ -48,18 +55,17 @@ export class FiltersComponent implements OnInit {
     const regex : RegExp = new RegExp('^'+str+'+');
 
     for(let i = 0; i < this.suggestion_list.length; i++) {
-      if(this.suggestion_list[i].toLocaleLowerCase().search(regex) == -1) {
-        console.log("mismatch")
-      } else {
+      if(this.suggestion_list[i].toLocaleLowerCase().search(regex) != -1) {
         suggestions.push(this.suggestion_list[i]);
-        console.log("match");
       }
     }
-    console.log(suggestions);
+
     this.update_suggestions(suggestions);
   }
 
   modelChange(str) {
+    this.show_content();
+
     if (!str){
       this.reset_list();
       return;
@@ -94,14 +100,13 @@ export class FiltersComponent implements OnInit {
     inputValue.classList.toggle('hide');
   }
 
-  change_bg_color(item) {
-    console.log(item);
-    var inputValue = (<HTMLInputElement>document.getElementById(item));
-    inputValue.classList.toggle('bg-selected');
-  }
+  // change_bg_color(item) {
+  //   console.log(item);
+  //   var inputValue = (<HTMLInputElement>document.getElementById(item));
+  //   inputValue.classList.toggle('bg-selected');
+  // }
 
   add_selected(component, item) {
-    this.change_bg_color(component);
     this.reset_list();
     if (this.selected_list.indexOf(item) == -1) {
       this.selected_list.push(item);
