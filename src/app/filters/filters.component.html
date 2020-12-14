@@ -1,57 +1,60 @@
 <div class="container">
     <form class="dropdown p-0">
-        <div (click)="input.focus()" class="row mx-auto">
-            <div class="textarea mt-2 pr-2 d-flex flex-wrap">
-                <div class="mt-2 mx-2">
+        <div  class="row mx-auto">
+            <div (click)="input.focus()" class="col-11 px-1 textarea mt-2 d-flex flex-wrap">
+                <div class="my-auto mx-1">
                     <span><i class="fas fa-tags fa-lg"></i></span>
                 </div>
 
                 <div class="d-flex align-items-center py-1" *ngFor="let selected_item of selected_list">
                     <div class="col p-0 mx-1">
                         <span class="badge badge-pill"
-                            (click)="add_selected(item_list.indexOf(selected_item), selected_item)">{{selected_item}}
+                            (click)="add_selected(selected_item)">{{selected_item}}
                             <i class="far fa-times-circle fa-lg"></i></span>
                     </div>
                 </div>
 
-                <div class="ml-0 py-1 px-0 d-flex align-items-center" style="min-width: 10%;">
-                    <input #input 
+                <div class="m-0 p-0 d-flex align-items-center" style="min-width: 10%;">
+                    <input id="focused" #input 
                     (ngModelChange)="modelChange($event)"
                     [ngModel]="searchInput"
                     [ngModelOptions]="{standalone: true}"
                     (keydown)="keydown($event);"
                     (keyup.enter)="value(input.value)"
+                    (focus)="show_content();"
+                    (blur)="blurred($event.target.value);"
                     type="text"
                     placeholder="&#xf055; Filter skills"
-                    size="6">
+                    size="6"
+                    class="px-1">
                 </div>
 
-                <!-- <div class="col mr-2 d-flex align-items-center justify-content-end">
-                    <span>
-                        <i class="fas fa-times-circle fa-lg" style="color: white;"></i>
+                <div *ngIf="selected_list.length > 0" class="col p-1 d-flex align-items-center justify-content-end">
+                    <span (click)="clear();">
+                        <i class="fas fa-times-circle fa-lg"></i>
                     </span>
-                </div> -->
+                </div>
 
             </div>
 
-            <div class="col p-0 d-flex justify-content-end">
-                <span class="pt-2 my-auto mr-2" (click)="toggle_content();">
-                    <i class="fas fa-caret-down fa-2x" style="color:white;"></i>
+            <div id="caret" (click)="toggle_content();" class="col-1 p-0 mt-2 d-flex justify-content-end">
+                <span class="my-auto mx-auto p-2" >
+                    <i class="fas fa-caret-down fa-2x"></i>
                 </span>
             </div>
         </div>
 
         <div class="row mx-auto">
-            <div id="dropdown-content" class="dropdown-content bg-white hide" style="left:0;">
+            <div (mousedown)="item();" id="dropdown-content" class="dropdown-content bg-white hide" style="left:0;">
                 <div *ngFor="let item of suggestion_list; let i = index" >
-                    <div [id]="item_list.indexOf(item)"
+                    <div  [id]="item_list.indexOf(item)"
                         [ngClass]="includeBG(item)"
                         (click)="add_selected(item)" 
                         [class.active]="i == arrowkeyLocation"
-                        (keyup.enter)="add_selected(item)">
+                        (focus)="i == arrowkeyLocation">
                         <div class="checkbox-hide">
                             <label>
-                                <input type="checkbox" (click)="add_selected(item)" (keyup.enter)="add_selected(item)">
+                                <input type="checkbox" (click)="add_selected(item)">
                                 {{item}}
                             </label>
                         </div>
