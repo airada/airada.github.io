@@ -3,8 +3,35 @@
     color: white;
 }
 
-.fa-caret-down {
+.fa-times-circle {
     cursor: pointer;
+    color: white;
+}
+
+.fa-caret-down {
+    color: #164450;
+    cursor: pointer;
+}
+
+#caret:hover span > .fa-caret-down {
+    color: white;
+}
+
+#caret {
+    background-color: white;
+    cursor: pointer;
+}
+
+#caret:hover {
+    background-color: transparent;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.fa-times-circle:hover {
+    color: gray;
 }
 
 /* Dropdown */
@@ -15,7 +42,7 @@
 
 .textarea {
     border: 2px solid white; 
-    width: 100%;
+    
     min-height: 40px;
     border-radius: 5px 0px 0px 5px;
     background-color:transparent;

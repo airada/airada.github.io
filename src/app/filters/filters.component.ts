@@ -1,10 +1,12 @@
-import { Component, Input, Output, ViewChild, ElementRef, EventEmitter, OnInit, HostListener } from '@angular/core';
+import { Component, Input, Output, ViewChild, Renderer2, ElementRef, EventEmitter, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
   styleUrls: ['./filters.component.css']
 })
+
+
 export class FiltersComponent implements OnInit {
   @ViewChild('input') userInput: ElementRef;
   @Input() title: string;
@@ -15,6 +17,8 @@ export class FiltersComponent implements OnInit {
   selected_list: any = [];
   searchInput: string = "";
   arrowkeyLocation = 0;
+  content = false;
+  scrollLocation = 0;
 
   constructor() {
   }
@@ -35,15 +39,76 @@ export class FiltersComponent implements OnInit {
   keydown(event: KeyboardEvent) {
     switch (event.keyCode) {
         case 38: // this is the ascii of arrow up
-                 this.arrowkeyLocation--;
-                 console.log(this.arrowkeyLocation);
-                 break;
+          if(this.arrowkeyLocation >= 1) {
+            this.arrowkeyLocation--;
+            this.scrollLocation = this.scrollLocation - 30;
+            document.getElementById("dropdown-content").scrollTop = this.scrollLocation;
+          
+          }
+          break;
         case 40: // this is the ascii of arrow down
-                 this.arrowkeyLocation++;
-                 console.log(this.arrowkeyLocation);
-                 break;
+          if(this.arrowkeyLocation < this.item_list.length - 1){
+            this.arrowkeyLocation++;
+            if (this.arrowkeyLocation != 0) {
+              this.scrollLocation = this.scrollLocation + 30;
+            }
+            document.getElementById("dropdown-content").scrollTop = this.scrollLocation;
+          }       
+          break;
+        case 13:
+          this.add_selected(this.suggestion_list[this.arrowkeyLocation]);
+          break;
+        case 10:
+          this.add_selected(this.suggestion_list[this.arrowkeyLocation]);
+          break;
     }
-}
+  }
+
+  clear() {
+    console.log("clear all");
+
+    for(let i = 0; i < this.selected_list.length; i++){
+      switch (this.selected_list[i]) {
+        case "C#": {
+          this.selected_event.emit("cs");
+          break;
+        }
+        case "Project Management": {
+          this.selected_event.emit("pm");
+          break;
+        }
+        case "HTML/CSS": {
+          this.selected_event.emit("htmlcss");
+          break;
+        }
+        case "JavaScript": {
+          this.selected_event.emit("js");
+          break;
+        }
+        default: {
+          this.selected_event.emit(this.selected_list[i].toLowerCase());
+          break;
+        }
+      }
+    }
+
+    this.selected_list = [];
+    console.log("selected list:", this.selected_list);
+  }
+
+  item() {
+    this.show_content();
+    console.log("content is focused");
+    this.content = true;
+  }
+
+  blurred(ev) {
+    if(this.content){
+      this.show_content();
+    } else {
+      this.hide_content();
+    }
+  }
 
   reset_input() {
     this.userInput.nativeElement.value = "";
@@ -55,10 +120,10 @@ export class FiltersComponent implements OnInit {
   }
 
   update_suggestions(list) {
+    this.arrowkeyLocation = 0;
     this.suggestion_list.splice(0, this.suggestion_list.indexOf(list[0]));
     var last = this.suggestion_list.indexOf(list.pop());
     this.suggestion_list.splice(last + 1, this.suggestion_list.length - last);
-
   }
 
   includeBG(item) {
@@ -71,6 +136,7 @@ export class FiltersComponent implements OnInit {
 
   search(str) {
     var suggestions = [];
+    this.reset_list();
     const regex: RegExp = new RegExp('^' + str + '+');
 
     for (let i = 0; i < this.suggestion_list.length; i++) {
@@ -90,30 +156,36 @@ export class FiltersComponent implements OnInit {
       return;
     }
     this.searchInput = str;
-    console.log("searching:", this.searchInput)
     this.search(this.searchInput.toLowerCase());
   }
 
   value(item) {
     const str = item.toLowerCase().charAt(0).toUpperCase() + item.toLowerCase().slice(1);
-    console.log("selecting: ", str);
 
     if (this.item_list.includes(str) && (this.selected_list.includes(str) == false)) {
-      this.selected_list.push(str);
+      this.add_selected(str);
     } else if (this.selected_list.includes(str)) {
+      this.reset_input();
+      this.reset_list();
       this.selected_list.splice(this.selected_list.indexOf(str), 1);
     }
     console.log("select_list:", this.selected_list);
 
-    this.reset_input();
-    this.reset_list();
+
   }
 
   private resize() {
-    this.userInput.nativeElement.setAttribute('size', this.userInput.nativeElement.value.length);
+    if (this.userInput.nativeElement.value.length == 0){
+      this.userInput.nativeElement.setAttribute('size', 6);
+    } else if (this.userInput.nativeElement.value.length == 1){
+      this.userInput.nativeElement.setAttribute('size', 1);
+    } else {
+      this.userInput.nativeElement.setAttribute('size', Math.round(this.userInput.nativeElement.value.length/2));
+    }
   }
 
   show_content() {
+    this.content = false;
     var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
     inputValue.classList.remove('hide');
   }
