@@ -1,14 +1,21 @@
-import { Component, Input, Output, ViewChild, Renderer2, ElementRef, EventEmitter, OnInit, HostListener } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  ViewChild,
+  ElementRef,
+  EventEmitter,
+  OnInit,
+  HostListener,
+} from "@angular/core";
 
 @Component({
-  selector: 'app-filters',
-  templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.css']
+  selector: "app-filters",
+  templateUrl: "./filters.component.html",
+  styleUrls: ["./filters.component.css"],
 })
-
-
 export class FiltersComponent implements OnInit {
-  @ViewChild('input') userInput: ElementRef;
+  @ViewChild("input") userInput: ElementRef;
   @Input() title: string;
   @Input() items: string;
   @Output() selected_event = new EventEmitter<string>();
@@ -20,90 +27,76 @@ export class FiltersComponent implements OnInit {
   content = false;
   scrollLocation = 0;
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     this.item_list = this.items.split(",");
     this.suggestion_list = this.item_list.slice();
   }
 
-  @HostListener('keyup') onKeyUp() {
+  @HostListener("keyup") onKeyUp() {
     this.resize();
   }
 
-  @HostListener('focus') onFocus() {
+  @HostListener("focus") onFocus() {
     this.resize();
   }
 
   keydown(event: KeyboardEvent) {
     switch (event.keyCode) {
-        case 38: // this is the ascii of arrow up
-          if(this.arrowkeyLocation >= 1) {
-            this.arrowkeyLocation--;
-            this.scrollLocation = this.scrollLocation - 30;
-            document.getElementById("dropdown-content").scrollTop = this.scrollLocation;
-          
+      case 38: // this is the ascii of arrow up
+        if (this.arrowkeyLocation >= 1) {
+          this.arrowkeyLocation--;
+          this.scrollLocation = this.scrollLocation - 30;
+          document.getElementById(
+            "dropdown-content"
+          ).scrollTop = this.scrollLocation;
+        }
+        break;
+      case 40: // this is the ascii of arrow down
+        if (this.arrowkeyLocation < this.item_list.length - 1) {
+          this.arrowkeyLocation++;
+          if (this.arrowkeyLocation != 0) {
+            this.scrollLocation = this.scrollLocation + 30;
           }
-          break;
-        case 40: // this is the ascii of arrow down
-          if(this.arrowkeyLocation < this.item_list.length - 1){
-            this.arrowkeyLocation++;
-            if (this.arrowkeyLocation != 0) {
-              this.scrollLocation = this.scrollLocation + 30;
-            }
-            document.getElementById("dropdown-content").scrollTop = this.scrollLocation;
-          }       
-          break;
-        case 13:
-          this.add_selected(this.suggestion_list[this.arrowkeyLocation]);
-          break;
-        case 10:
-          this.add_selected(this.suggestion_list[this.arrowkeyLocation]);
-          break;
+          document.getElementById(
+            "dropdown-content"
+          ).scrollTop = this.scrollLocation;
+        }
+        break;
+      case 13:
+        this.add_selected(this.suggestion_list[this.arrowkeyLocation]);
+        break;
+      case 10:
+        this.add_selected(this.suggestion_list[this.arrowkeyLocation]);
+        break;
+      case 8:
+        if (
+          this.userInput.nativeElement.value == "" &&
+          this.selected_list.length > 0
+        ) {
+          this.emit_event(this.selected_list.pop());
+        }
+        break;
     }
   }
 
   clear() {
-    console.log("clear all");
 
-    for(let i = 0; i < this.selected_list.length; i++){
-      switch (this.selected_list[i]) {
-        case "C#": {
-          this.selected_event.emit("cs");
-          break;
-        }
-        case "Project Management": {
-          this.selected_event.emit("pm");
-          break;
-        }
-        case "HTML/CSS": {
-          this.selected_event.emit("htmlcss");
-          break;
-        }
-        case "JavaScript": {
-          this.selected_event.emit("js");
-          break;
-        }
-        default: {
-          this.selected_event.emit(this.selected_list[i].toLowerCase());
-          break;
-        }
-      }
+    for (let i = 0; i < this.selected_list.length; i++) {
+      this.emit_event(this.selected_list[i]);
     }
 
     this.selected_list = [];
-    console.log("selected list:", this.selected_list);
   }
 
   item() {
     this.show_content();
-    console.log("content is focused");
     this.content = true;
   }
 
   blurred(ev) {
-    if(this.content){
+    if (this.content) {
       this.show_content();
     } else {
       this.hide_content();
@@ -112,7 +105,7 @@ export class FiltersComponent implements OnInit {
 
   reset_input() {
     this.userInput.nativeElement.value = "";
-    this.userInput.nativeElement.setAttribute('size', 6);
+    this.userInput.nativeElement.setAttribute("size", 6);
   }
 
   reset_list() {
@@ -137,7 +130,7 @@ export class FiltersComponent implements OnInit {
   search(str) {
     var suggestions = [];
     this.reset_list();
-    const regex: RegExp = new RegExp('^' + str + '+');
+    const regex: RegExp = new RegExp("^" + str + "+");
 
     for (let i = 0; i < this.suggestion_list.length; i++) {
       if (this.suggestion_list[i].toLocaleLowerCase().search(regex) != -1) {
@@ -160,44 +153,54 @@ export class FiltersComponent implements OnInit {
   }
 
   value(item) {
-    const str = item.toLowerCase().charAt(0).toUpperCase() + item.toLowerCase().slice(1);
+    const str =
+      item.toLowerCase().charAt(0).toUpperCase() + item.toLowerCase().slice(1);
 
-    if (this.item_list.includes(str) && (this.selected_list.includes(str) == false)) {
+    if (
+      this.item_list.includes(str) &&
+      this.selected_list.includes(str) == false
+    ) {
       this.add_selected(str);
     } else if (this.selected_list.includes(str)) {
       this.reset_input();
       this.reset_list();
       this.selected_list.splice(this.selected_list.indexOf(str), 1);
     }
-    console.log("select_list:", this.selected_list);
-
-
   }
 
   private resize() {
-    if (this.userInput.nativeElement.value.length == 0){
-      this.userInput.nativeElement.setAttribute('size', 6);
-    } else if (this.userInput.nativeElement.value.length == 1){
-      this.userInput.nativeElement.setAttribute('size', 1);
+    if (this.userInput.nativeElement.value.length == 0) {
+      this.userInput.nativeElement.setAttribute("size", 6);
+    } else if (this.userInput.nativeElement.value.length == 1) {
+      this.userInput.nativeElement.setAttribute("size", 1);
     } else {
-      this.userInput.nativeElement.setAttribute('size', Math.round(this.userInput.nativeElement.value.length/2));
+      this.userInput.nativeElement.setAttribute(
+        "size",
+        Math.round(this.userInput.nativeElement.value.length / 2)
+      );
     }
   }
 
   show_content() {
     this.content = false;
-    var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
-    inputValue.classList.remove('hide');
+    var inputValue = <HTMLInputElement>(
+      document.getElementById("dropdown-content")
+    );
+    inputValue.classList.remove("hide");
   }
 
   hide_content() {
-    var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
-    inputValue.classList.add('hide');
+    var inputValue = <HTMLInputElement>(
+      document.getElementById("dropdown-content")
+    );
+    inputValue.classList.add("hide");
   }
 
   toggle_content() {
-    var inputValue = (<HTMLInputElement>document.getElementById('dropdown-content'));
-    inputValue.classList.toggle('hide');
+    var inputValue = <HTMLInputElement>(
+      document.getElementById("dropdown-content")
+    );
+    inputValue.classList.toggle("hide");
   }
 
   add_selected(item) {
@@ -209,6 +212,11 @@ export class FiltersComponent implements OnInit {
       this.selected_list.splice(this.selected_list.indexOf(item), 1);
     }
 
+    this.emit_event(item);
+  }
+
+  emit_event(item) {
+    console.log(item);
     switch (item) {
       case "C#": {
         this.selected_event.emit("cs");
@@ -231,6 +239,5 @@ export class FiltersComponent implements OnInit {
         break;
       }
     }
-
   }
 }

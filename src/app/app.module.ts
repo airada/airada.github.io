@@ -1,15 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { AboutComponent } from './about/about.component';
-import { ProjectPreviewComponent } from './project-preview/project-preview.component';
-import { FiltersComponent } from './filters/filters.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select'; 
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { PortfolioComponent } from "./portfolio/portfolio.component";
+import { AboutComponent } from "./about/about.component";
+import { ProjectPreviewComponent } from "./project-preview/project-preview.component";
+import { FiltersComponent } from "./filters/filters.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatSelectModule } from "@angular/material/select";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     PortfolioComponent,
     AboutComponent,
     ProjectPreviewComponent,
-    FiltersComponent
+    FiltersComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,9 +25,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,13 +1,14 @@
 .card {
-    background-color: #0b2228ff;
+  background-color: #0b2228ff;
 }
 
 .badge {
-    background-color: #fd7e14;
+  background-color: #fd7e14;
 }
 
-.badge:hover, .badge-pill:hover {
-    background-color: transparent;
-    color: white;
-    font-weight: normal;
+.badge:hover,
+.badge-pill:hover {
+  background-color: transparent;
+  color: white;
+  font-weight: normal;
 }
