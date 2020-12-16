@@ -1,17 +1,18 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import { ProjectPreviewComponent } from './project-preview.component';
+import { ProjectPreviewComponent } from "./project-preview.component";
 
-describe('ProjectPreviewComponent', () => {
+describe("ProjectPreviewComponent", () => {
   let component: ProjectPreviewComponent;
   let fixture: ComponentFixture<ProjectPreviewComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ProjectPreviewComponent ]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [ProjectPreviewComponent],
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProjectPreviewComponent);
@@ -19,7 +20,7 @@ describe('ProjectPreviewComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

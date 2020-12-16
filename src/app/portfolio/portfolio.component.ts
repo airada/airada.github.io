@@ -1,35 +1,55 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import {FormControl} from '@angular/forms';
-
+import { FormControl } from "@angular/forms";
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+  selector: "app-portfolio",
+  templateUrl: "./portfolio.component.html",
+  styleUrls: ["./portfolio.component.css"],
 })
 export class PortfolioComponent implements OnInit {
-  skill_tags: any = [["cs", "C#"], ["cpp", "C++"], ["python", "PYTHON"], ["java", "JAVA"], ["unity", "UNITY"], ["unreal", "UNREAL"], ["design", "DESIGN"], ["backend", "BACKEND"], ["mobile", "MOBILE"], ["vr", "VIRTUAL REALITY"], ["clear", "CLEAR ALL"]];
+  skill_tags: any = [
+    ["cs", "C#"],
+    ["cpp", "C++"],
+    ["python", "PYTHON"],
+    ["java", "JAVA"],
+    ["unity", "UNITY"],
+    ["unreal", "UNREAL"],
+    ["design", "DESIGN"],
+    ["backend", "BACKEND"],
+    ["mobile", "MOBILE"],
+    ["vr", "VIRTUAL REALITY"],
+    ["clear", "CLEAR ALL"],
+  ];
   chosen_skill: any = [];
   selected_skill: any;
   toppings = new FormControl();
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  toppingList: string[] = [
+    "Extra cheese",
+    "Mushroom",
+    "Onion",
+    "Pepperoni",
+    "Sausage",
+    "Tomato",
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   get_selected($event) {
     this.selected_skill = $event;
 
     if (this.chosen_skill.includes(this.selected_skill)) {
-      this.chosen_skill.splice(this.chosen_skill.indexOf(this.selected_skill), 1);
+      this.chosen_skill.splice(
+        this.chosen_skill.indexOf(this.selected_skill),
+        1
+      );
     } else {
       this.chosen_skill.push(this.selected_skill);
     }
 
-    console.log(this.chosen_skill)
+    console.log(this.chosen_skill);
 
     this.filter_skill();
   }
@@ -38,7 +58,7 @@ export class PortfolioComponent implements OnInit {
   // add_skill(skill_item) {
   //   if (skill_item == "clear"){
   //     for (let i = 0; i < this.skill_tags.length; i++) {
-  //       this.toggle_class(this.skill_tags[i][0], false);    //removes hidden class, if it exists  
+  //       this.toggle_class(this.skill_tags[i][0], false);    //removes hidden class, if it exists
   //       var inputValue = (<HTMLInputElement>document.getElementById(this.skill_tags[i][0]));
   //       inputValue.removeAttribute('style');
   //       inputValue.classList.add('bg-warning');
@@ -62,7 +82,7 @@ export class PortfolioComponent implements OnInit {
 
   // change_btn_color(item, color1, color2, push) {
   //   var inputValue = (<HTMLInputElement>document.getElementById(item));
-  //   if (push){ inputValue.setAttribute("style","background-color: "+ color2 + ";"); } 
+  //   if (push){ inputValue.setAttribute("style","background-color: "+ color2 + ";"); }
   //   else {  inputValue.removeAttribute('style');  }
   //   inputValue.classList.toggle(color1);
   // }
@@ -73,31 +93,32 @@ export class PortfolioComponent implements OnInit {
 
     for (let i = 0; i < this.skill_tags.length; i++) {
       if (len === 0) {
-        this.toggle_class(this.skill_tags[i][0], false);    //removes hidden class, if it exists   
+        this.toggle_class(this.skill_tags[i][0], false); //removes hidden class, if it exists
       } else if (len >= 1) {
-        this.toggle_class(this.skill_tags[i][0], true);     //adds hidden class to all projects
+        this.toggle_class(this.skill_tags[i][0], true); //adds hidden class to all projects
       }
     }
 
     if (len === 1) {
       this.toggle_class(this.chosen_skill[0], false);
-    } 
-    else if (len > 1) {
+    } else if (len > 1) {
       let elements = document.querySelectorAll("." + this.chosen_skill[0]);
 
-      elements.forEach(element => {
-       const result = this.chosen_skill.every(val => element.classList.contains(val));
-       if (result) { element.classList.remove('hidden');}
-      }
-      )
+      elements.forEach((element) => {
+        const result = this.chosen_skill.every((val) =>
+          element.classList.contains(val)
+        );
+        if (result) {
+          element.classList.remove("hidden");
+        }
+      });
     }
   }
 
   toggle_class(skill, flag) {
     let elements = document.querySelectorAll("." + skill);
-    elements.forEach(element => {
-      element.classList.toggle('hidden', flag);
+    elements.forEach((element) => {
+      element.classList.toggle("hidden", flag);
     });
   }
-
 }

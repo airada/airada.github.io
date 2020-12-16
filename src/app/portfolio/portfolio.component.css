@@ -1,44 +1,50 @@
-header, section, .navbar, footer {
-    background-color: #0b2228ff;
+header,
+section,
+.navbar,
+footer {
+  background-color: #0b2228ff;
 }
 
 .navbar-nav li a {
-    text-align: right;
-    font-weight: normal;
+  text-align: right;
+  font-weight: normal;
 }
 .navbar-nav {
-    font-size: small;
+  font-size: small;
 }
 .copyright {
-    background-color:#051114ff;
+  background-color: #051114ff;
 }
 
-a.badge:hover, a.badge-pill:hover {
-    background-color: #fd7e14;
+a.badge:hover,
+a.badge-pill:hover {
+  background-color: #fd7e14;
 }
 
-a.badge:active, a.badge-pill:active {
-    background-color: #803300;
+a.badge:active,
+a.badge-pill:active {
+  background-color: #803300;
 }
 .hidden {
-    display: none;
+  display: none;
 }
 
 .flex-wrapper {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: space-between
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  ul, li {
-    list-style-type: none; 
-    margin: none;
-    padding: none;
+ul,
+li {
+  list-style-type: none;
+  margin: none;
+  padding: none;
 }
 
 .text-80 {
-    font-size: 80%;
-    margin: 0;
-    padding: 0;
+  font-size: 80%;
+  margin: 0;
+  padding: 0;
 }
