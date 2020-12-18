@@ -37,7 +37,7 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {}
 
-  get_selected($event) {
+  filter($event) {
     this.selected_skill = $event;
 
     if (this.chosen_skill.includes(this.selected_skill)) {
