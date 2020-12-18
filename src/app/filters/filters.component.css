@@ -1,53 +1,25 @@
-/* FontAwesome  */
-.fas,
-.far {
-  color: white;
+/* Works on Firefox */
+* {
+  scrollbar-color:grey;
+  scrollbar-width: thin;
 }
 
-.fa-times-circle {
-  color: white;
-  cursor: pointer;
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
 }
 
-.fa-caret-down {
-  color: #164450;
-  cursor: pointer;
+*::-webkit-scrollbar-track {
+  background: none;
 }
 
-#caret:hover span > .fa-caret-down {
-  color: white;
+*::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 20px;
 }
 
-#caret {
-  background-color: white;
-  cursor: pointer;
-}
-
-#caret:hover {
-  background-color: transparent;
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-  border-top: 2px solid white;
-  cursor: pointer;
-}
-
-.fa-times-circle:hover {
-  color: gray;
-}
-
-/* Dropdown */
-.dropdown {
-  min-width: 100%;
-  color: black;
-}
-
-.textarea {
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 5px 0px 0px 5px;
-  color: white;
-  cursor: text;
-  min-height: 40px;
+*,*:focus,*:hover{
+  outline:none;
 }
 
 input {
@@ -61,27 +33,94 @@ input {
   padding: 0;
 }
 
-.checkbox-hide input {
-  cursor: pointer;
-  height: 0;
-  opacity: 0;
-  position: absolute;
-  width: 0;
+ul {
+  list-style-type: none;
 }
 
+.far,
+.fas {
+  color: white;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+  color: black;
+  min-width: 100%;
+}
+
+.box {
+  background-color: rgba(220, 220, 220, 0.25);
+  border: 2px ;
+  border-radius: 15px 0px 0px 15px;
+  color: white;
+  cursor: text;
+  min-height: 40px;
+}
+
+.box-bottom {
+  border-radius: 15px 0px 0px 0px;
+}
+
+/* Badges */
+.badge,
+.badge-pill {
+  background-color: #fd7e14;
+  color: white;
+  font-size: 10pt;
+  box-shadow:  0px 2px 10px darkslategrey;
+}
+
+.badge:hover,
+.badge-pill:hover {
+  background-color: #803300;
+  cursor: pointer;
+}
+
+/* Clear */
+.clear:hover .fa-times {
+  color: gray;
+}
+
+/* Dropdown Button */
+.fa-sort {
+  color: white;
+}
+
+.caret {
+  background-color: rgba(220, 220, 220, 0.25);
+  border-radius: 0px 15px 15px 0px;
+}
+
+.caret-bottom {
+  border-radius: 0px 15px 0px 0px;
+}
+
+.caret:hover {
+  background-color: rgba(220, 220, 220, 0.75);
+}
+
+.caret:hover .fa-caret-down {
+  color: white;
+}
+
+/* Dropdown Content */
 .hide {
   display: none;
 }
 
 .dropdown-content {
+  background-color: white;
   border: 2px solid white;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 15px 15px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  margin-left: 5px;
   max-height: 200px;
   overflow-y: auto;
-  padding: 12px 16px;
+  scrollbar-color: grey;
+  scrollbar-width: thin;
   width: 100%;
   z-index: 1;
 }
@@ -94,25 +133,21 @@ input {
   border-bottom: 1px solid rgba(220, 220, 220, 0.75);
 }
 
-.dropdown-item:hover,
-.active {
+.active,
+.dropdown-item:hover {
   background-color: lightgrey;
 }
 
-/* .dropdown:hover div .dropdown-content {
-    display: block;
-} */
-
-/* Badges */
-.badge,
-.badge-pill {
+.active.bg-selected,
+.dropdown-item:hover.bg-selected {
   background-color: #fd7e14;
   color: white;
-  font-size: 10pt;
 }
 
-.badge:hover,
-.badge-pill:hover {
-  background-color: #803300;
+.checkbox-hide input {
   cursor: pointer;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
 }

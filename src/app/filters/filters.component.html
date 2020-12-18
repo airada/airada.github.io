@@ -1,88 +1,72 @@
 <div class="container">
-  <form class="dropdown p-0">
-    <div class="row mx-auto">
-      <div
-        (click)="input.focus()"
-        class="col-11 px-1 textarea mt-2 d-flex flex-wrap">
-        <div class="my-auto mx-1">
-          <span><i class="fas fa-tags fa-lg"></i></span>
-        </div>
+  <!-- Dropdown Inputs -->
+    <div class="row mx-auto d-flex justify-content-center">
+      <div id="box" (click)="input.focus()" class="col-11 col-lg-6 box px-1 mt-2 d-flex flex-wrap">
+        <span class="fas fa-filter fa-lg my-auto ml-3 mr-1"></span>
 
-        <div
-          id="badges"
-          class="d-flex align-items-center py-1"
-          *ngFor="let selected_item of selected_list"
-        >
-          <div class="col p-0 mx-1">
-            <span class="badge badge-pill" (click)="add_selected(selected_item)"
-              >{{ selected_item }} <i class="far fa-times-circle fa-lg"></i
-            ></span>
-          </div>
-        </div>
+        <!-- List of Selected Badges -->
+        <ul id="badges" class="d-inline-flex align-items-center p-0 m-0" *ngFor="let selected_item of selected">
+          <li  (click)="toggle_skill(selected_item)" class="badge badge-pill pointer px-2 m-1">
+              {{ selected_item }}
+              <span class="far fa-times-circle fa-lg"></span>
+          </li>
+        </ul>
 
-        <div class="m-0 p-0 d-flex align-items-center" style="min-width: 10%">
-          <input
-            id="focused"
-            #input
-            (ngModelChange)="modelChange($event)"
-            [ngModel]="searchInput"
-            [ngModelOptions]="{ standalone: true }"
-            (keydown)="keydown($event)"
-            (keyup.enter)="value(input.value)"
-            (focus)="show_content()"
-            (blur)="blurred($event.target.value)"
-            type="text"
-            placeholder="&#xf055; Filter skills"
-            size="6"
-            class="px-1"
-          />
-        </div>
-
-        <div
-          *ngIf="selected_list.length > 0"
-          class="col p-1 d-flex align-items-center justify-content-end"
-        >
-          <span (click)="clear()">
-            <i class="fas fa-times-circle fa-lg"></i>
-          </span>
+        <!-- Search Input -->
+        <input 
+          #input
+          type="text"
+          placeholder="Search"
+          [size]="search_size"
+          (focus)="content('show')"
+          (keydown)="keydown($event)"
+          (keyup.enter)="search(input.value)"
+          (ngModelChange)="modelChange($event)"
+          [ngModel]=""
+          [ngModelOptions]="{ standalone: true }"
+          class="p-0 ml-1 d-flex align-items-center"
+        />
+     
+        <!-- Clear Button -->
+        <div title="Clear All" (click)="clear()" *ngIf="selected.length > 0" class="clear p-2 ml-auto my-auto">
+          <span class="fas fa-times pointer fa-lg"></span>
         </div>
       </div>
 
+      <!-- Dropdown Button -->
       <div
         id="caret"
-        (click)="toggle_content()"
-        class="col-1 p-0 mt-2 d-flex justify-content-end"
+        (click)="input_focused ? content('hide') : content('toggle')"
+        class="col-1 caret pointer p-0 mt-2 d-flex justify-content-end"
       >
-        <span class="my-auto mx-auto p-2">
-          <i class="fas fa-caret-down fa-2x"></i>
+        <span title="Toggle Dropdown" class="my-auto mx-auto p-0">
+          <i class="fas fa-sort fa-lg"></i>
         </span>
       </div>
     </div>
 
-    <div class="row mx-auto">
-      <div
-        (mousedown)="item()"
-        id="dropdown-content"
-        class="dropdown-content bg-white hide"
-        style="left: 0"
-      >
-        <div *ngFor="let item of suggestion_list; let i = index">
-          <div
-            [id]="item_list.indexOf(item)"
+    <!-- Dropdown Content -->
+    <div class="row mx-auto d-flex justify-content-center">
+      <div id="dropdown-content" class="col col-lg-7 dropdown-content pointer hide">
+        <!-- List of Skills/Suggestions -->
+        <ul class="p-0 m-0">
+          <li
+            [id]="skills_list.indexOf(item)"
+            *ngFor="let item of suggestions; let i = index"
             [ngClass]="includeBG(item)"
-            (click)="add_selected(item)"
-            [class.active]="i == arrowkeyLocation"
-            (focus)="(i == arrowkeyLocation)"
+            (click)="toggle_skill(item)"
+            [class.active]="i == arrowkey_position" 
+            (focus)="(i == arrowkey_position)"
+            class="m-0"
           >
             <div class="checkbox-hide">
               <label>
-                <input type="checkbox" (click)="add_selected(item)" />
+                <input type="checkbox" (click)="toggle_skill(item)" />
                 {{ item }}
               </label>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
-  </form>
 </div>

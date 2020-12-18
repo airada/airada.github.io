@@ -1,243 +1,225 @@
-import {
-  Component,
-  Input,
-  Output,
-  ViewChild,
-  ElementRef,
-  EventEmitter,
-  OnInit,
-  HostListener,
-} from "@angular/core";
+import { Component, Input, Output, ViewChild, Renderer2, ElementRef, EventEmitter, OnInit, HostListener } from "@angular/core";
 
 @Component({
   selector: "app-filters",
   templateUrl: "./filters.component.html",
   styleUrls: ["./filters.component.css"],
 })
+
 export class FiltersComponent implements OnInit {
-  @ViewChild("input") userInput: ElementRef;
-  @Input() title: string;
-  @Input() items: string;
-  @Output() selected_event = new EventEmitter<string>();
-  item_list: Array<string>;
-  suggestion_list: Array<string>;
-  selected_list: any = [];
-  searchInput: string = "";
-  arrowkeyLocation = 0;
-  content = false;
-  scrollLocation = 0;
+  @Input() skills: string;
+  @Output() filter_skill = new EventEmitter<string>();
+  @ViewChild("input") input: ElementRef;
+  arrowkey_position: number = 0;
+  input_focused: boolean = false;
+  skills_list: Array<string> = [];
+  private scroll_position: number = 0;
+  search_size: number = 3;
+  selected: Array<string> = [];
+  suggestions: Array<string> = [];
 
-  constructor() {}
+  constructor(private renderer: Renderer2) {  }
 
-  ngOnInit() {
-    this.item_list = this.items.split(",");
-    this.suggestion_list = this.item_list.slice();
+  ngOnInit() { 
+    this.skills_list = this.skills.split(",");
+    this.suggestions = this.skills_list.slice(); 
+  }
+
+  private input_resize() {
+    const length = this.input.nativeElement.value.length;
+
+    switch(length) {
+      case 0:
+        this.renderer.setAttribute(this.input.nativeElement, "size", this.search_size.toString());
+        break;
+      case 1:
+        this.renderer.setAttribute(this.input.nativeElement, "size", "1");
+        break;
+      default:
+        this.renderer.setAttribute(this.input.nativeElement, "size", Math.round(length/2).toString());
+        break;      
+    }
   }
 
   @HostListener("keyup") onKeyUp() {
-    this.resize();
+    this.input_resize();
   }
 
   @HostListener("focus") onFocus() {
-    this.resize();
+    this.input_resize();
+  }
+
+  private set_scroll(position) {
+    document.getElementById("dropdown-content").scrollTop = position;
+  }
+
+  private reset_scroll() {
+    this.arrowkey_position = 0;
+    this.set_scroll(0);
+  }
+
+  private emit_event(item) {
+    switch (item) {
+      case "C#": {
+        this.filter_skill.emit("cs");
+        break;
+      }
+      case "Project Management": {
+        this.filter_skill.emit("pm");
+        break;
+      }
+      case "HTML/CSS": {
+        this.filter_skill.emit("htmlcss");
+        break;
+      }
+      case "JavaScript": {
+        this.filter_skill.emit("js");
+        break;
+      }
+      default: {
+        this.filter_skill.emit(item.toLowerCase());
+        break;
+      }
+    }
   }
 
   keydown(event: KeyboardEvent) {
     switch (event.keyCode) {
-      case 38: // this is the ascii of arrow up
-        if (this.arrowkeyLocation >= 1) {
-          this.arrowkeyLocation--;
-          this.scrollLocation = this.scrollLocation - 30;
-          document.getElementById(
-            "dropdown-content"
-          ).scrollTop = this.scrollLocation;
+      case 38: // Up Arrow Key
+        if (this.arrowkey_position > 0) {
+          this.arrowkey_position--;
+          this.scroll_position -= 20;
+          this.set_scroll(this.scroll_position);
         }
         break;
-      case 40: // this is the ascii of arrow down
-        if (this.arrowkeyLocation < this.item_list.length - 1) {
-          this.arrowkeyLocation++;
-          if (this.arrowkeyLocation != 0) {
-            this.scrollLocation = this.scrollLocation + 30;
+      case 40: // Down Arrow Key
+        if (this.arrowkey_position < this.skills_list.length - 1) {
+          this.arrowkey_position++;
+          if (this.arrowkey_position > 0) {
+            this.scroll_position += 20;
+            this.set_scroll(this.scroll_position);
           }
-          document.getElementById(
-            "dropdown-content"
-          ).scrollTop = this.scrollLocation;
         }
         break;
-      case 13:
-        this.add_selected(this.suggestion_list[this.arrowkeyLocation]);
-        break;
-      case 10:
-        this.add_selected(this.suggestion_list[this.arrowkeyLocation]);
-        break;
-      case 8:
-        if (
-          this.userInput.nativeElement.value == "" &&
-          this.selected_list.length > 0
-        ) {
-          this.emit_event(this.selected_list.pop());
+      case 8: // Backspace
+        if (this.input.nativeElement.value == "" && this.selected.length > 0) {
+          this.emit_event(this.selected.pop());
         }
+        this.reset_scroll();
         break;
     }
   }
 
-  clear() {
-
-    for (let i = 0; i < this.selected_list.length; i++) {
-      this.emit_event(this.selected_list[i]);
-    }
-
-    this.selected_list = [];
+  private reset_input() {
+    this.renderer.setProperty(this.input.nativeElement, "value", "");
+    this.renderer.setAttribute(this.input.nativeElement, "size", this.search_size.toString());
   }
 
-  item() {
-    this.show_content();
-    this.content = true;
+  private reset_suggestions() {
+    this.suggestions = this.skills_list.slice();
   }
 
-  blurred(ev) {
-    if (this.content) {
-      this.show_content();
-    } else {
-      this.hide_content();
-    }
-  }
-
-  reset_input() {
-    this.userInput.nativeElement.value = "";
-    this.userInput.nativeElement.setAttribute("size", 6);
-  }
-
-  reset_list() {
-    this.suggestion_list = this.item_list.slice();
-  }
-
-  update_suggestions(list) {
-    this.arrowkeyLocation = 0;
-    this.suggestion_list.splice(0, this.suggestion_list.indexOf(list[0]));
-    var last = this.suggestion_list.indexOf(list.pop());
-    this.suggestion_list.splice(last + 1, this.suggestion_list.length - last);
-  }
-
-  includeBG(item) {
-    if (this.selected_list.includes(item)) {
-      return "dropdown-item bg-selected";
-    } else {
-      return "dropdown-item";
-    }
-  }
-
-  search(str) {
-    var suggestions = [];
-    this.reset_list();
-    const regex: RegExp = new RegExp("^" + str + "+");
-
-    for (let i = 0; i < this.suggestion_list.length; i++) {
-      if (this.suggestion_list[i].toLocaleLowerCase().search(regex) != -1) {
-        suggestions.push(this.suggestion_list[i]);
-      }
-    }
-
-    this.update_suggestions(suggestions);
-  }
-
-  modelChange(str) {
-    this.show_content();
-
-    if (!str) {
-      this.reset_list();
-      return;
-    }
-    this.searchInput = str;
-    this.search(this.searchInput.toLowerCase());
-  }
-
-  value(item) {
-    const str =
-      item.toLowerCase().charAt(0).toUpperCase() + item.toLowerCase().slice(1);
-
-    if (
-      this.item_list.includes(str) &&
-      this.selected_list.includes(str) == false
-    ) {
-      this.add_selected(str);
-    } else if (this.selected_list.includes(str)) {
-      this.reset_input();
-      this.reset_list();
-      this.selected_list.splice(this.selected_list.indexOf(str), 1);
-    }
-  }
-
-  private resize() {
-    if (this.userInput.nativeElement.value.length == 0) {
-      this.userInput.nativeElement.setAttribute("size", 6);
-    } else if (this.userInput.nativeElement.value.length == 1) {
-      this.userInput.nativeElement.setAttribute("size", 1);
-    } else {
-      this.userInput.nativeElement.setAttribute(
-        "size",
-        Math.round(this.userInput.nativeElement.value.length / 2)
-      );
-    }
-  }
-
-  show_content() {
-    this.content = false;
-    var inputValue = <HTMLInputElement>(
-      document.getElementById("dropdown-content")
-    );
-    inputValue.classList.remove("hide");
-  }
-
-  hide_content() {
-    var inputValue = <HTMLInputElement>(
-      document.getElementById("dropdown-content")
-    );
-    inputValue.classList.add("hide");
-  }
-
-  toggle_content() {
-    var inputValue = <HTMLInputElement>(
-      document.getElementById("dropdown-content")
-    );
-    inputValue.classList.toggle("hide");
-  }
-
-  add_selected(item) {
+  toggle_skill(item) {
     this.reset_input();
-    this.reset_list();
-    if (this.selected_list.indexOf(item) == -1) {
-      this.selected_list.push(item);
+    this.reset_suggestions();
+    if (this.selected.indexOf(item) == -1) {
+      this.selected.push(item);
     } else {
-      this.selected_list.splice(this.selected_list.indexOf(item), 1);
+      this.selected.splice(this.selected.indexOf(item), 1);
     }
-
     this.emit_event(item);
   }
 
-  emit_event(item) {
-    console.log(item);
-    switch (item) {
-      case "C#": {
-        this.selected_event.emit("cs");
-        break;
+  private update_suggestions(list) {
+    this.arrowkey_position = 0;
+    this.suggestions.splice(0, this.suggestions.indexOf(list[0]));
+    const last = this.suggestions.indexOf(list.pop());
+    this.suggestions.splice(last + 1, this.suggestions.length - last);
+  }
+
+  private suggest(str) {
+    let matches = [];
+    this.reset_suggestions();
+    const regex: RegExp = new RegExp("^" + str + "+");
+
+    for (let i = 0; i < this.suggestions.length; i++) {
+      if (this.suggestions[i].toLowerCase().search(regex) != -1) {
+        matches.push(this.suggestions[i]);
       }
-      case "Project Management": {
-        this.selected_event.emit("pm");
+    }
+
+    this.update_suggestions(matches);
+  }
+
+  search(item) {
+    if(item == ""){
+      this.toggle_skill(this.suggestions[this.arrowkey_position]);
+      return;
+    }
+
+    //Capitalize first letter
+    const str = item.toLowerCase().charAt(0).toUpperCase() + item.toLowerCase().slice(1);
+
+    if (this.skills_list.includes(str) && !(this.selected.includes(str))) {
+      this.toggle_skill(str);
+    } else if (this.selected.includes(str)) {
+      this.selected.splice(this.selected.indexOf(str), 1);
+    } else {
+      this.toggle_skill(this.suggestions[this.arrowkey_position]);
+    }
+    this.reset_input();
+    this.reset_suggestions();
+  }
+
+  content(mode) {
+    this.reset_scroll();
+    let inputValue = <HTMLInputElement>(document.getElementById("dropdown-content"));
+    let box = <HTMLInputElement>(document.getElementById("box"));
+    let caret = <HTMLInputElement>(document.getElementById("caret"));
+
+    switch(mode){
+      case "show":
+        inputValue.classList.remove("hide");
+        box.classList.add("box-bottom");
+        caret.classList.add("caret-bottom");
+        this.input_focused = true;
         break;
-      }
-      case "HTML/CSS": {
-        this.selected_event.emit("htmlcss");
+      case "hide":
+        inputValue.classList.add("hide");
+        box.classList.remove("box-bottom");
+        caret.classList.remove("caret-bottom");
+        this.input_focused = false;
         break;
-      }
-      case "JavaScript": {
-        this.selected_event.emit("js");
+      case "toggle":
+        inputValue.classList.toggle("hide");
+        box.classList.toggle("box-bottom");
+        caret.classList.toggle("caret-bottom");
         break;
-      }
-      default: {
-        this.selected_event.emit(item.toLowerCase());
-        break;
-      }
+    }
+
+  }
+
+  modelChange(str) {
+    this.content('show');
+    if (!str) {
+      this.reset_suggestions();
+      return;
+    }
+    this.suggest(str.toLowerCase());
+  }
+
+  clear() {
+    for (let i = 0; i < this.selected.length; i++) {
+      this.emit_event(this.selected[i]);
+    }
+    this.selected = [];
+  }
+
+  includeBG(item) {
+    if (this.selected.includes(item)) {
+      return "dropdown-item bg-selected";
+    } else {
+      return "dropdown-item";
     }
   }
 }
