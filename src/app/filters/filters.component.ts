@@ -10,11 +10,11 @@ export class FiltersComponent implements OnInit {
   @Input() skills: string;
   @Output() filter_skill = new EventEmitter<string>();
   @ViewChild("input") input: ElementRef;
-  arrowkey_position: number = 0;
+  arrowkey_position: number = -1;
   input_focused: boolean = false;
   skills_list: Array<string> = [];
   private scroll_position: number = 0;
-  search_size: number = 3;
+  search_size: number = 5;
   selected: Array<string> = [];
   suggestions: Array<string> = [];
 
@@ -54,7 +54,8 @@ export class FiltersComponent implements OnInit {
   }
 
   private reset_scroll() {
-    this.arrowkey_position = 0;
+    this.arrowkey_position = -1;
+    this.scroll_position = 0;
     this.set_scroll(0);
   }
 
@@ -86,7 +87,7 @@ export class FiltersComponent implements OnInit {
   keydown(event: KeyboardEvent) {
     switch (event.keyCode) {
       case 38: // Up Arrow Key
-        if (this.arrowkey_position > 0) {
+        if (this.arrowkey_position > -1) {
           this.arrowkey_position--;
           this.scroll_position -= 20;
           this.set_scroll(this.scroll_position);
@@ -131,7 +132,7 @@ export class FiltersComponent implements OnInit {
   }
 
   private update_suggestions(list) {
-    this.arrowkey_position = 0;
+    this.arrowkey_position = -1;
     this.suggestions.splice(0, this.suggestions.indexOf(list[0]));
     const last = this.suggestions.indexOf(list.pop());
     this.suggestions.splice(last + 1, this.suggestions.length - last);
@@ -152,7 +153,7 @@ export class FiltersComponent implements OnInit {
   }
 
   search(item) {
-    if(item == ""){
+    if(item == "" && (this.arrowkey_position != -1)){
       this.toggle_skill(this.suggestions[this.arrowkey_position]);
       return;
     }
@@ -162,12 +163,14 @@ export class FiltersComponent implements OnInit {
 
     if (this.skills_list.includes(str) && !(this.selected.includes(str))) {
       this.toggle_skill(str);
-    } else if (this.selected.includes(str)) {
+    } else if (this.selected.includes(str) && (this.suggestions.indexOf(str) == this.arrowkey_position)) {
       this.selected.splice(this.selected.indexOf(str), 1);
-    } else {
+    } else if (this.arrowkey_position != -1) {
       this.toggle_skill(this.suggestions[this.arrowkey_position]);
     }
+
     this.reset_input();
+    this.reset_scroll();
     this.reset_suggestions();
   }
 
