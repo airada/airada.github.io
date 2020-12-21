@@ -1,0 +1,44 @@
+<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
+        data-aos-once="true" data-aos-anchor-placement="top-center">
+
+        <div class="row">
+          <div class="col-md-6 mt-3"></div>
+          <div class="col col-md-6 mt-md-3 my-2 text-white d-flex align-items-center">
+            <a *ngFor="let skill of badges_list" class="badge badge-pill">{{skill}}</a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row portfolio-detail border-radius mb-5">
+            <div class="col-12 col-md-6 d-flex justify-content-center bg-clam border-radius">
+              <div class="portfolio-item " data-toggle="modal" data-target="#portfolioModal1">
+                <img class="img-fluid" [src]="image" alt="Mimi AI Website Preview" />
+              </div>
+            </div>
+
+            <div class="col mt-2">
+              <h4 class="row text-center text-uppercase text-dark">
+                <b>{{title}}</b>
+              </h4>
+              <h6>
+                <i>{{date}}</i>
+              </h6>
+              <p class="row text-left mb-4">
+                {{description}}
+              </p>
+
+              <div class="row mx-auto">
+                <button class="bg-clam btn-shadow p-3">
+                  View Details
+                </button>
+              </div>
+              <div class="row d-flex mt-2 justify-content-center py-3 btn-portfolio">
+                <a class="col mx-auto text-dark d-flex align-items-center" [href]="code" aria-label="View the source code">VIEW SOURCE <i
+                    class="fab fa-github fa-lg ml-2"style="color: grey;"></i> </a>
+                <a class="col mx-auto text-dark d-flex align-items-center" [href]="link" aria-label="Checkout the project online"> VISIT WEBSITE<i
+                    class="fas fa-external-link-alt fa-lg ml-2" style="color: grey;"></i></a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>

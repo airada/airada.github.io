@@ -1,14 +1,9 @@
 header,
 section,
 .navbar,
-footer {
+footer,
+.copyright {
   background-color: #0b2228ff;
-}
-
-p {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 h1,
@@ -16,17 +11,69 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
   line-height: 1.2;
 }
 
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+.sub-heading {
+  font-size: large;
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+.text-shadow {
+  text-shadow: 0 0 5px #0b2228, 0 0 5px #0b2228, 0 0 5px #0b2228, 0 0 5px #0b2228;
+}
+
+.fab, .fas {
+  color: #ffffff;
+}
+
+.dot-sm {
+  height: 7px;
+  width: 7px;
+  background-color: transparent;
+  border: 1px dotted #ffe6d5;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #ffe6d5;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.bottom-align-text {
+  position: absolute;
+  bottom: 5vh;
+}
+
+.top-align {
+  position: absolute;
+  top: 10vh;
+}
+
 header {
-  background: url("src\assets\fish.svg") no-repeat center center;
+  background: url("src\assets\drawing3anim.svg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -34,7 +81,16 @@ header {
   background-color: #0b2228ff;
 }
 
-a.badge:hover,
+.fas, .fab, .btn-social-custom {
+  color:  #ffe6d5bb;
+}
+
+.navbar-nav li a {
+  text-align: right;
+  font-weight: normal;
+}
+
+/* a.badge:hover,
 a.badge-pill:hover {
   background-color: transparent;
   color: white;
@@ -67,9 +123,7 @@ i a:hover {
 .navbar-nav {
   font-size: small;
 }
-.name-text {
-  font-size: large;
-}
+
 .card {
   background-color: #f8f9fa;
 }
@@ -86,7 +140,6 @@ i a:hover {
   overflow-x: hidden;
 }
 
-/* Style sidebar links */
 .sidebar a {
   text-decoration: none;
   font-size: 20px;
@@ -94,17 +147,11 @@ i a:hover {
   display: block;
 }
 
-/* Style links on mouse-over */
 .sidebar a:hover {
   color: #803300;
 }
 
-.bottom-align-text {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
+
 
 .card-size {
   width: 13rem;
@@ -129,4 +176,4 @@ li {
   font-size: 80%;
   margin: 0;
   padding: 0;
-}
+} */
