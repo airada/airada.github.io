@@ -10,6 +10,7 @@ import { FiltersComponent } from "./filters/filters.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSelectModule } from "@angular/material/select";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { PortfolioFeaturedComponent } from './portfolio-featured/portfolio-featured.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     AboutComponent,
     ProjectPreviewComponent,
     FiltersComponent,
+    PortfolioFeaturedComponent,
   ],
   imports: [
     BrowserModule,
