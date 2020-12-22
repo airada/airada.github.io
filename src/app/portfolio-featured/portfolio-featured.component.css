@@ -12,6 +12,14 @@ p {
   line-height: 1.2;
 }
 
+h4 {
+  font-size: large;
+}
+
+.badge {
+  font-size: small;
+}
+
 .portfolio-detail {
   background-color: white;
   border: 2px solid white;
@@ -22,11 +30,15 @@ p {
 }
 
 .btn-shadow {
-  box-shadow: 5px 5px 10px lightgrey;
+  box-shadow: 5px 5px 10px lightgray;
 }
 
 .bg-clam {
   background-color: #ffe6d5;
+}
+
+.bg-sea {
+  background-color: #0b2228;
 }
 
 .btn-portfolio {
