@@ -1,8 +1,35 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.2;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: large;
+}
+
+h4 {
+  font-size: large;
+}
+
+h6 {
+  font-size: small;
+}
+
 header,
 section,
 .navbar,
 footer {
-  background-color: #0b2228ff;
+  background-color: white;
 }
 
 .navbar-nav li a {

@@ -1,5 +1,5 @@
 <div id="page-top">
-  <nav class="navbar navbar-expand-lg text-uppercase fixed-top py-1" id="mainNav">
+  <nav class="navbar navbar-expand-lg text-uppercase fixed-top py-3" id="mainNav">
     <div class="container justify-content-end">
       <!-- <a class="js-scroll-trigger" href="#page-top"></a> -->
       <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button"
@@ -11,7 +11,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item ml-auto mx-lg-1">
             <a class="nav-link mb-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/About"
-              routerLinkActive="active">About</a>
+              routerLinkActive="active">Home</a>
           </li>
           <li class="nav-item ml-auto mx-lg-1">
             <a class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/Portfolio"
@@ -40,14 +40,38 @@
   <!--Header-->
   <header>
     <div class="container d-flex align-items-center justify-content-center">
-      <div class="d-none d-md-block bottom-align-text text-white text-center p-5 mb-lg-5">
+      <div class="d-none d-md-block  text-white text-center p-5 mb-lg-5">
         <p class="sub-heading">Hi, there! My name is</p>
         <h1>JASMINE IRADA</h1>
-        <h4>SOFTWARE ENGINEER</h4>
+        
+      </div>
+
+      <div class="d-none d-md-block bottom-align-text text-white text-center ">
+        <h2>SOFTWARE ENGINEER</h2>
         <p>
           Diving deep into the intersection between technology, art, and design.
         </p>
+        <ul class="d-flex justify-content-center p-0 mx-0 mt-4">
+          <span class="my-auto mx-1 dot-sm"></span>
+          <span class="my-auto mx-1 dot"></span>
+          <li><a class="btn-social-custom mx-2" target="_blank" href="https://github.com/airada"
+              aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github fa-2x"></i></a>
+          </li>
+          <li><a class="btn-social-custom mx-2" target="_blank" href="https://rninchan.itch.io/"
+              aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io fa-2x"></i></a>
+          </li>
+          <li><a class="btn-social-custom mx-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
+              aria-label="Connect with me on Linkedin"><i class="fab fa-fw fa-linkedin fa-2x"></i></a>
+          </li>
+          <li><a class="btn-social-custom mx-2" target="_blank" href="mailto:jasmineirada@gmail.com"
+              aria-label="Send me an email"><i class="fas fa-fw fa-envelope fa-2x"></i></a>
+          </li>
+          <span class="my-auto mx-1 dot"></span>
+          <span class="my-auto mx-1 dot-sm"></span>
+        </ul>
+        
       </div>
+      
       <!-- bottom-align-text text-white text-left ml-3 mb-md-5 -->
       <div class="d-md-none top-align text-shadow text-white mt-0 pt-2 ">
         <p class="sub-heading">Hi, there! My name is</p>
@@ -81,8 +105,24 @@
     </div>
   </header>
 
-  <!-- About Section-->
-  <!-- <section class="text-dark bg-white py-5">
+
+  <!-- Portfolio Section-->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="text-center text-white text-uppercase mb-5">
+          Featured Work
+        </h2>
+
+      <app-portfolio-featured badges="Python,Angular,Bootstrap,Design" image="/assets/img/portfolio/mimi/prototype.png"
+        title="Mimi AI: Happy For You" date="August 2020 - Ongoing"
+        description="Motivational task-list system integrated with game mechanics and design."
+        code="https://github.com/airada/happy-for-you" link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+
+    </div>
+  </section>
+
+    <!-- About Section-->
+  <section class="text-dark bg-white py-5">
     <h2 class="text-center text-uppercase text-dark">ABOUT ME</h2>
     <div class="container d-flex flex-wrap ">
 
@@ -144,46 +184,33 @@
           </div>
         </div>
     </div>
-  </section> -->
-
-  <!-- Portfolio Section-->
-  <section class="page-section portfolio" id="portfolio">
-    <div class="container">
-        <h2 class="text-center text-white text-uppercase mb-5">
-          Featured Work
-        </h2>
-
-      <app-portfolio-featured badges="Python,Angular,Bootstrap,Design" image="/assets/img/portfolio/mimi/prototype.png"
-        title="Mimi AI: Happy For You" date="August 2020 - Ongoing"
-        description="Motivational task-list system integrated with game mechanics and design."
-        code="https://github.com/airada/happy-for-you" link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
-
-    </div>
   </section>
 
   <!-- Footer-->
-  <footer class="footer text-center">
+  <footer class="footer bg-white text-dark text-center">
     <div class="container">
       <div class="row">
         <!-- Footer Social Icons-->
         <div class="col mb-5 mb-lg-0">
-          <p class="name-custom mb-4">Diving Deep into Learning</p>
-          <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://github.com/airada"
+          <p class="name-custom mb-4">Let's Connect!</p>
+          <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="https://github.com/airada"
             aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github"></i></a>
-          <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://rninchan.itch.io/"
+          <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="https://rninchan.itch.io/"
             aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io"></i></a>
-          <a class="btn btn-outline-light btn-social mx-1" target="_blank"
+          <a class="btn btn-outline-dark btn-social mx-1" target="_blank"
             href="https://www.linkedin.com/in/jasmineirada/" aria-label="Let's connect on LinkedIn"><i
               class="fab fa-fw fa-linkedin"></i></a>
-          <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="mailto:jasmineirada@gmail.com"
+          <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="mailto:jasmineirada@gmail.com"
             aria-label="Send me an email"><i class="fas fa-fw fa-envelope"></i></a>
         </div>
       </div>
     </div>
   </footer>
   <!-- Copyright Section-->
-  <div class="copyright py-4 text-center text-white">
-    <div class="container"><small>Copyright © Jasmine Irada 2020</small></div>
+  <div class="copyright py-4 bg-white text-center text-dark">
+    <div class="container">
+      <p><small>©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <i class="fas fa-heart"></i></small></p>
+    </div>
   </div>
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
   <div class="scroll-to-top d-lg-none position-fixed">

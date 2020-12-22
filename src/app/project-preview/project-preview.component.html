@@ -1,15 +1,15 @@
-<div class="col-4 animate_animated animate__fadeIn">
-  <div class="card mr-2 mt-3" style="width: 18rem">
-    <a href="#!"
-      ><img class="card-img-top" [src]="image_thumbnail" alt="Card image cap"
-    /></a>
-    <div class="card-body mb-3 p-0">
-      <div class="d-flex">
-        <div *ngFor="let skill of skill_list">
-          <span class="badge badge-pill mx-auto">{{ skill }}</span>
-        </div>
-      </div>
-      <p class="card-text">{{ title }}</p>
+<div class="col m-3 p-0 justify-content-center">
+  <div class="d-flex flex-wrap">
+    <div *ngFor="let skill of skill_list">
+      <span class="badge text-dark m-1 p-1">{{ skill }}</span>
     </div>
   </div>
-</div>
+  <div class="rounded bg-shadow" style="max-width: 500px; position: relative;">
+    <a class="text-center" href="#!">
+      <img class="h-100 w-100 rounded" [src]="image_thumbnail" alt="Card image cap"/> 
+    </a>
+    <div class="bg-overlay text-white d-flex align-items-center justify-content-center rounded">
+      <div class="circle"></div>
+      <h4 style="position: absolute; z-index: 2;">{{title}}</h4>
+    </div>
+  </div>
