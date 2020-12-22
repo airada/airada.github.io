@@ -27,9 +27,12 @@ h6 {
 
 header,
 section,
-.navbar,
 footer {
   background-color: white;
+}
+
+.navbar {
+  background-color: #0b2228;
 }
 
 .navbar-nav li a {
