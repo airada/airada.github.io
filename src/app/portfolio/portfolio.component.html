@@ -1,24 +1,23 @@
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
-  <div class="container">
-    <a class="js-scroll-trigger" href="#page-top">JASMINE IRADA</a>
+<nav class="navbar navbar-expand-lg text-uppercase fixed-top p-0" id="mainNav">
+  <div class="container justify-content-end">
+    <!-- <a class="js-scroll-trigger" href="#page-top"></a> -->
     <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button"
       data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
       aria-label="Toggle navigation">
-      Menu
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars fa-2x"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/About"
-            routerLinkActive="active">About</a>
+        <li class="nav-item ml-auto mx-lg-1">
+          <a class="nav-link mb-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/About"
+            routerLinkActive="active">Home</a>
         </li>
-        <li class="nav-item mx-0 mx-lg-1">
+        <li class="nav-item ml-auto mx-lg-1">
           <a class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/Portfolio"
             routerLinkActive="active">Portfolio</a>
         </li>
-        <li class="nav-item mx-0 mx-lg-1">
+        <li class="nav-item ml-auto mx-lg-1">
           <a class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" target="_blank"
             href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">Resume</a>
         </li>
@@ -34,7 +33,7 @@
      <app-filters (filter_skill)="filter($event)" title="Languages"
       skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,Unity"></app-filters>
 
-    <div class="container d-flex flex-wrap mt-3">
+    <div class="container d-flex flex-wrap justify-content-center mt-3">
       <app-project-preview class="htmlcss bootstrap angular design" title="PERSONAL WEBSITE"
         skills="HTML/CSS,Bootstrap,Angular,Design" image_thumbnail="/assets/img/portfolio/personal.png"></app-project-preview>
       <app-project-preview class="python flask js htmlcss bootstrap" title="MIMI AI: HAPPY FOR YOU"
