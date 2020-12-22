@@ -22,10 +22,23 @@
   outline:none;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgray;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: lightgray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:  lightgray;
+}
+
 input {
   background-color: transparent;
   border: none;
-  color: white;
+  color: gray;
   display: inline-block;
   font-family: "Font Awesome 5 Free", "Montserrat";
   font-weight: 900;
@@ -53,7 +66,7 @@ ul {
 }
 
 .box {
-  background-color: rgba(220, 220, 220, 0.25);
+  background-color: rgba(128, 128, 128, 0.1);
   border: 2px ;
   border-radius: 15px 0px 0px 15px;
   color: white;
@@ -71,7 +84,6 @@ ul {
   background-color: #fd7e14;
   color: white;
   font-size: 10pt;
-  box-shadow:  0px 2px 10px darkslategrey;
 }
 
 .badge:hover,
@@ -91,7 +103,7 @@ ul {
 }
 
 .caret {
-  background-color: rgba(220, 220, 220, 0.25);
+  background-color: rgba(128, 128, 128, 0.3);
   border-radius: 0px 15px 15px 0px;
 }
 
@@ -100,7 +112,7 @@ ul {
 }
 
 .caret:hover {
-  background-color: rgba(220, 220, 220, 0.75);
+  background-color: rgba(128, 128, 128, 0.75);
 }
 
 .caret:hover .fa-caret-down {

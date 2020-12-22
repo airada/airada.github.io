@@ -56,8 +56,7 @@
   border: none;
 }
 
-html,
-body {
+html {
   height: 100vh;
   width: 100%;
 }
