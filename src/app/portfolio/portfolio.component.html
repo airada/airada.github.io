@@ -33,20 +33,48 @@
      <app-filters (filter_skill)="filter($event)" title="Languages"
       skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,Unity"></app-filters>
 
-    <div class="container d-flex flex-wrap justify-content-center mt-3">
-      <app-project-preview class="htmlcss bootstrap angular design" title="PERSONAL WEBSITE"
-        skills="HTML/CSS,Bootstrap,Angular,Design" image_thumbnail="/assets/img/portfolio/personal.png"></app-project-preview>
-      <app-project-preview class="python flask js htmlcss bootstrap" title="MIMI AI: HAPPY FOR YOU"
-        skills="Python,Flask,JavaScript,HTML/CSS,Bootstrap" image_thumbnail="/assets/img/portfolio/mimi/preview.png"></app-project-preview>
-        <app-project-preview class="cs unity design" title="CRYSTAL CRISIS" skills="C#,Unity,3D Design"
-        image_thumbnail="/assets/img/portfolio/obviouspalace/start_screen.png"></app-project-preview>
-      <app-project-preview class="unity design pm" title="ESCAPING THE NEGATIVITY"
+    <div class="d-flex flex-wrap justify-content-center mt-3">
+      <app-project-preview
+        class="htmlcss bootstrap angular design"
+        title="PERSONAL WEBSITE"
+        skills="HTML/CSS,Bootstrap,Angular,Design"
+        image_thumbnail="/assets/img/portfolio/personal.jpg"
+        link="https://jasmineirada.com/About">
+      </app-project-preview>
+      <app-project-preview
+        class="python flask js htmlcss bootstrap"
+        title="MIMI AI: HAPPY FOR YOU"
+        skills="Python,Flask,JavaScript,HTML/CSS,Bootstrap"
+        image_thumbnail="/assets/img/portfolio/mimi/preview.png"
+        link="https://mimi-ai.herokuapp.com/">
+      </app-project-preview>
+      <app-project-preview
+        class="cs unity design"
+        title="CRYSTAL CRISIS"
+        skills="C#,Unity,3D Design"
+        image_thumbnail="/assets/img/portfolio/obviouspalace/start_screen.png"
+        link="https://jasmineirada.com/obviouspalace/">
+      </app-project-preview>
+      <app-project-preview
+        class="unity design pm"
+        title="ESCAPING THE NEGATIVITY"
         skills="Unity,Art,Design,Project Management"
-        image_thumbnail="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png"></app-project-preview>
-      <app-project-preview class="cs unity art" title="TREASURE TOWER" skills="C#,Unity,Art"
-        image_thumbnail="/assets/img/portfolio/lahax/tt.jpg"></app-project-preview>
-      <app-project-preview class="htmlcss js design" title="DIGITAL ROOT" skills="HTML/CSS,JavaScript, Design"
-        image_thumbnail="/assets/img/portfolio/digitalroot.png"></app-project-preview>
+        image_thumbnail="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png"
+        link="https://devpost.com/software/escaping-the-negativity">
+      </app-project-preview>
+      <app-project-preview 
+        class="cs unity art"
+        title="TREASURE TOWER"
+        skills="C#,Unity,Art"
+        image_thumbnail="/assets/img/portfolio/lahax/tt.jpg"
+        link="https://devpost.com/software/treasure-tower">
+      </app-project-preview>
+      <app-project-preview
+        class="htmlcss js design"
+        title="DIGITAL ROOT"
+        skills="HTML/CSS,JavaScript, Design"
+        image_thumbnail="/assets/img/portfolio/digitalroot.png"
+        link="https://jasmineirada.com/digitalroot/"></app-project-preview>
     </div> 
 </section>
 
@@ -57,14 +85,14 @@
       <!-- Footer Social Icons-->
       <div class="col mb-5 mb-lg-0">
         <p class="name-custom mb-4">Let's Connect!</p>
-        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="https://github.com/airada"
+        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="https://github.com/airada"
           aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github"></i></a>
-        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="https://rninchan.itch.io/"
+        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="https://rninchan.itch.io/"
           aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io"></i></a>
-        <a class="btn btn-outline-dark btn-social mx-1" target="_blank"
+        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer"
           href="https://www.linkedin.com/in/jasmineirada/" aria-label="Let's connect on LinkedIn"><i
             class="fab fa-fw fa-linkedin"></i></a>
-        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="mailto:jasmineirada@gmail.com"
+        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="mailto:jasmineirada@gmail.com"
           aria-label="Send me an email"><i class="fas fa-fw fa-envelope"></i></a>
       </div>
     </div>
@@ -82,46 +110,3 @@
       class="fa fa-chevron-up"></i></a>
 </div>
 
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog"
-  aria-labelledby="portfolioModal1Label" aria-hidden="true">
-  <div class="modal-dialog modal-xl" role="document">
-    <div class="modal-content">
-      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-      </button>
-      <div class="modal-body text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <!-- Portfolio Modal - Title-->
-              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">
-                Log Cabin
-              </h2>
-              <!-- Icon Divider-->
-              <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon">
-                  <i class="fas fa-star"></i>
-                </div>
-                <div class="divider-custom-line"></div>
-              </div>
-              <!-- Portfolio Modal - Image-->
-              <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="" />
-              <!-- Portfolio Modal - Text-->
-              <p class="mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Mollitia neque assumenda ipsam nihil, molestias magnam,
-                recusandae quos quis inventore quisquam velit asperiores, vitae?
-                Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-              </p>
-              <button class="btn btn-primary" data-dismiss="modal">
-                <i class="fas fa-times fa-fw"></i>
-                Close Window
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>

@@ -9,6 +9,7 @@ export class ProjectPreviewComponent implements OnInit {
   @Input() skills: string;
   @Input() image_thumbnail: any;
   @Input() title: string;
+  @Input() link: string;
 
   skill_list: Array<string>;
 
@@ -16,15 +17,5 @@ export class ProjectPreviewComponent implements OnInit {
 
   ngOnInit() {
     this.skill_list = this.skills.split(",");
-  }
-
-  hide_overlay(){
-    let overlay = <HTMLElement>document.getElementById("overlay");
-    overlay.classList.remove("bg-overlay");
-  }
-
-  show_overlay(){
-    let overlay = <HTMLElement>document.getElementById("overlay");
-    overlay.classList.add("bg-overlay");
   }
 }
