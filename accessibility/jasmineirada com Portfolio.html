@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessibility Standards - Koa11y</title>
+    <meta name="generator" content="Koa11y 3.0.0" />
+
+    <!--
+
+      Run this test on your site with Koa11y!
+
+      https://open-indy.github.io/Koa11y/
+
+    -->
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      body {
+        background: #fff;
+        margin-top: 17px;
+        color: #2c3e50;
+        font-family: "Lato", "Helvetica Neue", sans-serif;
+        font-size: 15px;
+        line-height: 1.42857143;
+      }
+      h1 {
+        display: inline-block;
+        margin: 21px 0px 20px;
+        font-size: 39px;
+        font-weight: 400;
+        word-break: break-all;
+      }
+      h4 {
+        margin: 0px;
+        color: #636f79;
+        font-size: 14.25px;
+      }
+      pre {
+        display: block;
+        background-color: #ecf0f1;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 0px 0px 10.5px;
+        padding: 10px;
+        color: #7b8a8b;
+        font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+        font-size: 14px;
+        line-height: 1.42857143;
+        overflow: auto;
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+      code {
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+      .container {
+        max-width: 900px;
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px 15px;
+      }
+      .row {
+        margin-right: -15px;
+        margin-left: -15px;
+        clear: both;
+      }
+      .panel {
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        margin-bottom: 21px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+      }
+      .panel-heading {
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        color: #fff;
+      }
+      .panel-body {
+        padding: 15px;
+      }
+      .panel-footer {
+        background-color: #ecf0f1;
+        border-top: 1px solid #ecf0f1;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        padding: 10px 15px;
+      }
+      .panel-success {
+        border-color: #18bc9c;
+      }
+      .panel-danger {
+        border-color: #e74c3c;
+      }
+      .panel-warning {
+        border-color: #f39c12;
+      }
+      .panel-primary {
+        border-color: #2c3e50;
+      }
+      .panel-success > .panel-heading {
+        background-color: #18bc9c;
+        border-color: #18bc9c;
+      }
+      .panel-danger > .panel-heading {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+      }
+      .panel-warning > .panel-heading {
+        background-color: #f39c12;
+        border-color: #f39c12;
+      }
+      .panel-primary > .panel-heading {
+        background-color: #2c3e50;
+        border-color: #2c3e50;
+      }
+      .hide {
+        display: none;
+      }
+      .text-capitalize {
+        color: #8c8c8c;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      #buttons {
+        display: inline-block;
+        margin-top: 30px;
+        float: right;
+      }
+      #buttons .disabled {
+        box-shadow: none;
+        cursor: pointer;
+        filter: alpha(opacity=65);
+        opacity: 0.65;
+        pointer-events: auto;
+      }
+      .panel-primary i {
+        margin: 0px 7px;
+      }
+      .btn {
+        display: inline-block;
+        background-image: none;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        margin-bottom: 0px;
+        padding: 10px 15px;
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: center;
+        cursor: pointer;
+        touch-action: manipulation;
+        user-select: none;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+      .btn-sm {
+        border-radius: 3px;
+        padding: 6px 9px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .btn-danger {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+        color: #fff;
+      }
+      .btn-warning {
+        background-color: #f39c12;
+        border-color: #f39c12;
+        color: #fff;
+      }
+      .btn-primary {
+        background-color: #2c3e50;
+        border-color: #2c3e50;
+        color: #fff;
+      }
+      .btn-danger,
+      .btn-warning {
+        margin-right: 3px;
+      }
+      .badge {
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        min-width: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 3px 7px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+      .btn-danger .badge {
+        color: #e74c3c;
+      }
+      .btn-warning .badge {
+        color: #f39c12;
+      }
+      .btn-primary .badge {
+        color: #2c3e50;
+      }
+      .glyphicon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        vertical-align: top;
+      }
+      .glyphicon-ok {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMSAtNiAzMiAzMiI+PHBhdGggZmlsbD0iIzE4QkM5QyIgZD0iTS43NzMgMTMuNDkzbDExLjE3MyAxMS4yTDMzLjc1OSAyLjgyNmwtNS42NTMtNS42NTNMMTEuOTE5IDEzLjM2IDYuNDI2IDcuODR6Ii8+PC9zdmc+");
+      }
+      .glyphicon-remove {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAtNiAzMiAzMiI+PHBhdGggZmlsbD0iI0U3NEMzQyIgZD0iTTIuODI3IDE3LjEybDcuNTItNy41Mi03LjUyLTcuNTJMOC40OC0zLjU3MyAxNiAzLjk0N2w3LjUyLTcuNTIgNS42NTMgNS42NTMtNy41MiA3LjUyIDcuNTIgNy41Mi01LjY1MyA1LjY1My03LjUyLTcuNTItNy41MiA3LjUyeiIvPjwvc3ZnPg==");
+      }
+      .glyphicon-ban-circle {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAtNiAzMiAzMiI+PHBhdGggZmlsbD0iI0YzOUMxMiIgZD0iTS4xMDcgOS42cTAtNC4zMiAyLjEzMy03Ljk3M1Q4LjAyNy00LjE2IDE2LTYuMjkzdDcuOTczIDIuMTMzIDUuNzg3IDUuNzg3VDMxLjg5MyA5LjZ0LTIuMTMzIDcuOTczLTUuNzg3IDUuNzg3VDE2IDI1LjQ5MyA4LjAyNyAyMy4zNiAyLjI0IDE3LjU3My4xMDcgOS42em00Ljg1MyAwcTAgMy4wNjcgMS42NTMgNS43MzNMMjEuNzYuMjEzUTE5LjA5My0xLjQ0IDE2LTEuNDRxLTQuNTYgMC03LjggMy4yNFQ0Ljk2IDkuNnptNS40NjcgOS40NjdRMTMuMDE0IDIwLjY0IDE2IDIwLjY0cTQuNTYgMCA3LjgtMy4yNHQzLjI0LTcuOHEwLTIuOTg3LTEuNTczLTUuNTczeiIvPjwvc3ZnPg==");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" role="main">
+      <div class="row">
+        <span id="buttons"
+          ><button class="btn btn-sm btn-primary">
+            Notices <span class="badge">48</span>
+          </button></span
+        >
+        <h1>jasmineirada.com/Portfolio</h1>
+      </div>
+
+      <div class="row">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_2.H25.2
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the
+            title element describes the document.<br /><br />
+            <pre><code>&lt;title>Jasmine Irada | Portfolio&lt;/title></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4><small>html > head > title</small></h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="#page-top" class="js-scroll-trigger">JASMINE IRADA&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4><small>#mainNav > div > a</small></h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle3.Guideline3_2.3_2_1.G107
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that a change
+            of context does not occur when this input field receives focus.<br /><br />
+            <pre><code>&lt;button _ngcontent-ndw-c9="" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right text-uppercase text-whi...</code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4><small>#mainNav > div > button</small></h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" routerlink="/About" routerlinkactive="active" class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger active" href="/About">About&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4><small>#navbarResponsive > ul > li:nth-child(1) > a</small></h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" routerlink="/Portfolio" routerlinkactive="active" class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger" href="/Portfolio">Portfolio&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4><small>#navbarResponsive > ul > li:nth-child(2) > a</small></h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing" class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded js-scroll-trigger">Resume&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4><small>#navbarResponsive > ul > li:nth-child(3) > a</small></h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="https://github.com/airada" aria-label="Checkout my GitHub" class="btn-social-custom mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small>#page-top > div:nth-child(2) > a:nth-child(1)</small>
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="https://rninchan.itch.io/" aria-label="Checkout my games on Itch.io" class="btn-social-custom mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small>#page-top > div:nth-child(2) > a:nth-child(2)</small>
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="https://www.linkedin.com/in/jasmineirada/" aria-label="Connect with me on Linkedin" class="btn-social-custom mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small>#page-top > div:nth-child(2) > a:nth-child(3)</small>
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="mailto:jasmineirada@gmail.com" aria-label="Send me an email" class="btn-social-custom mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small>#page-top > div:nth-child(2) > a:nth-child(4)</small>
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Ensure that the img
+            element's alt text serves the same purpose and presents the same
+            information as the image.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="/assets/img/avataaars.svg" alt="Smiling Girl Avatar Icon" class="card-img-top mx-auto" style="height: 8rem; width: 8rem;"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > section:nth-child(4) > div > div:nth-child(3) >
+                div:nth-child(1) > div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> If this image
+            cannot be fully described in a short text alternative, ensure a long
+            text alternative is also available, such as in the body text or
+            through a link.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="/assets/img/avataaars.svg" alt="Smiling Girl Avatar Icon" class="card-img-top mx-auto" style="height: 8rem; width: 8rem;"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > section:nth-child(4) > div > div:nth-child(3) >
+                div:nth-child(1) > div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Ensure that the img
+            element's alt text serves the same purpose and presents the same
+            information as the image.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="assets/img/graduation-cap-solid.svg" alt="Graduation Cap Icon" class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" style="height: 6rem; width: 6rem;"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > section:nth-child(4) > div > div:nth-child(3) >
+                div:nth-child(1) > div:nth-child(2) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> If this image
+            cannot be fully described in a short text alternative, ensure a long
+            text alternative is also available, such as in the body text or
+            through a link.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="assets/img/graduation-cap-solid.svg" alt="Graduation Cap Icon" class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" style="height: 6rem; width: 6rem;"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > section:nth-child(4) > div > div:nth-child(3) >
+                div:nth-child(1) > div:nth-child(2) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Ensure that the img
+            element's alt text serves the same purpose and presents the same
+            information as the image.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="assets/img/lightbulb-regular.svg" alt="Lightbulb Icon" class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" style="height: 6rem; width: 6rem;"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > section:nth-child(4) > div > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> If this image
+            cannot be fully described in a short text alternative, ensure a long
+            text alternative is also available, such as in the body text or
+            through a link.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="assets/img/lightbulb-regular.svg" alt="Lightbulb Icon" class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" style="height: 6rem; width: 6rem;"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > section:nth-child(4) > div > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Ensure that the img
+            element's alt text serves the same purpose and presents the same
+            information as the image.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="assets/img/laptop-code-solid.svg" alt="Laptop with Code brackets Icon" class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" style="height: 6rem; width: 6rem;"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > section:nth-child(4) > div > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(2) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> If this image
+            cannot be fully described in a short text alternative, ensure a long
+            text alternative is also available, such as in the body text or
+            through a link.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="assets/img/laptop-code-solid.svg" alt="Laptop with Code brackets Icon" class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" style="height: 6rem; width: 6rem;"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > section:nth-child(4) > div > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(2) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Python&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(3) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(1)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Angular&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(3) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(2)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Bootstrap&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(3) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(3)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Design&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(3) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(4)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Ensure that the img
+            element's alt text serves the same purpose and presents the same
+            information as the image.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="/assets/img/portfolio/mimi/prototype.png" alt="Mimi AI Website Preview" class="img-fluid"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(3) > div:nth-child(3) >
+                div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> If this image
+            cannot be fully described in a short text alternative, ensure a long
+            text alternative is also available, such as in the body text or
+            through a link.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="/assets/img/portfolio/mimi/prototype.png" alt="Mimi AI Website Preview" class="img-fluid"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(3) > div:nth-child(3) >
+                div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="https://github.com/airada/happy-for-you" aria-label="View the source code" class="mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(3) > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(2) > a:nth-child(1)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="https://mimi-ai.herokuapp.com/" aria-label="Checkout the project online" class="mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(3) > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(2) > a:nth-child(2)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">C#&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(1)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Unity&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(2)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Art&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(3)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Project Management&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(4)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Ensure that the img
+            element's alt text serves the same purpose and presents the same
+            information as the image.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="/assets/img/portfolio/obviouspalace/start_screen.png" alt="Crystal Crisis Start Screen Preview" class="img-fluid"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(3) >
+                div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> If this image
+            cannot be fully described in a short text alternative, ensure a long
+            text alternative is also available, such as in the body text or
+            through a link.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="/assets/img/portfolio/obviouspalace/start_screen.png" alt="Crystal Crisis Start Screen Preview" class="img-fluid"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(3) >
+                div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="https://jasmineirada.com/obviouspalace/">Obvious Palace&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > i >
+                a</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="https://github.com/magks/magic-missile" aria-label="View the source code" class="mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(2) > a:nth-child(1)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="https://jasmineirada.com/obviouspalace/" aria-label="Check out the promotional website for the game" class="mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(4) > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(2) > a:nth-child(2)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">C#&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(5) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(1)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Unity&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(5) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(2)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" class="badge badge-pill">Design&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(5) > div:nth-child(2) >
+                div:nth-child(2) > a:nth-child(3)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G94.Image
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Ensure that the img
+            element's alt text serves the same purpose and presents the same
+            information as the image.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png" alt="Escaping the Negativity Game Art Preview" class="img-fluid"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(5) > div:nth-child(3) >
+                div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle1.Guideline1_1.1_1_1.G73,G74
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> If this image
+            cannot be fully described in a short text alternative, ensure a long
+            text alternative is also available, such as in the body text or
+            through a link.<br /><br />
+            <pre><code>&lt;img _ngcontent-ndw-c9="" src="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png" alt="Escaping the Negativity Game Art Preview" class="img-fluid"></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(5) > div:nth-child(3) >
+                div:nth-child(1) > div > img</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="https://devpost.com/software/escaping-the-negativity">AthenaHacks 2019&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(5) > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > i >
+                a</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="https://github.com/airada/AH_2019" aria-label="View the source code" class="mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(5) > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(2) > a:nth-child(1)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="https://devpost.com/software/escaping-the-negativity" aria-label="View the DevPost" class="mx-2">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#portfolio > div > div:nth-child(5) > div:nth-child(3) >
+                div:nth-child(2) > div:nth-child(2) > a:nth-child(2)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="https://github.com/airada" aria-label="Checkout my GitHub" class="btn btn-outline-light btn-social mx-1">&lt;svg _ngcontent-ndw-c9="" style...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > footer > div > div > div > a:nth-child(2)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="https://rninchan.itch.io/" aria-label="Checkout my games on Itch.io" class="btn btn-outline-light btn-social mx-1">&lt;svg _ngcontent-ndw-c9="" style...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > footer > div > div > div > a:nth-child(3)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="https://www.linkedin.com/in/jasmineirada/" aria-label="Let's connect on LinkedIn" class="btn btn-outline-light btn-social mx-1">&lt;svg _ngcontent-ndw-c9="" style...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > footer > div > div > div > a:nth-child(4)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" target="_blank" href="mailto:jasmineirada@gmail.com" aria-label="Send me an email" class="btn btn-outline-light btn-social mx-1">&lt;svg _ngcontent-ndw-c9="" style...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4>
+              <small
+                >#page-top > footer > div > div > div > a:nth-child(5)</small
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            WCAG2AA.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81
+          </div>
+          <div class="panel-body">
+            <strong class="text-capitalize">notice:</strong> Check that the link
+            text combined with programmatically determined link context
+            identifies the purpose of the link.<br /><br />
+            <pre><code>&lt;a _ngcontent-ndw-c9="" href="#page-top" aria-label="Go back to top of page" class="js-scroll-trigger d-block text-center text-white rounded">&lt;svg _ngcontent-ndw-c9="" aria-...&lt;/a></code></pre>
+          </div>
+          <div class="panel-footer text-sm">
+            <h4><small>#page-top > div:nth-child(8) > a</small></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var errorButton = document.querySelectorAll(".btn-danger")[0];
+      var warningButton = document.querySelectorAll(".btn-warning")[0];
+      var noticeButton = document.querySelectorAll(".btn-primary")[0];
+      var allErrors = document.querySelectorAll(".panel-danger");
+      var allWarnings = document.querySelectorAll(".panel-warning");
+      var allNotices = document.querySelectorAll(".panel-primary");
+
+      function hideAll(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          arr[i].classList.add("hide");
+        }
+      }
+
+      function showAll(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          arr[i].classList.remove("hide");
+        }
+      }
+
+      errorButton.addEventListener("click", function () {
+        if (this.classList.contains("disabled")) {
+          this.classList.remove("disabled");
+          showAll(allErrors);
+        } else {
+          this.classList.add("disabled");
+          hideAll(allErrors);
+        }
+      });
+      warningButton.addEventListener("click", function () {
+        if (this.classList.contains("disabled")) {
+          this.classList.remove("disabled");
+          showAll(allWarnings);
+        } else {
+          this.classList.add("disabled");
+          hideAll(allWarnings);
+        }
+      });
+      noticeButton.addEventListener("click", function () {
+        if (this.classList.contains("disabled")) {
+          this.classList.remove("disabled");
+          showAll(allNotices);
+        } else {
+          this.classList.add("disabled");
+          hideAll(allNotices);
+        }
+      });
+    </script>
+  </body>
+</html>

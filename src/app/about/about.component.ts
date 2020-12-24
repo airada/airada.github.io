@@ -1,18 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
-
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  selector: "app-about",
+  templateUrl: "./about.component.html",
+  styleUrls: ["./about.component.css"],
 })
+
 export class AboutComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router){}
-
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
