@@ -1,13 +1,46 @@
 import { Component, OnInit } from "@angular/core";
-
 import { FormControl } from "@angular/forms";
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  keyframes,
+  group,
+  query,
+  sequence,
+  stagger,
+  animation,
+  useAnimation,
+  animateChild
+} from '@angular/animations';
+
 
 @Component({
   selector: "app-portfolio",
   templateUrl: "./portfolio.component.html",
   styleUrls: ["./portfolio.component.css"],
+  animations: [
+    trigger('alert', [
+      state('open', style({
+        opacity: 1
+      })),
+      state('closed', style({
+        opacity: 0,
+      })),
+      transition('open => closed', [
+        animate('1s ease-out')
+      ]),
+      transition('closed => open', [
+        animate('0.5s ease-in')
+      ]),
+    ]),
+  ]
+  
 })
 export class PortfolioComponent implements OnInit {
+  skillExist = true;
   skill_tags: any = [
     ["cs", "C#"],
     ["cpp", "C++"],
@@ -38,6 +71,12 @@ export class PortfolioComponent implements OnInit {
   ngOnInit() {}
 
   filter($event) {
+    if($event == "invalid"){
+      this.alert_fadein();
+      this.alert_fadeout();
+      return;
+    }
+
     this.selected_skill = $event;
 
     if (this.chosen_skill.includes(this.selected_skill)) {
@@ -54,40 +93,6 @@ export class PortfolioComponent implements OnInit {
     this.filter_skill();
   }
 
-  //Skill is added to or removed from chosen list
-  // add_skill(skill_item) {
-  //   if (skill_item == "clear"){
-  //     for (let i = 0; i < this.skill_tags.length; i++) {
-  //       this.toggle_class(this.skill_tags[i][0], false);    //removes hidden class, if it exists
-  //       var inputValue = (<HTMLInputElement>document.getElementById(this.skill_tags[i][0]));
-  //       inputValue.removeAttribute('style');
-  //       inputValue.classList.add('bg-warning');
-
-  //     }
-
-  //     this.chosen_skill = [];
-  //     return;
-  //   }
-
-  //   if (this.chosen_skill.includes(skill_item)) {
-  //     this.chosen_skill.splice(this.chosen_skill.indexOf(skill_item), 1);
-  //     this.change_btn_color(skill_item, 'bg-warning', '#d39e00', false);
-  //   } else {
-  //     this.chosen_skill.push(skill_item);
-  //     this.change_btn_color(skill_item, 'bg-warning', '#d39e00', true);
-  //   }
-
-  //   this.filter_skill();
-  // }
-
-  // change_btn_color(item, color1, color2, push) {
-  //   var inputValue = (<HTMLInputElement>document.getElementById(item));
-  //   if (push){ inputValue.setAttribute("style","background-color: "+ color2 + ";"); }
-  //   else {  inputValue.removeAttribute('style');  }
-  //   inputValue.classList.toggle(color1);
-  // }
-
-  // Filters projects based on the chosen skill list
   filter_skill() {
     let len = this.chosen_skill.length;
 
@@ -121,4 +126,14 @@ export class PortfolioComponent implements OnInit {
       element.classList.toggle("hidden", flag);
     });
   }
+
+  alert_fadein() {
+    this.skillExist = false;
+  }
+
+  alert_fadeout() {
+    setTimeout( () => {
+          this.skillExist = true;
+        }, 2000);
+   }
 }

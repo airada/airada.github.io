@@ -167,6 +167,8 @@ export class FiltersComponent implements OnInit {
       this.selected.splice(this.selected.indexOf(str), 1);
     } else if (this.arrowkey_position != -1) {
       this.toggle_skill(this.suggestions[this.arrowkey_position]);
+    } else if (!this.skills_list.includes(str)){
+      this.emit_event("invalid");
     }
 
     this.reset_input();

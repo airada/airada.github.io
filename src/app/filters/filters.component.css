@@ -23,7 +23,7 @@
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: lightgray;
+  color: gray;
   opacity: 1; /* Firefox */
 }
 
@@ -38,7 +38,7 @@
 input {
   background-color: transparent;
   border: none;
-  color: gray;
+  color: #0b2228;
   display: inline-block;
   font-family: "Font Awesome 5 Free", "Montserrat";
   font-weight: 900;
@@ -48,11 +48,6 @@ input {
 
 ul {
   list-style-type: none;
-}
-
-.far,
-.fas {
-  color: white;
 }
 
 .pointer {
@@ -93,8 +88,11 @@ ul {
 }
 
 /* Clear */
+.fa-filter, .fa-times {
+  color: darkgray;
+}
 .clear:hover .fa-times {
-  color: gray;
+  color: #0b2228;
 }
 
 /* Dropdown Button */
@@ -103,7 +101,7 @@ ul {
 }
 
 .caret {
-  background-color: rgba(128, 128, 128, 0.3);
+  background-color: darkgray;
   border-radius: 0px 15px 15px 0px;
 }
 
@@ -112,7 +110,7 @@ ul {
 }
 
 .caret:hover {
-  background-color: rgba(128, 128, 128, 0.75);
+  background-color: #0b2228;
 }
 
 .caret:hover .fa-caret-down {
