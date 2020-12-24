@@ -144,6 +144,8 @@ ul {
 }
 
 .active,
+.dropdown-item.active,
+.dropdown-item:active,
 .dropdown-item:hover {
   background-color: lightgrey;
 }

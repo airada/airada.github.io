@@ -1,24 +1,27 @@
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg text-uppercase fixed-top p-0 py-md-3" id="mainNav">
-  <div class="container justify-content-end">
+<nav class="navbar navbar-expand-lg  fixed-top p-0 py-md-3" id="mainNav">
+  <div [@alert]="skillExist ? 'closed' : 'open'" class="container alert alert-danger mt-lg-0" role="alert">
+    <p><b class="mr-1">Sorry!</b> Skill currently not available.</p>
+  </div>
+  <div class="container text-uppercase justify-content-end">
     <!-- <a class="js-scroll-trigger" href="#page-top"></a> -->
     <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button"
       data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
       aria-label="Toggle navigation">
       <i class="fas fa-bars fa-2x"></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <div class="collapse navbar-collapse pb-3 py-lg-0" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item ml-auto mx-lg-1">
-          <a class="nav-link mb-3 my-lg-0 px-0 px-lg-3 rounded" routerLink="/About"
+        <li class="nav-item pb-3 px-3 py-lg-0">
+          <a class="nav-link rounded" routerLink="/About"
             routerLinkActive="active">Home</a>
         </li>
-        <li class="nav-item ml-auto mx-lg-1">
-          <a class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded" routerLink="/Portfolio"
+        <li class="nav-item p-3 py-lg-0">
+          <a class="nav-link rounded" routerLink="/Portfolio"
             routerLinkActive="active">Portfolio</a>
         </li>
-        <li class="nav-item ml-auto mx-lg-1">
-          <a class="nav-link my-3 my-lg-0 px-0 px-lg-3 rounded" target="_blank"
+        <li class="nav-item p-3 py-lg-0">
+          <a class="nav-link rounded" target="_blank"
             rel="noopener noreferrer"
             href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">Resume</a>
         </li>
@@ -28,10 +31,6 @@
 </nav>
 
 <section class="page-section text-dark mb-0 mt-5">
-  <div [@alert]="skillExist ? 'closed' : 'open'" class="container alert alert-danger" role="alert">
-    <p><b class="mr-2">Sorry!</b> Skill currently not available.</p>
-  </div>
-
   <h2 class="text-center text-uppercase mb-0">Portfolio</h2>
 
   <app-filters (filter_skill)="filter($event)"
