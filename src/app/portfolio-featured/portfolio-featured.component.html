@@ -1,0 +1,48 @@
+<div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
+        data-aos-once="true" data-aos-anchor-placement="top-center">
+
+        <div class="row">
+          <div class="col-md-6 mt-3"></div>
+          <div class="col col-md-6 mt-md-3 my-2 text-white d-flex align-items-center">
+            <a *ngFor="let skill of badges_list" class="badge bg-sea mx-1 p-2">{{skill}}</a>
+          </div>
+        </div>
+        <div class="container text-dark">
+          <div class="row portfolio-detail border-radius mb-5">
+            <div class="col-12 col-md-6 p-5 bg-clam d-flex justify-content-center border-radius">
+              <div class="portfolio-item " data-toggle="modal" data-target="#portfolioModal1">
+                <img class="img-fluid" [src]="image" alt="Project Preview" />
+              </div>
+            </div>
+
+            <div class="col mt-2 pb-5" style="position: relative;">
+              <h4 class="row mt-2 text-center text-uppercase" >
+                <b>{{title}}</b>
+              </h4>
+              <h6 class="row">
+                <i>{{date}}</i>
+              </h6>
+              <p class="row text-left mb-4">
+                {{description}}
+              </p>
+
+              <div class="row mx-auto pb-4" >
+                <div [@alert]="skillExist ? 'closed' : 'open'" class="container alert alert-info mt-lg-0" role="alert">
+                  <p><b class="mr-1">Sorry!</b> Page is under construction.</p>
+                </div>
+                <button (click)="details()" class="bg-clam btn-shadow p-3">
+                  View Details
+                </button>
+              </div>
+
+              <div class="row d-flex flex-wrap justify-content-center py-3 btn-portfolio" style="position: absolute; width: 100%; bottom: 0;">
+                <a class="col mx-auto d-flex flex-wrap align-items-center text-dark" target="_blank" rel="noopener noreferrer" [href]="code" aria-label="View the source code"><small>VIEW SOURCE</small> <i
+                    class="fab fa-github fa-lg ml-2 my-1"style="color: grey;"></i> </a>
+                <a class="col mx-auto d-flex flex-wrap align-items-center text-dark" target="_blank" rel="noopener noreferrer" [href]="link" aria-label="Checkout the project online"> <small>VISIT WEBSITE</small> <i
+                    class="fas fa-external-link-alt fa-lg my-1 ml-2" style="color: grey;"></i></a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>

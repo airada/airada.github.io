@@ -1,106 +1,177 @@
-header, section, .navbar, footer {
-    background-color: #0b2228ff;
+header,
+section,
+.navbar {
+  background-color: #0b2228ff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+.sub-heading {
+  font-size: large;
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+.text-shadow {
+  text-shadow: 0 0 5px #0b2228, 0 0 5px #0b2228, 0 0 5px #0b2228, 0 0 5px #0b2228;
+}
+
+.fab, .fas {
+  color: #ffffff;
+}
+
+.dot-sm {
+  height: 7px;
+  width: 7px;
+  background-color: transparent;
+  border: 1px dotted #ffe6d5;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #ffe6d5;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.bottom-align-text {
+  position: absolute;
+  bottom: 5vh;
+}
+
+.top-align {
+  position: absolute;
+  top: 10vh;
+}
 
 header {
-    background: url('src\assets\fish.svg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-color: #0b2228ff;
+  background: url("src\assets\drawing3anim.svg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-color: #0b2228ff;
 }
 
-a.badge:hover, a.badge-pill:hover {
-    background-color: transparent;
-    color: white;
-    font-weight: normal;
+.fas, .fab, .btn-social-custom {
+  color:  #ffe6d5bb;
 }
 
-a.badge, a.badge-pill, a.border {
-    background-color: #fd7e14;
-    font-weight: normal;
+.navbar-nav li a {
+  text-align: right;
+  font-weight: normal;
+}
+
+/* a.badge:hover,
+a.badge-pill:hover {
+  background-color: transparent;
+  color: white;
+  font-weight: normal;
+}
+
+a.badge,
+a.badge-pill,
+a.border {
+  background-color: #fd7e14;
+  font-weight: normal;
 }
 
 i a {
-    color: #fd7e14;
+  color: #fd7e14;
 }
 
 i a:hover {
-    color: #803300;
+  color: #803300;
 }
 .navbar-nav li a {
-    text-align: right;
-    font-weight: normal;
+  text-align: right;
+  font-weight: normal;
 }
 
 .overlay {
-    background-color: #164450;
+  background-color: #164450;
 }
 
 .navbar-nav {
-    font-size: small;
+  font-size: small;
 }
-.name-text {
-    font-size: large;
-}
+
 .card {
-    background-color:#f8f9fa;
+  background-color: #f8f9fa;
 }
 
 .copyright {
-    background-color:#051114ff;
+  background-color: #051114ff;
 }
 
 .sidebar {
-    width: 100px;
-    position: fixed;
-    bottom: 75px;
-    left: 0;
-    overflow-x: hidden;
+  width: 100px;
+  position: fixed;
+  bottom: 75px;
+  left: 0;
+  overflow-x: hidden;
 }
-  
-  /* Style sidebar links */
-  .sidebar a {
-    text-decoration: none;
-    font-size: 20px;
-    color:#fd7e14;
-    display: block;
-  }
-  
-  /* Style links on mouse-over */
-  .sidebar a:hover {
-    color:#803300;
-  }
 
-.bottom-align-text {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  }
+.sidebar a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fd7e14;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #803300;
+}
+
+
 
 .card-size {
-    width: 13rem;
-    height: 20rem;
+  width: 13rem;
+  height: 20rem;
 }
 
 @media only screen and (max-width: 600px) {
-    .card-size {
-        width: 10rem;
-        height: 15rem;
-    }
+  .card-size {
+    width: 10rem;
+    height: 15rem;
   }
+}
 
-ul, li {
-    list-style-type: none; 
-    margin: none;
-    padding: none;
+ul,
+li {
+  list-style-type: none;
+  margin: none;
+  padding: none;
 }
 
 .text-80 {
-    font-size: 80%;
-    margin: 0;
-    padding: 0;
-}
+  font-size: 80%;
+  margin: 0;
+  padding: 0;
+} */
