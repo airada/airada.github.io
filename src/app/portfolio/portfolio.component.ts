@@ -5,15 +5,7 @@ import {
   state,
   style,
   animate,
-  transition,
-  keyframes,
-  group,
-  query,
-  sequence,
-  stagger,
-  animation,
-  useAnimation,
-  animateChild
+  transition
 } from '@angular/animations';
 
 
@@ -128,12 +120,16 @@ export class PortfolioComponent implements OnInit {
   }
 
   alert_fadein() {
+    let alert = <HTMLElement>(document.getElementById("alert"));
+    alert.classList.remove("d-none");
     this.skillExist = false;
   }
 
   alert_fadeout() {
+    let alert = <HTMLElement>(document.getElementById("alert"));
     setTimeout( () => {
           this.skillExist = true;
-        }, 2000);
+          setTimeout( () => { alert.classList.add("d-none");}, 1000)
+        }, 3000);
    }
 }
