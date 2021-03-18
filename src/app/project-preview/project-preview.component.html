@@ -1,5 +1,20 @@
-<div class="col">
-  <ul class="d-flex flex-wrap m-0 p-0">
+<div class="col mt-4">
+  <div class="card bg-light d-flex align-items-center justify-content-center" style="width: 25rem;">
+    <div class="project">
+      <img class="card-img-top" [src]="image_thumbnail" alt="Card image cap">
+      <div class="overlay bg-overlay rounded"></div>
+      
+    </div>
+    <div class="circle"></div>
+    <h4 class="title text-white text-center">{{title}}</h4>
+
+    <div class="card-body">
+      <ul class="d-flex flex-wrap m-0 p-0">
+        <li class="badge badge-dark text-light mx-1" *ngFor="let skill of skill_list">{{skill}}</li>
+      </ul>
+    </div>
+  </div>
+  <!-- <ul class="d-flex flex-wrap m-0 p-0">
     <li class="text-dark mt-1 mx-1 p-1" *ngFor="let skill of skill_list">{{ skill }}</li>
   </ul>
   <a
@@ -12,5 +27,5 @@
     <div class="overlay bg-overlay rounded"></div>
     <div class="circle"></div>
     <h4 class="title text-white text-center">{{title}}</h4>
-  </a>
+  </a> -->
 </div>

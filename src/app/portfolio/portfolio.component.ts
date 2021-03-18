@@ -48,15 +48,6 @@ export class PortfolioComponent implements OnInit {
   ];
   chosen_skill: any = [];
   selected_skill: any;
-  toppings = new FormControl();
-  toppingList: string[] = [
-    "Extra cheese",
-    "Mushroom",
-    "Onion",
-    "Pepperoni",
-    "Sausage",
-    "Tomato",
-  ];
 
   constructor() {}
 
