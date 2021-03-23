@@ -1,7 +1,10 @@
 header,
-section,
 .navbar {
-  background-color: #0b2228ff;
+  background-color: white;
+}
+
+section {
+  background-color: white;
 }
 
 h1,
@@ -18,12 +21,21 @@ p {
   line-height: 1.2;
 }
 
-h1 {
-  font-size: xx-large;
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 7vh;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: xx-large;
+  }
 }
 
 h2 {
-  font-size: x-large;
+  font-size: large;
 }
 
 .sub-heading {
@@ -47,7 +59,7 @@ ul {
   height: 7px;
   width: 7px;
   background-color: transparent;
-  border: 1px dotted #ffe6d5;
+  border: 1px dotted black;
   border-radius: 50%;
   display: inline-block;
 }
@@ -55,7 +67,7 @@ ul {
 .dot {
   height: 10px;
   width: 10px;
-  background-color: #ffe6d5;
+  background-color: black;
   border-radius: 50%;
   display: inline-block;
 }
@@ -71,7 +83,7 @@ ul {
 }
 
 header {
-  background: url("src\assets\drawing3anim.svg") no-repeat center center;
+  background: url("src\assets\new_theme\header1.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -80,7 +92,7 @@ header {
 }
 
 .fas, .fab, .btn-social-custom {
-  color:  #ffe6d5bb;
+  color:  black;
 }
 
 .navbar-nav li a {

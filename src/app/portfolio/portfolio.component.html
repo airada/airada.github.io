@@ -13,17 +13,17 @@
     <div class="collapse navbar-collapse pb-3 py-lg-0" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item pb-3 px-3 py-lg-0">
-          <a class="nav-link rounded" routerLink="/About"
-            routerLinkActive="active">Home</a>
+          <a class="nav-link text-dark rounded" routerLink="/About"
+            routerLinkActive="active"><b>Home</b></a>
         </li>
         <li class="nav-item p-3 py-lg-0">
           <a class="nav-link rounded" routerLink="/Portfolio"
-            routerLinkActive="active">Portfolio</a>
+            routerLinkActive="active"><b>Portfolio</b></a>
         </li>
         <li class="nav-item p-3 py-lg-0">
-          <a class="nav-link rounded" target="_blank"
+          <a class="nav-link text-dark rounded" target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">Resume</a>
+            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing"><b>Resume</b></a>
         </li>
       </ul>
     </div>
@@ -31,7 +31,7 @@
 </nav>
 
 <section class="page-section text-dark mb-0 mt-5">
-  <h2 class="text-center text-uppercase mb-0">Portfolio</h2>
+  <!-- <h2 class="text-center text-uppercase mb-0">Portfolio</h2> -->
 
   <app-filters (filter_skill)="filter($event)"
     skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,Unity"></app-filters>
