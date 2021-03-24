@@ -37,9 +37,6 @@ footer {
   text-align: right;
   font-weight: normal;
 }
-.navbar-nav {
-  font-size: small;
-}
 
 .hidden {
   display: none;
@@ -76,7 +73,9 @@ li {
   color: #491217;
 }
 
-
+.btn-outline-dark {
+  border-radius: 50%;
+}
 /* .open-close-container {
   border: 1px solid #dddddd;
   margin-top: 1em;

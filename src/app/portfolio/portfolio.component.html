@@ -1,10 +1,9 @@
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg  fixed-top p-0 py-md-3" id="mainNav">
+<!-- <nav class="navbar navbar-expand-lg  fixed-top p-0 py-md-3" id="mainNav">
   <div id="alert" [@alert]="skillExist ? 'closed' : 'open'" class="container alert alert-danger mt-lg-0 d-none" role="alert">
     <p><b class="mr-1">Sorry!</b> Skill currently not available.</p>
   </div>
   <div class="container text-uppercase justify-content-end">
-    <!-- <a class="js-scroll-trigger" href="#page-top"></a> -->
     <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button"
       data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -28,11 +27,26 @@
       </ul>
     </div>
   </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">-</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" routerLink="/About" routerLinkActive="active" aria-current="page">HOME</a>
+        <a class="nav-link active" routerLink="/Portfolio" routerLinkActive="active">PORTFOLIO</a>
+        <a class="nav-link" target="_blank" rel="noopener noreferrer"
+        href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">RESUME</a>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <section class="page-section text-dark mb-0 mt-5">
-  <!-- <h2 class="text-center text-uppercase mb-0">Portfolio</h2> -->
-
   <app-filters (filter_skill)="filter($event)"
     skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,Unity"></app-filters>
 
@@ -83,16 +97,24 @@
 
 <!-- Footer-->
 <footer class="footer bg-white text-dark text-center">
-  <p class="name-custom mb-4">Let's Connect!</p>
-  <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="https://github.com/airada"
-    aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github"></i></a>
-  <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="https://rninchan.itch.io/"
-    aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io"></i></a>
-  <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer"
-    href="https://www.linkedin.com/in/jasmineirada/" aria-label="Let's connect on LinkedIn"><i
-      class="fab fa-fw fa-linkedin"></i></a>
-  <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="mailto:jasmineirada@gmail.com"
-    aria-label="Send me an email"><i class="fas fa-fw fa-envelope"></i></a>
+  <div class="container">
+    <div class="row">
+      <!-- Footer Social Icons-->
+      <div class="col mb-5 mb-lg-0">
+        <p class="name-custom mb-4">Let's Connect!</p>
+        <a class="btn btn-outline-dark btn-social p-3 mx-1" target="_blank" rel="noopener noreferrer"
+          href="https://github.com/airada" aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github fa-2x"></i></a>
+        <a class="btn btn-outline-dark btn-social p-3 mx-1" target="_blank" rel="noopener noreferrer"
+          href="https://rninchan.itch.io/" aria-label="Checkout my games on Itch.io"><i
+            class="fab fa-fw fa-itch-io fa-2x"></i></a>
+        <a class="btn btn-outline-dark btn-social p-3 mx-1" target="_blank" rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/jasmineirada/" aria-label="Let's connect on LinkedIn"><i
+            class="fab fa-fw fa-linkedin fa-2x"></i></a>
+        <a class="btn btn-outline-dark btn-social p-3 mx-1" target="_blank" rel="noopener noreferrer"
+          href="mailto:jasmineirada@gmail.com" aria-label="Send me an email"><i class="fas fa-fw fa-envelope fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
 </footer>
 <!-- Copyright Section-->
 <div class="copyright py-4 bg-white text-center text-dark">
