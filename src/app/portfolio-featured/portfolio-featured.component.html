@@ -1,20 +1,20 @@
 <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
         data-aos-once="true" data-aos-anchor-placement="top-center">
-        <div class="container my-5 text-dark">
-          <div class="row border-radius">
-            <div class="col-12 col-md-6 col-xl-6 d-flex align-items-center">
-              <img class="img-fluid" [src]="image" alt="Project Preview" />
+        <div class="container-xxxl my-5 text-dark">
+          <div class="row h-25">
+            <div class="col-12 col-md-6 col-xl-6 d-flex align-items-center justify-content-center">
+              <img style="max-width: 90%;" [src]="image" alt="Project Preview" />
             </div>
-            <div class="col mt-2 pb-5" style="position: relative;">
-              <div class="container mb-5 mb-md-0">
-                <h1 class="mt-2 text-center text-uppercase" >
-                  <b>{{title}}</b>
-                </h1>
+            <div class="col" >
+              <div class="container h-100 pb-5 pb-lg-0" style="position: relative;">
+                <h3 class="text-center text-uppercase" >
+                  <strong>{{title}}</strong>
+                </h3>
                 <!-- <h2 class="text-center">
                   {{date}}
                 </h2> -->
-                <div class="row card-footer pt-2 text-white">
-                  <ul class="d-flex flex-wrap align-items-center m-0 p-0">
+                <div class="row pt-2 text-white">
+                  <ul class="d-flex flex-wrap align-items-center">
                     <li class="badge text-light my-1 me-1" *ngFor="let skill of badges_list">{{skill}}</li>
                   </ul>
                 </div>
@@ -28,25 +28,20 @@
                   </div>
                   
                 </div> -->
-                <button type="button" (click)="details()" class="btn btn-shadow bg-clam p-3">
+                <button type="button" (click)="details()" class="btn btn-shadow bg-clam mb-3">
                   View Details
                 </button>
-              </div>
-              
-              <div class="container btn-portfolio">
-                <div class="row mb-3">
+                <div class="row btn-portfolio">
                   <div class="col d-flex justify-content-start">
                     <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="code" aria-label="View the source code">View Source<i
-                      class="fab fa-github fa-lg ms-2"></i> </a>
+                      class="fab fa-github fa-lg"></i> </a>
                   </div>
                   <div class="col d-flex justify-content-start">
                     <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="link" aria-label="Checkout the project online"> Visit Website<i
-                      class="fas fa-external-link-alt fa-lg ms-2" ></i></a>
+                      class="fas fa-external-link-alt fa-lg" ></i></a>
                   </div>
-                </div>
+                </div>              
               </div>
-
-              
             </div>
             
           </div>
