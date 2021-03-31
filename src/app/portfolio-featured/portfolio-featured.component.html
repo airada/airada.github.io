@@ -1,20 +1,8 @@
 <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
         data-aos-once="true" data-aos-anchor-placement="top-center">
-
-        <!-- <div class="row">
-          <div class="col-md-6 mt-md-3"></div>
-          <div class="col col-md-6 mt-md-3 mb-2 text-white ">
-            <a *ngFor="let skill of badges_list" class="badge bg-sea mx-1 p-2">{{skill}}</a>
-          </div>
-        </div> -->
-        <div class="container text-dark">
+        <div class="container my-5 text-dark">
           <div class="row border-radius">
-            <!-- <div class="col-12 col-md-6 h-75 p-0 d-flex justify-content-center border-radius">
-              <div class="portfolio-item" data-toggle="modal" data-target="#portfolioModal1">
-                <img class="img-fluid" [src]="image" alt="Project Preview" />
-              </div>
-            </div> -->
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 col-xl-6 d-flex align-items-center">
               <img class="img-fluid" [src]="image" alt="Project Preview" />
             </div>
             <div class="col mt-2 pb-5" style="position: relative;">
@@ -22,9 +10,14 @@
                 <h1 class="mt-2 text-center text-uppercase" >
                   <b>{{title}}</b>
                 </h1>
-                <h2 class="text-center">
+                <!-- <h2 class="text-center">
                   {{date}}
-                </h2>
+                </h2> -->
+                <div class="row card-footer pt-2 text-white">
+                  <ul class="d-flex flex-wrap align-items-center m-0 p-0">
+                    <li class="badge text-light my-1 me-1" *ngFor="let skill of badges_list">{{skill}}</li>
+                  </ul>
+                </div>
                 <p class="text-left mt-md-4 mb-4">
                   {{description}}
                 </p>
@@ -40,23 +33,16 @@
                 </button>
               </div>
               
-              <div class="row btn-portfolio">
+              <div class="container btn-portfolio">
                 <div class="row mb-3">
-                  <div class="col d-flex justify-content-center">
+                  <div class="col d-flex justify-content-start">
                     <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="code" aria-label="View the source code">View Source<i
-                      class="fab fa-github fa-lg"></i> </a>
+                      class="fab fa-github fa-lg ms-2"></i> </a>
                   </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col d-flex justify-content-start">
                     <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="link" aria-label="Checkout the project online"> Visit Website<i
-                      class="fas fa-external-link-alt fa-lg" ></i></a>
+                      class="fas fa-external-link-alt fa-lg ms-2" ></i></a>
                   </div>
-                </div>
-                <div class="row card-footer pt-2 text-white">
-                  <ul class="d-flex flex-wrap align-items-center m-0 p-0">
-                    <span class="fas fa-tags fa-lg mx-md-auto d-none d-md-block"></span>
-                    <span class="fas fa-tags mx-1 d-md-none"></span>
-                    <li class="badge bg-dark text-light mx-auto" *ngFor="let skill of badges_list">{{skill}}</li>
-                  </ul>
                 </div>
               </div>
 

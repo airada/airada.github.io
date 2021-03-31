@@ -11,34 +11,8 @@ p {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.2;
 }
+@media only screen and (max-width: 1824px) {
 
-@media only screen and (max-width: 800px) {
-  h1 {
-    font-size: large;
-  }
-  h2 {
-    font-size: x-small;
-  }
-
-  p {
-    font-size: small;
-  }
-
-  .link {
-    font-size: small;
-  }
-
-  .badge {
-    font-size: small;
-  }
-
-  .fa-github, .fa-external-link-alt, i {
-    margin-left: 5px;
-  }
-  
-}
-
-@media only screen and (min-width: 801px) {
   h1{
     font-size: xx-large;
   }
@@ -62,12 +36,42 @@ p {
   .fa-github, .fa-external-link-alt, i {
     margin-left: 10px;
   }
+
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: large;
+  }
+  h2 {
+    font-size: x-small;
+  }
+
+  p {
+    font-size: small;
+  }
+
+  .link {
+    font-size: small;
+  }
+
+  .badge {
+    font-size: x-small;
+  }
+
+  .fa-github, .fa-external-link-alt, i {
+    margin-left: 5px;
+  }
+  
 }
 
 .btn-portfolio {
   position: absolute; 
   width: 100%; 
   bottom: 0;
+}
+.card-footer {
+  background-color: white;
 }
 
 .portfolio-detail {
@@ -96,8 +100,11 @@ button {
   background-color: none;
 }
 
+.badge {
+  background-color: black;
+}
 .fa-tags {
-  color: black;
+  color: lightgray;
 }
 
 .fa-github, .fa-external-link-alt {

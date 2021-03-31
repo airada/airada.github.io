@@ -76,6 +76,10 @@ li {
 .btn-outline-dark {
   border-radius: 50%;
 }
+.navbar-nav, .nav-link {
+  margin-left: auto;
+}
+
 /* .open-close-container {
   border: 1px solid #dddddd;
   margin-top: 1em;

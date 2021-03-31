@@ -3,8 +3,12 @@ header,
   background-color: white;
 }
 
-header > .container-fluid {
+header {
   height: 100vh;
+}
+
+header > .container-fluid {
+  height: 100%;
 }
 
 section {
@@ -17,38 +21,190 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+.subheading {
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.2;
+  color: black;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 2560px) {
   h1 {
-    font-size: 5vh;
+    font-size: 5rem;
+  }
+  
+  .subheading {
+    font-size: 2.5rem;
+    margin-top: 2rem;
   }
 
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .container-xxxl {
+    max-width: 4000px;
+  }
+
+  .card-img-top {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .card-img{
+    height: 14rem;
+    width: 14rem;
+  }
+
+  .nav-link {
+    font-size: 2rem;
+  }
+
+  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
+    font-size: 4rem;
+  }
+
+  .btn-outline-dark {
+    padding: 2em;
+  }
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (max-width: 2559px) {
+  h1 {
+    font-size: 4rem;
+  }
+  
+  .subheading {
+    font-size: 2rem;
+    margin-top: 1.25rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .container-xxxl {
+    max-width: 1824px;
+  }
+
+  .card-img-top {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .card-img{
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
+    font-size: 3rem;
+  }
+
+  .btn-outline-dark {
+    padding: 2em;
+  }
+}
+
+@media only screen and (max-width: 1824px) {
   h1 {
     font-size: xx-large;
   }
+  
+  .subheading {
+    font-size: large;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  p {
+    font-size: large;
+  }
+
+  .card-img-top {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .card-img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+  }
+
+  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
+    font-size: 2rem;
+  }
+
+  .btn-outline-dark {
+    padding: 1.25em;
+  }
 }
 
-h2 {
-  font-size: large;
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: x-large;
+  }
+  
+  .subheading {
+    font-size: 0.90rem;
+  }
+
+  h2 {
+    font-size: normal;
+  }
+
+  p {
+    font-size: small;
+  }
+  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
+    font-size: 1.25rem;
+  }
+
+  .btn-outline-dark {
+    padding: 1em;
+  }
 }
 
-.sub-heading {
-  font-size: large;
+.container-xxxl {
+  width: 100%;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+/* p {
+  font-size: 0.95rem;
+} */
 
 ul {
   list-style: none;
   list-style-type: none;
+}
+
+.navbar-nav, .nav-link {
+  margin-left: auto;
 }
 
 .text-shadow {
@@ -96,12 +252,14 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-color: #0b2228ff;
+  background-color: white;
 }
 
 .fas, .fab, .btn-social-custom {
   color:  black;
 }
+
+
 
 .navbar-nav li a {
   text-align: right;
