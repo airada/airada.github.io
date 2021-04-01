@@ -34,7 +34,7 @@ p {
   }
 
   .fa-github, .fa-external-link-alt, i {
-    margin-left: 20px;
+    margin-right: 20px;
   }
 
   button {
@@ -65,7 +65,7 @@ p {
   }
 
   .fa-github, .fa-external-link-alt, i {
-    margin-left: 20px;
+    margin-right: 20px;
   }
 
   button {
@@ -96,7 +96,7 @@ p {
   }
 
   .fa-github, .fa-external-link-alt, i {
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   button {
@@ -124,7 +124,7 @@ p {
   }
 
   .fa-github, .fa-external-link-alt, i {
-    margin-left: 5px;
+    margin-right: 5px;
   }
 
   button {
@@ -163,7 +163,8 @@ p {
 }
 
 .bg-clam {
-  background: url("src\assets\new_theme\mesh-gradient.png") no-repeat center center;
+  background-color: #ffa384;
+  /* background: url("src\assets\new_theme\mesh-gradient.png") no-repeat center center; */
 }
 
 .bg-sea {

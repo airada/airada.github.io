@@ -1,3 +1,12 @@
+header {
+  background: url("src\assets\new_theme\header6.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-color: white;
+}
+
 header,
 .navbar {
   background-color: white;
@@ -246,14 +255,6 @@ ul {
   top: 10vh;
 }
 
-header {
-  background: url("src\assets\new_theme\header1.png") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-color: white;
-}
 
 .fas, .fab, .btn-social-custom {
   color:  black;
