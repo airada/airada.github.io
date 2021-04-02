@@ -1,57 +1,65 @@
 <div id="page-top">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">-</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav py-2">
-          <a class="nav-link active my-1" routerLink="/About" routerLinkActive="active" aria-current="page">HOME</a>
-          <a class="nav-link my-1" routerLink="/Portfolio" routerLinkActive="active">PORTFOLIO</a>
-          <a class="nav-link my-1" target="_blank" rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">RESUME</a>
+          <a class="nav-link active my-1 mx-3" routerLink="/About" routerLinkActive="active"
+            aria-current="page">HOME</a>
+          <a class="nav-link my-1 mx-3" routerLink="/Portfolio" routerLinkActive="active">PORTFOLIO</a>
+          <a class="nav-link my-1 ms-3 me-5" target="_blank" rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">RESUME</a>
         </div>
       </div>
     </div>
   </nav>
 
   <header>
-    <div class="container-fluid">
-      <div class="row h-100 d-flex align-items-center justify-content-center">
-          <div class="col-12 col-lg-5 mb-0 pb-0 ms-3 text-dark">
-              <h1> <small>Hi there! </small><br> I'm Jasmine Irada. <br><strong>Software Engineer</strong></h1>
-              <ul class="d-flex justify-content-start p-0 mx-0 mt-2">
-                <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://github.com/airada"
-                    aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github "></i></a>
-                </li>
-                <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://rninchan.itch.io/"
-                    aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io "></i></a>
-                </li>
-                <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
-                    aria-label="Connect with me on Linkedin"><i class="fab fa-fw fa-linkedin "></i></a>
-                </li>
-                <li><a class="btn btn-outline-dark me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
-                    aria-label="Send me an email"><i class="fas fa-fw fa-envelope "></i></a>
-                </li>
-              </ul>
-              <br>
-              <div class="subheading">Diving deep into the intersection between technology, art, and design.</div>
-        </div>
-        <div class="col mt-lg-5 d-flex align-items-center justify-content-center text-dark">
-          <!-- <h1>insert pic here</h1> -->
-            <img class="img-fluid" src="/assets/new_theme/cup/full_cup.svg">
+    <div class="container-fluid" style="position: relative;">
+      <div class="m-0 p-0" data-aos="fade-right" data-aos-offset="300" data-aos-duration="750" data-aos-easing="ease-in-sine">
+        <div class="row h-50 w-75">
+          <img class="img-fluid" src="/assets/new_theme/test_projects/183c.jpg">
         </div>
       </div>
-        
+
+      <div class="row m-0 p-0" style="position: absolute; bottom: 0; left: 0; right: 0;">
+        <div class="col mb-0 pb-0 ms-3 text-center text-white">
+          <h1 class="text-white"> <small>Jasmine Irada</small><br><strong>Software
+              Engineer</strong></h1>
+          <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
+            <li><a class="btn btn-outline-light me-2" target="_blank" href="https://github.com/airada"
+                aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github "></i></a>
+            </li>
+            <li><a class="btn btn-outline-light me-2" target="_blank" href="https://rninchan.itch.io/"
+                aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io "></i></a>
+            </li>
+            <li><a class="btn btn-outline-light me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
+                aria-label="Connect with me on Linkedin"><i class="fab fa-fw fa-linkedin "></i></a>
+            </li>
+            <li><a class="btn btn-outline-light me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
+                aria-label="Send me an email"><i class="fas fa-fw fa-envelope "></i></a>
+            </li>
+          </ul>
+          <br>
+          <!-- <div class="subheading">Diving deep into the intersection between technology, art, and design.</div> -->
+        </div>
+        <!-- <div class="col mt-lg-5 d-flex align-items-center justify-content-center text-dark">
+          <img class="img-fluid" src="/assets/new_theme/cup/full_cup.svg">
+        </div> -->
       </div>
+
+    </div>
   </header>
 
   <section class="page-section portfolio" id="portfolio">
     <app-portfolio-featured badges="Python,Angular,Bootstrap,Design" image="/assets/new_theme/test_projects/888.jpg"
-        title="Mimi AI: Happy For You" date="August 2020 - Ongoing"
-        description="Motivational task-list system integrated with game mechanics and design."
-        code="https://github.com/airada/happy-for-you" link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+      title="Mimi AI: Happy For You" date="August 2020 - Ongoing"
+      description="Motivational task-list system integrated with game mechanics and design."
+      code="https://github.com/airada/happy-for-you" link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
   </section>
 
   <section class="bg-white py-5 my-5">
@@ -59,8 +67,7 @@
     <div class="container-xxxl d-flex flex-wrap">
       <div class="col-6 col-lg-3 p-0 mx-auto">
         <div class="card bg-white card-size">
-          <img class="card-img mx-auto" src="/assets/img/avataaars.svg"
-            alt="Smiling Girl Avatar Icon" />
+          <img class="card-img mx-auto" src="/assets/img/avataaars.svg" alt="Smiling Girl Avatar Icon" />
 
           <div class="card-body">
             <p class="card-text text-center">
@@ -73,8 +80,8 @@
 
       <div class="col-6 col-lg-3 p-0 mx-auto">
         <div class="card bg-white card-size">
-          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
-            src="assets/img/graduation-cap-solid.svg" alt="Graduation Cap Icon" />
+          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/graduation-cap-solid.svg"
+            alt="Graduation Cap Icon" />
 
           <div class="card-body">
             <p class="card-text text-center">
@@ -90,8 +97,8 @@
 
       <div class="col-6 col-lg-3 p-0 mx-auto">
         <div class="card bg-white card-size">
-          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
-            src="assets/img/lightbulb-regular.svg" alt="Lightbulb Icon" />
+          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/lightbulb-regular.svg"
+            alt="Lightbulb Icon" />
 
           <div class="card-body">
             <p class="card-text text-center">
@@ -104,8 +111,8 @@
 
       <div class="col-6 col-lg-3 p-0 mx-auto">
         <div class="card bg-white card-size">
-          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark"
-            src="assets/img/laptop-code-solid.svg" alt="Laptop with Code brackets Icon" />
+          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/laptop-code-solid.svg"
+            alt="Laptop with Code brackets Icon" />
 
           <div class="card-body">
             <p class="card-text text-center">
@@ -137,7 +144,8 @@
             <li><a class="btn btn-outline-dark me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
                 aria-label="Send me an email"><i class="fas fa-fw fa-envelope "></i></a>
             </li>
-          </ul></div>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>

@@ -1,16 +1,21 @@
 header {
-  background: url("src\assets\new_theme\header6.png") no-repeat center center;
+  /* background: url("src/assets/new_theme/adrien-olichon-_GH9LwhlSO4-unsplash.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
-  background-color: white;
+  -o-background-size: cover; */
+  background-color: black;
 }
 
 header,
 .navbar {
-  background-color: white;
+  background-color: black;
+  color: #f5f5f7;
 }
+
+/* .navbar {
+  opacity: 0.85;
+} */
 
 header {
   height: 100vh;
@@ -80,7 +85,7 @@ p,
     font-size: 4rem;
   }
 
-  .btn-outline-dark {
+  .btn-outline-light,.btn-outline-dark {
     padding: 2em;
   }
 }
@@ -125,7 +130,7 @@ p,
     font-size: 3rem;
   }
 
-  .btn-outline-dark {
+  .btn-outline-light,.btn-outline-dark {
     padding: 2em;
   }
 }
@@ -165,7 +170,7 @@ p,
     font-size: 2rem;
   }
 
-  .btn-outline-dark {
+  .btn-outline-light,.btn-outline-dark {
     padding: 1.25em;
   }
 }
@@ -190,7 +195,7 @@ p,
     font-size: 1.25rem;
   }
 
-  .btn-outline-dark {
+  .btn-outline-light,.btn-outline-dark {
     padding: 1em;
   }
 }
@@ -212,8 +217,9 @@ ul {
   list-style-type: none;
 }
 
-.navbar-nav, .nav-link {
+.navbar-nav, .nav-link, .navbar-brand {
   margin-left: auto;
+  color: #f5f5f7;
 }
 
 .text-shadow {
@@ -267,7 +273,7 @@ ul {
   font-weight: normal;
 }
 
-.btn-outline-dark {
+.btn-outline-light, .btn-outline-dark {
   border-radius: 50%;
 }
 
