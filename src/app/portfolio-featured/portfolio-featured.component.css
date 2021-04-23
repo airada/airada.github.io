@@ -134,12 +134,11 @@ p {
 
 }
 
-.btn-portfolio {
+/* .btn-portfolio {
   position: absolute;
   width: 100%;
   bottom: 0;
-
-}
+} */
 
 .container-xxxl {
   width: 100%;
@@ -172,12 +171,12 @@ p {
 }
 
 .badge {
-  background-color: black;
+  background-color: lightgray;
 }
 .fa-tags {
   color: lightgray;
 }
 
 .fa-github, .fa-external-link-alt {
-  color: grey;
+  color: gray;
 }

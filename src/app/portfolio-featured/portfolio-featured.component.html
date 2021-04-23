@@ -1,15 +1,16 @@
 <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out"
         data-aos-once="true" data-aos-anchor-placement="top-center">
-        <div class="container-xxxl my-5 text-dark">
+        <div class="container-xxxl mt-5 text-dark">
           <div class="row h-25">
             <div class="col-12 col-md-6 col-xl-6 d-flex align-items-center justify-content-center">
-              <img style="max-width: 90%;" [src]="image" alt="Project Preview" />
+              <img style="max-width: 80%;" [src]="image" alt="Project Preview" />
             </div>
             <div class="col" >
               <div class="container h-100 pb-5 pb-lg-0" style="position: relative;">
                 <h3 class="text-center text-uppercase" >
                   <strong>{{title}}</strong>
                 </h3>
+                
                 <!-- <h2 class="text-center">
                   {{date}}
                 </h2> -->
@@ -21,29 +22,26 @@
                 <p class="text-left mt-md-4 mb-4">
                   {{description}}
                 </p>
-  
                 <!-- <div class="row mx-auto pb-4" >
                   <div [@alert]="skillExist ? 'closed' : 'open'" class="container alert alert-info mt-lg-0" role="alert">
                     <p><b class="mr-1">Sorry!</b> Page is under construction.</p>
                   </div>
-                  
+
                 </div> -->
-                <button type="button" (click)="details()" class="btn btn-shadow bg-clam mb-3">
-                  View Details
-                </button>
-                <div class="row btn-portfolio">
+                <!-- <button type="button" (click)="details()" class="btn btn-shadow bg-clam mb-5">
+                  View Details →
+                </button> -->
+                <!-- <div class="row btn-portfolio">
                   <div class="col d-flex justify-content-start">
                     <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="code" aria-label="View the source code"><i
-                      class="fab fa-github fa-lg"></i>View Source </a>
+                      class="fab fa-github fa-2x"></i></a>
+                      <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="link" aria-label="Checkout the project online"><i
+                      class="fas fa-external-link-alt fa-2x" ></i></a>
                   </div>
-                  <div class="col d-flex justify-content-start">
-                    <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="link" aria-label="Checkout the project online"><i
-                      class="fas fa-external-link-alt fa-lg" ></i> Visit Website</a>
-                  </div>
-                </div>              
+                </div> -->
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>

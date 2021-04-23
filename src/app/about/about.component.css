@@ -1,13 +1,18 @@
+html, body {
+  /* background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
+}
 header {
-  /* background: url("src/assets/new_theme/adrien-olichon-_GH9LwhlSO4-unsplash.jpg") no-repeat center center;
+  background: url("src/assets/new_theme/header/p5.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover; */
-  background-color: black;
+  -o-background-size: cover;
+
+  
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-header,
 .navbar {
   background-color: black;
   color: #f5f5f7;
