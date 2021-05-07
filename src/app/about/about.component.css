@@ -2,15 +2,47 @@ html, body {
   /* background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
 }
+
 header {
-  background: url("src/assets/new_theme/header/p5.png") no-repeat center center;
+  /* background: url("src/assets/new_theme/header/p5.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
-
+  -o-background-size: cover; */
+  background-color: transparent;
   
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+section {
+  z-index: 5;
+}
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#whitebg {
+  z-index: -1;
+}
+
+#blackbg {
+  z-index: -2;
 }
 
 .navbar {
@@ -30,9 +62,6 @@ header > .container-fluid {
   height: 100%;
 }
 
-section {
-  background-color: white;
-}
 
 h1,
 h2,

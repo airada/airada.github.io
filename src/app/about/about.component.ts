@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef, HostListener } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
@@ -11,4 +11,12 @@ export class AboutComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {}
+
+  @HostListener("window:scroll", ["$event"])
+  onWindowScroll(event){
+    let height = window.scrollY;
+    let bg = document.getElementById("whitebg");
+
+    bg.style.top = height * 0.25 + 'px';
+  }
 }
