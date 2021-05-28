@@ -76,14 +76,14 @@ ul {
 /* Badges */
 .badge,
 .badge-pill {
-  background-color: #fd7e14;
+  background-color: #343a40;
   color: white;
   font-size: 10pt;
 }
 
 .badge:hover,
 .badge-pill:hover {
-  background-color: #803300;
+  background-color: #0d1013;
   cursor: pointer;
 }
 
@@ -136,7 +136,9 @@ ul {
 }
 
 .bg-selected {
-  background-color: #ffe6d5;
+  background-color: darkgray;
+  color: white;
+  font-weight: bold;
 }
 
 .dropdown-item {
@@ -152,7 +154,7 @@ ul {
 
 .active.bg-selected,
 .dropdown-item:hover.bg-selected {
-  background-color: #fd7e14;
+  background-color: #343a40;
   color: white;
 }
 
