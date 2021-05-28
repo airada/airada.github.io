@@ -18,8 +18,18 @@ section {
   z-index: 5;
 }
 
-h1, h2, .nav-link { font-family: "Playfair Display"; font-style: normal; font-variant: normal;  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.nav-link { font-family: "Playfair Display"; font-style: normal; font-variant: normal;  }
 
+h2 {
+  font-weight: 900;
+}
 
 #header {
   position: relative;
@@ -99,10 +109,7 @@ header > .container-fluid {
   height: 100%;
 }
 
-h3,
-h4,
-h5,
-h6,
+
 p,
 .subheading {
   margin-bottom: 0.5rem;

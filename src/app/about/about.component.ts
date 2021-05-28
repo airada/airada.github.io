@@ -50,9 +50,9 @@ export class AboutComponent implements OnInit {
 
 
   ngOnInit() {
-    this.stars = this.box_shadow(250);
-    this.stars1 = this.box_shadow(125);
-    this.stars2 = this.box_shadow(75);
+    this.stars = this.box_shadow(400, 250);
+    this.stars1 = this.box_shadow(125, 200);
+    this.stars2 = this.box_shadow(50, 200);
     document.getElementById("stars").style.boxShadow = this.stars;
     document.getElementById("stars1").style.boxShadow = this.stars1;
     document.getElementById("stars2").style.boxShadow = this.stars2;
@@ -82,11 +82,11 @@ export class AboutComponent implements OnInit {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  private box_shadow(num_stars) {
+  private box_shadow(num_stars, vh_height) {
     let box_shadow_str = "";
 
     for (let i = 0; i <= num_stars; i++) {
-      box_shadow_str += this.rng(0, 100).toString() + "vw " + this.rng(0, 200).toString() + "vh " + "white"
+      box_shadow_str += this.rng(0, 100).toString() + "vw " + this.rng(0, vh_height).toString() + "vh " + "white"
 
       if (i != num_stars) {
         box_shadow_str += ","
