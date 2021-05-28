@@ -9,10 +9,10 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav py-2">
           <a class="nav-link active my-1 mx-3" routerLink="/About" routerLinkActive="active"
-            aria-current="page">HOME</a>
-          <a class="nav-link my-1 mx-3" routerLink="/Portfolio" routerLinkActive="active">PORTFOLIO</a>
+            aria-current="page">./home</a>
+          <a class="nav-link my-1 mx-3" routerLink="/Portfolio" routerLinkActive="active">./portfolio</a>
           <a class="nav-link my-1 ms-3 me-5" target="_blank" rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">RESUME</a>
+            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">./resume</a>
         </div>
       </div>
     </div>
@@ -38,22 +38,30 @@
 
       
       <img class="img-fluid" src="/assets/new_theme/header/white_bg.png" id="whitebg">
-      <div id="stars"></div>
-      <div id="stars1"></div>
-      <div id="stars2"></div>
-      <img class="img-fluid" src="/assets/new_theme/header/black.png" id="blackbg">
+      <div [@starsAnim]="this.state" (@starsAnim.done)="onEnd($event)">
+        <div id="stars"></div>
+      </div>
+      <div [@starsAnim1]="this.state" (@starsAnim1.done)="onEnd($event)">
+        <div id="stars1"></div>
+      </div>
+      <div [@starsAnim2]="this.state" (@starsAnim2.done)="onEnd($event)">
+        <div id="stars2"></div>
+      </div>
 
+      <!-- <div id="stars1"></div> -->
+      <div id="space"></div>
+      
       <div id="text" class="row m-0 pt-5" style="position: absolute; bottom: 15vh; left: 0; right: 0;">
         <div class="col mb-0 pb-0 ms-3 text-center text-white">
-          <h1 class="text-white"> <small>Jasmine Irada</small><br><strong>Software
-              Engineer</strong></h1>
+          <h1 class="text-white mb-3">JASMINE IRADA</h1>
+          <!-- <h2 class="text-white mb-3">software engineer</h2> -->
           <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
             <li><a class="btn btn-outline-light me-2" target="_blank" href="https://github.com/airada"
                 aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github "></i></a>
             </li>
-            <li><a class="btn btn-outline-light me-2" target="_blank" href="https://rninchan.itch.io/"
+            <!-- <li><a class="btn btn-outline-light me-2" target="_blank" href="https://rninchan.itch.io/"
                 aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io "></i></a>
-            </li>
+            </li> -->
             <li><a class="btn btn-outline-light me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
                 aria-label="Connect with me on Linkedin"><i class="fab fa-fw fa-linkedin "></i></a>
             </li>

@@ -620,7 +620,7 @@
        x2="258.7037"
        y2="186.09029"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.0008384,0,0,0.80974469,-3.0517578e-5,41.33874)" />
+       gradientTransform="matrix(1.0112681,0,0,0.80974469,-5.2911304,41.33874)" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath1248">
@@ -776,8 +776,8 @@
        inkscape:label="bg"
        style="display:inline">
       <path
-         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#333333;stroke-width:1.3171345;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:markers stroke fill"
-         d="M 0.65832723,105.83334 V 213.65415 H 507.34162 V 105.83334 H 380.91677 a 132.29168,132.29168 0 0 1 -120.7797,87.26651 132.29168,132.29168 0 0 1 -127.72606,-87.26651 z"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#333333;stroke-width:1.32397962;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:markers stroke fill"
+         d="M -4.6259119,105.83334 V 213.65415 H 507.33754 V 105.83334 H 379.59522 a 133.67029,132.29168 0 0 1 -122.03835,87.26651 133.67029,132.29168 0 0 1 -129.0571,-87.26651 z"
          id="rect6809"
          inkscape:connector-curvature="0"
          inkscape:export-xdpi="96"
@@ -805,7 +805,7 @@
       <g
          id="g7697"
          clip-path="url(#clipPath1149)"
-         transform="translate(-3.0517578e-5)"
+         transform="matrix(1.010421,0,0,1,-5.2911305,0)"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96">
         <rect
@@ -874,7 +874,7 @@
       </g>
       <g
          id="g7717"
-         transform="matrix(-1,0,0,1,507.73539,0)"
+         transform="matrix(-1.010421,0,0,1,507.73542,0)"
          clip-path="url(#clipPath1141)"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96">
@@ -964,7 +964,7 @@
          y="0.26098788" />
       <g
          id="g7910"
-         transform="matrix(0,1,-2.3816913,0,510.76341,-279.23617)"
+         transform="matrix(0,1,-2.406511,0,510.79499,-279.23617)"
          clip-path="url(#clipPath1163)"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96">
@@ -1055,7 +1055,7 @@
       <g
          id="g8213"
          clip-path="url(#clipPath1171)"
-         transform="translate(-3.0517578e-5)"
+         transform="matrix(1.010421,0,0,1,-5.2911305,0)"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96">
         <g
@@ -1209,8 +1209,8 @@
         </g>
       </g>
       <path
-         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.3498989;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-         d="m 283.03675,186.22295 c 12.72426,13.47247 12.72426,13.47247 12.72426,13.47247"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.35171732;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         d="m 280.69519,186.22295 c 12.85686,13.47247 12.85686,13.47247 12.85686,13.47247"
          id="path1266"
          inkscape:connector-curvature="0"
          inkscape:export-xdpi="96"
@@ -1221,7 +1221,7 @@
          id="path1272"
          inkscape:connector-curvature="0"
          clip-path="url(#clipPath1187)"
-         transform="translate(-3.0517578e-5)"
+         transform="matrix(1.010421,0,0,1,-5.2911305,0)"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96" />
       <path
@@ -1230,7 +1230,7 @@
          id="path1270"
          inkscape:connector-curvature="0"
          clip-path="url(#clipPath1183)"
-         transform="translate(-3.0517578e-5)"
+         transform="matrix(1.010421,0,0,1,-5.2911305,0)"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96" />
       <path
@@ -1240,7 +1240,8 @@
          inkscape:connector-curvature="0"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96"
-         clip-path="url(#clipPath1205)" />
+         clip-path="url(#clipPath1205)"
+         transform="matrix(1.010421,0,0,1,-5.2910996,0)" />
     </g>
     <g
        inkscape:groupmode="layer"
@@ -1248,11 +1249,11 @@
        inkscape:label="blkbg 3"
        style="display:inline">
       <rect
-         style="opacity:1;fill:url(#linearGradient8289);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.23818725;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         style="opacity:1;fill:url(#linearGradient8289);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.23942511;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
          id="rect8233"
-         width="507.76678"
+         width="513.05823"
          height="87.307144"
-         x="-3.0517578e-05"
+         x="-5.2911305"
          y="127.03673"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96" />
