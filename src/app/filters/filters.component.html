@@ -1,8 +1,8 @@
-<div class="container pt-5 mt-5">
+<div class="container pt-5 mt-5" style="position: relative;">
   <!-- Dropdown Inputs -->
-    <div class="row mx-auto d-flex justify-content-center">
+    <div class="row d-flex justify-content-center">
       <div id="box" (click)="input.focus()" class="col-11 col-lg-6 box px-1 mt-2 d-flex flex-wrap">
-        <span class="fas fa-filter fa-lg my-auto ml-3 mr-1"></span>
+        <span class="fas fa-filter fa-lg my-auto ms-3 me-2"></span>
 
         <!-- List of Selected Badges -->
         <ul id="badges" class="d-inline-flex align-items-center p-0 m-0" *ngFor="let selected_item of selected">
@@ -24,7 +24,7 @@
           (ngModelChange)="modelChange($event)"
           [ngModel]=""
           [ngModelOptions]="{ standalone: true }"
-          class="p-0 ml-1 d-flex align-items-center"
+          class="p-0 ms-1 d-flex align-items-center"
         />
      
         <!-- Clear Button -->
@@ -46,7 +46,7 @@
     </div>
 
     <!-- Dropdown Content -->
-    <div class="row mx-auto d-flex justify-content-center">
+    <div class="row d-flex justify-content-center">
       <div id="dropdown-content" class="col col-lg-7 dropdown-content pointer hide">
         <!-- List of Skills/Suggestions -->
         <ul class="p-0 m-0">

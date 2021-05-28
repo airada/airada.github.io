@@ -132,7 +132,6 @@ ul {
   position: absolute;
   scrollbar-color: grey;
   scrollbar-width: thin;
-  width: 640px;
   z-index: 4;
 }
 
