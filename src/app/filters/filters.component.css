@@ -52,8 +52,7 @@ input {
   border: none;
   color: #0b2228;
   display: inline-block;
-  font-family: "Font Awesome 5 Free", "Montserrat";
-  font-weight: 900;
+  font-family: "Montserrat";
   margin: 0;
   padding: 0;
 }
@@ -139,7 +138,7 @@ ul {
   border: 2px solid white;
   border-radius: 0px 0px 15px 15px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  max-height: 200px;
+  max-height: 25vh;
   overflow-y: auto;
   position: absolute;
   scrollbar-color: grey;
@@ -176,4 +175,100 @@ ul {
   opacity: 0;
   position: absolute;
   width: 0;
+}
+
+@media only screen and (min-width: 2560px) {
+  .bar {
+    min-height: 8em;
+  }
+
+  input {
+    font-size: 3rem;
+  }
+
+  .badge {
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+
+  .checkbox-hide {
+    padding-top: 1em;
+  }
+
+  .dropdown-content {
+    font-size: 3rem;
+  }
+
+  .item {
+    height: 2em;
+  }
+
+  .filter-white  {
+    height: 4rem;
+  }
+
+  .filter-gray {
+    height: 2.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 2559px) {
+  .bar {
+    min-height: 4em;
+    border-radius: 2em;
+  }
+
+  .badge {
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+  }
+
+  .checkbox-hide {
+    padding-top: 0.25em;
+  }
+
+  .dropdown-content {
+    font-size: 1.25rem;
+  }
+
+  .item {
+    height: 1.75em;
+  }
+
+ input {
+   font-size: 1.5rem;
+ }
+
+  .filter-white {
+    height: 2rem;
+  }
+  
+  .filter-gray  {
+    height: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 1824px) {
+  input {
+    font-size: 1.5rem;
+  }
+
+  .filter-white, .filter-gray  {
+    height: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  input, .dropdown-content, .badge {
+    font-size:1rem;
+  }
+
+  .filter-white, .filter-gray {
+    height: 1.5rem;
+  }
+
+ 
 }

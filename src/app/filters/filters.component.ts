@@ -11,6 +11,7 @@ export class FiltersComponent implements OnInit {
   @Output() filter_skill = new EventEmitter<string>();
   @ViewChild("input") input: ElementRef;
   arrowkey_position: number = -1;
+  caret_img: string = "/assets/img/caret-down-solid.svg"
   input_focused: boolean = false;
   skills_list: Array<string> = [];
   private scroll_position: number = 0;
@@ -187,18 +188,25 @@ export class FiltersComponent implements OnInit {
         inputValue.classList.remove("hide");
         box.classList.add("box-bottom");
         caret.classList.add("caret-bottom");
+        this.caret_img = "/assets/img/caret-up-solid.svg";
         this.input_focused = true;
         break;
       case "hide":
         inputValue.classList.add("hide");
         box.classList.remove("box-bottom");
         caret.classList.remove("caret-bottom");
+        this.caret_img = "/assets/img/caret-down-solid.svg";
         this.input_focused = false;
         break;
       case "toggle":
         inputValue.classList.toggle("hide");
         box.classList.toggle("box-bottom");
         caret.classList.toggle("caret-bottom");
+        if (this.caret_img == "/assets/img/caret-down-solid.svg") {
+          this.caret_img = "/assets/img/caret-up-solid.svg";
+        } else {
+          this.caret_img = "/assets/img/caret-down-solid.svg";
+        }
         break;
     }
 
