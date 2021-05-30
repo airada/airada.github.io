@@ -35,6 +35,18 @@
   color:  lightgray;
 }
 
+.filter-gray {
+  filter: invert(75%) sepia(12%) saturate(5%) hue-rotate(333deg) brightness(90%) contrast(83%);
+}
+
+.pointer:hover .filter-gray {
+  filter: none;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+}
+
 input {
   background-color: transparent;
   border: none;

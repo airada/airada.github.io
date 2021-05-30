@@ -47,8 +47,8 @@ h6,
     font-size: 2rem;
   }
 
-  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
-    font-size: 4rem;
+  .filter-black {
+    height: 4rem;
   }
 
   .btn-outline-light,.btn-outline-dark {
@@ -92,8 +92,8 @@ h6,
     font-size: 1.5rem;
   }
 
-  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
-    font-size: 2rem;
+  .filter-black {
+    height: 2rem;
   }
 
   .btn-outline-light,.btn-outline-dark {
@@ -132,8 +132,8 @@ h6,
     font-size: 1.15rem;
   }
 
-  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
-    font-size: 1.5rem;
+  .filter-black {
+    height: 1.5rem;
   }
 
   .btn-outline-light,.btn-outline-dark {
@@ -157,13 +157,19 @@ h6,
   p {
     font-size: small;
   }
-  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
-    font-size: 1rem;
+
+  .filter-black {
+    height: 1.5rem;
   }
 
   .btn-outline-light,.btn-outline-dark {
-    padding: 1em;
+    padding: 1.5em;
   }
+}
+
+
+.btn:hover .filter-black {
+  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
 }
 
 

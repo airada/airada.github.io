@@ -1,182 +1,164 @@
-<div id="page-top">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container-fluid">
-      <!-- <a class="navbar-brand me-auto" href="#">./ji</a> -->
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav py-2">
-          <a class="nav-link active my-1 ms-auto mx-md-3" routerLink="/About" routerLinkActive="active"
-            aria-current="page"><small>./home</small></a>
-          <a class="nav-link my-1 ms-auto mx-md-3" routerLink="/Portfolio" routerLinkActive="active"><small>./portfolio</small></a>
-          <a class="nav-link my-1 ms-auto ms-md-3 me-md-5" target="_blank" rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing"><small>./resume</small></a>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand me-auto" href="#"><img style="width: 32px; height: 32px;" src="/assets/favicon_resolution.png"> </a> -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav py-2">
+        <a class="nav-link active my-1 ms-auto mx-md-3" routerLink="/About" routerLinkActive="active"
+          aria-current="page"><small>./home</small></a>
+        <a class="nav-link my-1 ms-auto mx-md-3" routerLink="/Portfolio"
+          routerLinkActive="active"><small>./portfolio</small></a>
+        <a class="nav-link my-1 ms-auto ms-md-3 me-md-5" target="_blank" rel="noopener noreferrer"
+          href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing"><small>./resume</small></a>
       </div>
-    </div>
-  </nav>
-
-  <header>
-    <div id="header" class="container-fluid">
-      <!-- <div class="row h-100 w-100">
-        <div class="col-4 d-flex align-items-center justify-content-center">
-
-        </div>
-        <div class="col-4 d-flex align-items-center justify-content-center">
-          <div data-aos="fade-in" data-aos-offset="300" data-aos-duration="750" data-aos-easing="ease-in-sine">
-
-              <img class="img-fluid" src="/assets/new_theme/cup/full_cup.svg">
-
-          </div>
-        </div>
-        <div class="col-4 d-flex align-items-center justify-content-center">
- 
-        </div>
-      </div> -->
-
-      
-      <img class="img-fluid" src="/assets/new_theme/header/white_bg.png" id="whitebg">
-      <div [@starsAnim]="this.state" (@starsAnim.done)="onEnd($event)">
-        <div id="stars"></div>
-      </div>
-      <div [@starsAnim1]="this.state" (@starsAnim1.done)="onEnd($event)">
-        <div id="stars1"></div>
-      </div>
-      <div [@starsAnim2]="this.state" (@starsAnim2.done)="onEnd($event)">
-        <div id="stars2"></div>
-      </div>
-
-      <!-- <div id="stars1"></div> -->
-      <div id="space"></div>
-      
-      <div id="text" class="row m-0 pt-5" style="position: absolute; bottom: 15vh; left: 0; right: 0;">
-        <div class="col mb-0 pb-0 ms-3 text-center text-white">
-          <h1 class="text-white mb-3">JASMINE IRADA</h1>
-          <!-- <h2 class="text-white mb-3">software engineer</h2> -->
-          <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
-            <li><a class="btn btn-outline-light me-2" target="_blank" href="https://github.com/airada"
-                aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github "></i></a>
-            </li>
-            <!-- <li><a class="btn btn-outline-light me-2" target="_blank" href="https://rninchan.itch.io/"
-                aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io "></i></a>
-            </li> -->
-            <li><a class="btn btn-outline-light me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
-                aria-label="Connect with me on Linkedin"><i class="fab fa-fw fa-linkedin "></i></a>
-            </li>
-            <li><a class="btn btn-outline-light me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
-                aria-label="Send me an email"><i class="fas fa-fw fa-envelope "></i></a>
-            </li>
-          </ul>
-          <br>
-         
-        </div>
-      </div>
-
-      
-    </div>
-  </header>
-
-  <section class="page-section portfolio bg-white" id="portfolio" >
-    <app-portfolio-featured badges="Angular,Bootstrap,Design" image="/assets/img/portfolio/personal/june21_888.png"
-      title="Personal Website" date="September 2019 - Ongoing"
-      description="Personal website with portfolio and accomplishments."
-      code="https://github.com/airada/happy-for-you" link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
-  </section>
-
-  <section class="bg-white py-5 my-5">
-    <h2 style="font-size: 1.5rem; " class="text-center text-uppercase mb-5"><span style="background: linear-gradient(to top, lightgray 50%, transparent 50%);">ABOUT ME</span></h2>
-    <div class="container-xxxl d-flex flex-wrap">
-      <div class="col-6 col-lg-3 p-0 mx-auto">
-        <div class="card bg-white card-size">
-          <img class="card-img mx-auto" src="/assets/img/avataaars.svg" alt="Smiling Girl Avatar Icon" />
-
-          <div class="card-body">
-            <p class="card-text text-center">
-              I'm Jasmine Irada.
-              (she/her)
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-lg-3 p-0 mx-auto">
-        <div class="card bg-white card-size">
-          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/graduation-cap-solid.svg"
-            alt="Graduation Cap Icon" />
-
-          <div class="card-body">
-            <p class="card-text text-center">
-              UC Irvine
-              <br>
-              <small>Computer Science B.S.</small>
-              <br>
-              <small>Class of 2020</small>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-lg-3 p-0 mx-auto">
-        <div class="card bg-white card-size">
-          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/lightbulb-regular.svg"
-            alt="Lightbulb Icon" />
-
-          <div class="card-body">
-            <p class="card-text text-center">
-              I develop ideas into impactful, successful
-              products.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-lg-3 p-0 mx-auto">
-        <div class="card bg-white card-size">
-          <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/laptop-code-solid.svg"
-            alt="Laptop with Code brackets Icon" />
-
-          <div class="card-body">
-            <p class="card-text text-center">
-              I'm looking for opportunities that allow me to grow as a
-              developer.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer bg-white text-dark text-center">
-    <div class="container">
-      <div class="row">
-        <!-- Footer Social Icons-->
-        <div class="col mb-5 mb-lg-0">
-          <p class="name-custom mb-4">Let's Connect!</p>
-          <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
-            <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://github.com/airada"
-                aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github "></i></a>
-            </li>
-            <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
-                aria-label="Connect with me on Linkedin"><i class="fab fa-fw fa-linkedin "></i></a>
-            </li>
-            <li><a class="btn btn-outline-dark me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
-                aria-label="Send me an email"><i class="fas fa-fw fa-envelope "></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div class="copyright py-4 bg-white text-center text-dark">
-    <div class="container">
-      <p><small>©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <i class="fas fa-heart"></i></small></p>
     </div>
   </div>
-  <div class="scroll-to-top d-lg-none position-fixed">
-    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"
-      aria-label="Go back to top of page"><i class="fa fa-chevron-up"></i></a>
-  </div>
+</nav>
 
+<header>
+  <div id="header" class="container-fluid">
+
+
+    <img class="img-fluid" src="/assets/new_theme/header/white_bg_compressed.png" id="whitebg">
+    <div [@starsAnim]="this.state" (@starsAnim.done)="onEnd($event)">
+      <div id="stars"></div>
+    </div>
+    <div [@starsAnim1]="this.state" (@starsAnim1.done)="onEnd($event)">
+      <div id="stars1"></div>
+    </div>
+    <div [@starsAnim2]="this.state" (@starsAnim2.done)="onEnd($event)">
+      <div id="stars2"></div>
+    </div>
+
+    <div id="space"></div>
+
+    <div id="text" class="row m-0 pt-5" style="position: absolute; bottom: 15vh; left: 0; right: 0;">
+      <div class="col mb-0 pb-0 ms-3 text-center text-white">
+        <h1 class="text-white mb-3">JASMINE IRADA</h1>
+        <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
+          <li><a class="btn btn-outline-light me-2" target="_blank" href="https://github.com/airada"
+              aria-label="Checkout my GitHub"><img class="filter-white"
+                src="/assets/img/github-brands.svg"></a>
+          </li>
+          <li><a class="btn btn-outline-light me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
+              aria-label="Connect with me on Linkedin"><img class="filter-white"
+                src="/assets/img/linkedin-brands.svg"></a>
+          </li>
+          <li><a class="btn btn-outline-light me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
+              aria-label="Send me an email"><img class="filter-white"
+                src="/assets/img/envelope-solid.svg"></a>
+          </li>
+        </ul>
+        <br>
+
+      </div>
+    </div>
+
+
+  </div>
+</header>
+
+<section class="page-section portfolio bg-white" id="portfolio">
+  <app-portfolio-featured badges="Angular,Bootstrap,Design" image="/assets/img/portfolio/personal/personal_mockup.jpg"
+    title="Personal Website" date="September 2019 - Ongoing"
+    description="Personal website with portfolio and accomplishments." code="https://github.com/airada/happy-for-you"
+    link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+</section>
+
+<section class="bg-white py-5 my-5">
+  <h2 style="font-size: 1.5rem; " class="text-center text-uppercase mb-5"><span
+      style="background: linear-gradient(to top, lightgray 50%, transparent 50%);">ABOUT ME</span></h2>
+  <div class="container-xxxl d-flex flex-wrap">
+    <div class="col-6 col-lg-3 p-0 mx-auto">
+      <div class="card bg-white card-size">
+        <img class="card-img mx-auto" src="/assets/img/avataaars.svg" alt="Smiling Girl Avatar Icon" />
+
+        <div class="card-body">
+          <p class="card-text text-center">
+            I'm Jasmine Irada.
+            (she/her)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-lg-3 p-0 mx-auto">
+      <div class="card bg-white card-size">
+        <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/graduation-cap-solid.svg"
+          alt="Graduation Cap Icon" />
+
+        <div class="card-body">
+          <p class="card-text text-center">
+            UC Irvine
+            <br>
+            <small>Computer Science B.S.</small>
+            <br>
+            <small>Class of 2020</small>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-lg-3 p-0 mx-auto">
+      <div class="card bg-white card-size">
+        <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/lightbulb-regular.svg"
+          alt="Lightbulb Icon" />
+
+        <div class="card-body">
+          <p class="card-text text-center">
+            I develop ideas into impactful, successful
+            products.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-lg-3 p-0 mx-auto">
+      <div class="card bg-white card-size">
+        <img class="card-img-top mx-auto mt-4 p-4 rounded-circle bg-dark" src="assets/img/laptop-code-solid.svg"
+          alt="Laptop with Code brackets Icon" />
+
+        <div class="card-body">
+          <p class="card-text text-center">
+            I'm looking for opportunities that allow me to grow as a
+            developer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer bg-white text-dark text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col mb-5 mb-lg-0">
+        <p class="name-custom mb-4">Let's Connect!</p>
+        <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
+          <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://github.com/airada"
+              aria-label="Checkout my GitHub"><img class="filter-black"
+                src="/assets/img/github-brands.svg"></a>
+          </li>
+          <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
+              aria-label="Connect with me on Linkedin"><img class="filter-black"
+                src="/assets/img/linkedin-brands.svg"></a>
+          </li>
+          <li><a class="btn btn-outline-dark me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
+              aria-label="Send me an email"><img class="filter-black"
+                src="/assets/img/envelope-solid.svg"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="copyright py-4 bg-white text-center text-dark">
+  <div class="container">
+    <p><small>©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <img style="height: 1rem;"
+      src="/assets/img/heart-solid.svg"></small></p>
+  </div>
 </div>

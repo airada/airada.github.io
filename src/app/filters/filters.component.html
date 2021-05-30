@@ -2,13 +2,15 @@
   <!-- Dropdown Inputs -->
     <div class="row d-flex justify-content-center">
       <div id="box" (click)="input.focus()" class="col-11 col-lg-6 box px-1 mt-2 d-flex flex-wrap">
-        <span class="fas fa-filter fa-lg my-auto ms-3 me-2"></span>
+        <span class=" my-auto ms-3 me-2"><img class="filter-gray" style="height: 1rem;"
+          src="/assets/img/filter-solid.svg"></span>
 
         <!-- List of Selected Badges -->
         <ul id="badges" class="d-inline-flex align-items-center p-0 m-0" *ngFor="let selected_item of selected">
           <li  (click)="toggle_skill(selected_item)" class="badge badge-pill pointer px-2 m-1">
               {{ selected_item }}
-              <span class="far fa-times-circle fa-lg"></span>
+              <span><img class="filter-white" style="height: 1rem;"
+                src="/assets/img/times-circle-regular.svg"></span>
           </li>
         </ul>
 
@@ -29,7 +31,8 @@
      
         <!-- Clear Button -->
         <div title="Clear All" (click)="clear()" *ngIf="selected.length > 0" class="clear p-2 ml-auto my-auto">
-          <span class="fas fa-times pointer fa-lg"></span>
+          <span class="pointer fa-lg"><img class="filter-gray" style="height: 1.5em;"
+            src="/assets/img/times-solid.svg"></span>
         </div>
       </div>
 
@@ -40,7 +43,8 @@
         class="col-1 caret pointer p-0 mt-2 d-flex justify-content-end"
       >
         <span title="Toggle Dropdown" class="my-auto mx-auto p-0">
-          <i class="fas fa-sort fa-lg"></i>
+          <img class="filter-white" style="height: 1.5em;"
+          src="/assets/img/caret-down-solid.svg">
         </span>
       </div>
     </div>

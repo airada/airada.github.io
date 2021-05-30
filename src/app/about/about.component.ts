@@ -94,7 +94,6 @@ export class AboutComponent implements OnInit {
 
     }
 
-    console.log(box_shadow_str);
     return box_shadow_str
   }
 }

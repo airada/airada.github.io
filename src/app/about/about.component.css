@@ -31,6 +31,18 @@ h2 {
   font-weight: 900;
 }
 
+.filter-white {
+  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+}
+
+.btn:hover .filter-black {
+  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+}
+
+.btn:hover .filter-white {
+  filter: none;
+}
+
 #header {
   position: relative;
   width: 100%;
@@ -92,7 +104,7 @@ h2 {
   /* background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%); */
   background-image: 
   radial-gradient(circle at bottom, #303e4eaf 0%, #1b2735 10%,black 70%), 
-  url("src/assets/new_theme/header/black.png");
+  url("src/assets/new_theme/header/black.jpg");
   z-index: -4;
 }
 
@@ -156,8 +168,8 @@ p,
     font-size: 2rem;
   }
 
-  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
-    font-size: 4rem;
+  .filter-white, .filter-black  {
+    height: 4rem;
   }
 
   .btn-outline-light,.btn-outline-dark {
@@ -201,8 +213,8 @@ p,
     font-size: 1.5rem;
   }
 
-  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
-    font-size: 2rem;
+  .filter-white, .filter-black  {
+    height: 2rem;
   }
 
   .btn-outline-light,.btn-outline-dark {
@@ -241,8 +253,8 @@ p,
     font-size: 1.15rem;
   }
 
-  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
-    font-size: 1.5rem;
+  .filter-white, .filter-black  {
+    height: 1.5rem;
   }
 
   .btn-outline-light,.btn-outline-dark {
@@ -266,12 +278,13 @@ p,
   p {
     font-size: small;
   }
-  .fa-github, .fa-itch-io, .fa-linkedin, .fa-envelope {
-    font-size: 1rem;
+
+  .filter-white, .filter-black {
+    height: 1.5rem;
   }
 
   .btn-outline-light,.btn-outline-dark {
-    padding: 1em;
+    padding: 1.5em;
   }
 }
 
