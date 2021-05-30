@@ -21,17 +21,55 @@ h4 {
   filter: invert(75%) sepia(12%) saturate(5%) hue-rotate(333deg) brightness(90%) contrast(83%);
 }
 
-@media only screen and (max-width: 800px) {
+
+@media only screen and (min-width: 2560px) {
   .card {
-    width: 20rem;
+    width: 75em;
+  }
+
+  .filter-gray {
+    height: 2.5rem;
+  }
+
+  .badge {
+    font-size: 2rem;
+    border-radius: 0.25em;
   }
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (max-width: 2559px) {
+  .card {
+    width: 50em;
+  }
+
+  .filter-gray {
+    height: 2rem;
+  }
+
+  .badge {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1824px) {
+  .card {
+    width: 20rem;
+  }
+  .filter-gray {
+    height: 1rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .card {
     width: 25rem;
   }
 }
+
 .card {
   border: none;
 }
