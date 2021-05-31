@@ -35,13 +35,24 @@
   color:  lightgray;
 }
 
+.filter-gray {
+  filter: invert(75%) sepia(12%) saturate(5%) hue-rotate(333deg) brightness(90%) contrast(83%);
+}
+
+.pointer:hover .filter-gray {
+  filter: none;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+}
+
 input {
   background-color: transparent;
   border: none;
   color: #0b2228;
   display: inline-block;
-  font-family: "Font Awesome 5 Free", "Montserrat";
-  font-weight: 900;
+  font-family: "Montserrat";
   margin: 0;
   padding: 0;
 }
@@ -76,30 +87,18 @@ ul {
 /* Badges */
 .badge,
 .badge-pill {
-  background-color: #fd7e14;
+  background-color: #343a40;
   color: white;
   font-size: 10pt;
 }
 
 .badge:hover,
 .badge-pill:hover {
-  background-color: #803300;
+  background-color: #0d1013;
   cursor: pointer;
 }
 
-/* Clear */
-.fa-filter, .fa-times {
-  color: darkgray;
-}
-.clear:hover .fa-times {
-  color: #0b2228;
-}
-
 /* Dropdown Button */
-.fa-sort {
-  color: white;
-}
-
 .caret {
   background-color: darkgray;
   border-radius: 0px 15px 15px 0px;
@@ -113,9 +112,6 @@ ul {
   background-color: #0b2228;
 }
 
-.caret:hover .fa-caret-down {
-  color: white;
-}
 
 /* Dropdown Content */
 .hide {
@@ -127,16 +123,18 @@ ul {
   border: 2px solid white;
   border-radius: 0px 0px 15px 15px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  max-height: 200px;
+  max-height: 25vh;
   overflow-y: auto;
+  position: absolute;
   scrollbar-color: grey;
   scrollbar-width: thin;
-  width: 100%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .bg-selected {
-  background-color: #ffe6d5;
+  background-color: darkgray;
+  color: white;
+  font-weight: bold;
 }
 
 .dropdown-item {
@@ -152,7 +150,7 @@ ul {
 
 .active.bg-selected,
 .dropdown-item:hover.bg-selected {
-  background-color: #fd7e14;
+  background-color: #343a40;
   color: white;
 }
 
@@ -162,4 +160,123 @@ ul {
   opacity: 0;
   position: absolute;
   width: 0;
+}
+
+@media only screen and (min-width: 2560px) {
+  .bar {
+    min-height: 8em;
+  }
+
+  input {
+    font-size: 3rem;
+  }
+
+  .badge {
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 1rem;
+  }
+
+  .checkbox-hide {
+    padding-top: 1em;
+  }
+
+  .dropdown-content {
+    font-size: 3rem;
+  }
+
+  .item {
+    height: 2em;
+  }
+
+  .filter-white  {
+    height: 4rem;
+  }
+
+  .filter-gray {
+    height: 2.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 2559px) {
+  .bar {
+    min-height: 4em;
+    border-radius: 2em;
+  }
+
+  .badge {
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+  }
+
+  .checkbox-hide {
+    padding-top: 0.25em;
+  }
+
+  .dropdown-content {
+    font-size: 1.25rem;
+  }
+
+  .item {
+    height: 1.75em;
+  }
+
+ input {
+   font-size: 1.5rem;
+ }
+
+  .filter-white {
+    height: 2rem;
+  }
+  
+  .filter-gray  {
+    height: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 1824px) {
+  .bar {
+    min-height: 2em;
+    border-radius: 1em;
+  }
+
+  .badge {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+  }
+
+  .checkbox-hide {
+    padding-top: 0.25em;
+  }
+
+  .dropdown-content {
+    font-size: 1rem;
+  }
+
+  .item {
+    height: 1.75em;
+  }
+
+  input {
+    font-size: 1.25rem;
+  }
+
+  .filter-white, .filter-gray  {
+    height: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  input, .dropdown-content, .badge {
+    font-size:1rem;
+  }
+
+  .filter-white, .filter-gray {
+    height: 1.5rem;
+  }
+
+ 
 }

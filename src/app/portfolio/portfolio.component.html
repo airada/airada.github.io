@@ -1,101 +1,94 @@
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg  fixed-top p-0 py-md-3" id="mainNav">
-  <div id="alert" [@alert]="skillExist ? 'closed' : 'open'" class="container alert alert-danger mt-lg-0 d-none" role="alert">
-    <p><b class="mr-1">Sorry!</b> Skill currently not available.</p>
-  </div>
-  <div class="container text-uppercase justify-content-end">
-    <!-- <a class="js-scroll-trigger" href="#page-top"></a> -->
-    <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button"
-      data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <i class="fas fa-bars fa-2x"></i>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse pb-3 py-lg-0" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item pb-3 px-3 py-lg-0">
-          <a class="nav-link rounded" routerLink="/About"
-            routerLinkActive="active">Home</a>
-        </li>
-        <li class="nav-item p-3 py-lg-0">
-          <a class="nav-link rounded" routerLink="/Portfolio"
-            routerLinkActive="active">Portfolio</a>
-        </li>
-        <li class="nav-item p-3 py-lg-0">
-          <a class="nav-link rounded" target="_blank"
-            rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">Resume</a>
-        </li>
-      </ul>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav py-2">
+        <a class="nav-link my-1 ms-auto mx-lg-3" routerLink="/About" routerLinkActive="active"
+          aria-current="page"><small>./home</small></a>
+        <a class="nav-link active my-1 ms-auto mx-lg-3" routerLink="/Portfolio"
+          routerLinkActive="active"><small>./portfolio</small></a>
+        <a class="nav-link my-1 ms-auto ms-lg-3 me-lg-5" target="_blank" rel="noopener noreferrer"
+          href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing"><small>./resume</small></a>
+      </div>
     </div>
   </div>
 </nav>
 
-<section class="page-section text-dark mb-0 mt-5">
-  <h2 class="text-center text-uppercase mb-0">Portfolio</h2>
-
+<section class="text-dark my-5 pb-5">
   <app-filters (filter_skill)="filter($event)"
     skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,Unity"></app-filters>
 
   <div class="d-flex flex-wrap justify-content-center mt-3">
-    <app-project-preview
-      class="htmlcss bootstrap angular design"
-      title="PERSONAL WEBSITE"
-      skills="HTML/CSS,Bootstrap,Angular,Design"
-      image_thumbnail="/assets/img/portfolio/personal.jpg"
+    <app-project-preview class="htmlcss bootstrap angular design" title="PERSONAL WEBSITE"
+      skills="HTML/CSS,Bootstrap,Angular,Design" image_thumbnail="/assets/img/portfolio/personal/personal_mockup.jpg"
       link="https://jasmineirada.com/About">
     </app-project-preview>
-    <app-project-preview
+    <!-- <app-project-preview
       class="python flask js htmlcss bootstrap"
       title="MIMI AI: HAPPY FOR YOU"
       skills="Python,Flask,JavaScript,HTML/CSS,Bootstrap"
-      image_thumbnail="/assets/img/portfolio/mimi/preview.png"
+      image_thumbnail="/assets/new_theme/test_projects/899.jpg"
       link="https://mimi-ai.herokuapp.com/">
     </app-project-preview>
     <app-project-preview
       class="cs unity design"
       title="CRYSTAL CRISIS"
       skills="C#,Unity,3D Design"
-      image_thumbnail="/assets/img/portfolio/obviouspalace/start_screen.png"
+      image_thumbnail="/assets/new_theme/test_projects/888.jpg"
       link="https://jasmineirada.com/obviouspalace/">
     </app-project-preview>
     <app-project-preview
       class="unity design pm"
       title="ESCAPING THE NEGATIVITY"
       skills="Unity,Art,Design,Project Management"
-      image_thumbnail="/assets/img/portfolio/athenahacks/escaping_the_negativity_preview.png"
+      image_thumbnail="/assets/new_theme/test_projects/899.jpg"
       link="https://devpost.com/software/escaping-the-negativity">
     </app-project-preview>
     <app-project-preview 
       class="cs unity art"
       title="TREASURE TOWER"
       skills="C#,Unity,Art"
-      image_thumbnail="/assets/img/portfolio/lahax/tt.jpg"
+      image_thumbnail="/assets/new_theme/test_projects/888.jpg"
       link="https://devpost.com/software/treasure-tower">
     </app-project-preview>
     <app-project-preview
       class="htmlcss js design"
       title="DIGITAL ROOT"
       skills="HTML/CSS,JavaScript, Design"
-      image_thumbnail="/assets/img/portfolio/digitalroot.png"
-      link="https://jasmineirada.com/digitalroot/"></app-project-preview>
-    </div> 
+      image_thumbnail="/assets/new_theme/test_projects/899.jpg"
+      link="https://jasmineirada.com/digitalroot/"></app-project-preview> -->
+  </div>
 </section>
 
-<!-- Footer-->
-<footer class="footer bg-white text-dark text-center">
-  <p class="name-custom mb-4">Let's Connect!</p>
-  <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="https://github.com/airada"
-    aria-label="Checkout my GitHub"><i class="fab fa-fw fa-github"></i></a>
-  <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="https://rninchan.itch.io/"
-    aria-label="Checkout my games on Itch.io"><i class="fab fa-fw fa-itch-io"></i></a>
-  <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer"
-    href="https://www.linkedin.com/in/jasmineirada/" aria-label="Let's connect on LinkedIn"><i
-      class="fab fa-fw fa-linkedin"></i></a>
-  <a class="btn btn-outline-dark btn-social mx-1" target="_blank" rel="noopener noreferrer" href="mailto:jasmineirada@gmail.com"
-    aria-label="Send me an email"><i class="fas fa-fw fa-envelope"></i></a>
+<footer class="footer pt-5 mt-5 bg-white text-dark text-center">
+  <div class="container">
+    <div class="row">
+      <!-- Footer Social Icons-->
+      <div class="col mb-5 mb-lg-0">
+        <p class="name-custom mb-4">Let's Connect!</p>
+        <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
+          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://github.com/airada"
+              aria-label="Checkout my GitHub"><img class="filter-black" src="/assets/img/github-brands.svg"></a>
+          </li>
+          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://www.linkedin.com/in/jasmineirada/"
+              aria-label="Connect with me on Linkedin"><img class="filter-black"
+                src="/assets/img/linkedin-brands.svg"></a>
+          </li>
+          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="nofollow" href="mailto:jasmineirada@gmail.com"
+              aria-label="Send me an email"><img class="filter-black" src="/assets/img/envelope-solid.svg"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </footer>
-<!-- Copyright Section-->
-<div class="copyright py-4 bg-white text-center text-dark">
-  <p><small>©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <i class="fas fa-heart"></i></small></p>
-</div>
 
+<div class="copyright py-4 bg-white text-center text-dark">
+  <div class="container">
+    <p><small>©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <img style="height: 1rem;"
+      src="/assets/img/heart-solid.svg"></small></p>
+  </div>
+</div>
