@@ -23,7 +23,10 @@
     "@angular/router": "~11.0.2",
     "animate.css": "^4.1.0",
     "aos": "^3.0.0-beta.6",
+<<<<<<< HEAD
     "bootstrap-icons": "^1.4.0",
+=======
+>>>>>>> 072648a67f94ea6ed853c8a3e623a4f87182f52c
     "node-forge": "^0.10.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",

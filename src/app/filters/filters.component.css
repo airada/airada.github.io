@@ -98,19 +98,7 @@ ul {
   cursor: pointer;
 }
 
-/* Clear */
-.fa-filter, .fa-times {
-  color: darkgray;
-}
-.clear:hover .fa-times {
-  color: #0b2228;
-}
-
 /* Dropdown Button */
-.fa-sort {
-  color: white;
-}
-
 .caret {
   background-color: darkgray;
   border-radius: 0px 15px 15px 0px;
@@ -124,9 +112,6 @@ ul {
   background-color: #0b2228;
 }
 
-.caret:hover .fa-caret-down {
-  color: white;
-}
 
 /* Dropdown Content */
 .hide {
