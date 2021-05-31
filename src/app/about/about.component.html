@@ -1,17 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container-fluid">
-    <!-- <a class="navbar-brand me-auto" href="#"><img style="width: 32px; height: 32px;" src="/assets/favicon_resolution.png"> </a> -->
     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav py-2">
-        <a class="nav-link active my-1 ms-auto mx-md-3" routerLink="/About" routerLinkActive="active"
+      <div class="navbar-nav ms-auto py-2">
+        <a class="nav-link active my-1 ms-auto mx-lg-3" routerLink="/About" routerLinkActive="active"
           aria-current="page"><small>./home</small></a>
-        <a class="nav-link my-1 ms-auto mx-md-3" routerLink="/Portfolio"
+        <a class="nav-link my-1 ms-auto mx-lg-3" routerLink="/Portfolio"
           routerLinkActive="active"><small>./portfolio</small></a>
-        <a class="nav-link my-1 ms-auto ms-md-3 me-md-5" target="_blank" rel="noopener noreferrer"
+        <a class="nav-link my-1 ms-auto ms-lg-3 me-lg-5" target="_blank" rel="noopener noreferrer"
           href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing"><small>./resume</small></a>
       </div>
     </div>
@@ -20,9 +19,7 @@
 
 <header>
   <div id="header" class="container-fluid">
-
-
-    <img class="img-fluid" src="/assets/new_theme/header/white_bg_compressed.png" id="whitebg">
+    <img class="img-fluid" src="/assets/new_theme/header/white_bg_compressed.png" alt="White Upside Down Arch" id="whitebg">
     <div [@starsAnim]="this.state" (@starsAnim.done)="onEnd($event)">
       <div id="stars"></div>
     </div>
@@ -39,15 +36,15 @@
       <div class="col mb-0 pb-0 ms-3 text-center text-white">
         <h1 class="text-white mb-3">JASMINE IRADA</h1>
         <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
-          <li><a class="btn btn-outline-light me-2" target="_blank" href="https://github.com/airada"
+          <li><a class="btn btn-outline-light me-2" target="_blank" rel="external" href="https://github.com/airada"
               aria-label="Checkout my GitHub"><img class="filter-white"
                 src="/assets/img/github-brands.svg"></a>
           </li>
-          <li><a class="btn btn-outline-light me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
+          <li><a class="btn btn-outline-light me-2" target="_blank" rel="external" href="https://www.linkedin.com/in/jasmineirada/"
               aria-label="Connect with me on Linkedin"><img class="filter-white"
                 src="/assets/img/linkedin-brands.svg"></a>
           </li>
-          <li><a class="btn btn-outline-light me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
+          <li><a class="btn btn-outline-light me-2" target="_blank" rel="nofollow" href="mailto:jasmineirada@gmail.com"
               aria-label="Send me an email"><img class="filter-white"
                 src="/assets/img/envelope-solid.svg"></a>
           </li>
@@ -69,12 +66,12 @@
 </section>
 
 <section class="bg-white py-5 my-5">
-  <h2 style="font-size: 1.5rem; " class="text-center text-uppercase mb-5"><span
-      style="background: linear-gradient(to top, lightgray 50%, transparent 50%);">ABOUT ME</span></h2>
+  <h2 class="text-center text-uppercase mb-5"><span
+      class="about">ABOUT ME</span></h2>
   <div class="container-xxxl d-flex flex-wrap">
     <div class="col-6 col-lg-3 p-0 mx-auto">
       <div class="card bg-white card-size">
-        <img class="card-img mx-auto" src="/assets/img/avataaars.svg" alt="Smiling Girl Avatar Icon" />
+        <img class="card-img mx-auto" src="/assets/img/avataaars.svg" alt="Smiling Girl Avatar Icon from avataaars.com" />
 
         <div class="card-body">
           <p class="card-text text-center">
@@ -138,15 +135,15 @@
       <div class="col mb-5 mb-lg-0">
         <p class="name-custom mb-4">Let's Connect!</p>
         <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
-          <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://github.com/airada"
+          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://github.com/airada"
               aria-label="Checkout my GitHub"><img class="filter-black"
                 src="/assets/img/github-brands.svg"></a>
           </li>
-          <li><a class="btn btn-outline-dark me-2" target="_blank" href="https://www.linkedin.com/in/jasmineirada/"
+          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://www.linkedin.com/in/jasmineirada/"
               aria-label="Connect with me on Linkedin"><img class="filter-black"
                 src="/assets/img/linkedin-brands.svg"></a>
           </li>
-          <li><a class="btn btn-outline-dark me-2" target="_blank" href="mailto:jasmineirada@gmail.com"
+          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="nofollow" href="mailto:jasmineirada@gmail.com"
               aria-label="Send me an email"><img class="filter-black"
                 src="/assets/img/envelope-solid.svg"></a>
           </li>

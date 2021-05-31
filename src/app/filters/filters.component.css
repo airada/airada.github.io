@@ -252,12 +252,35 @@ ul {
 }
 
 @media only screen and (max-width: 1824px) {
+  .bar {
+    min-height: 2em;
+    border-radius: 1em;
+  }
+
+  .badge {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+  }
+
+  .checkbox-hide {
+    padding-top: 0.25em;
+  }
+
+  .dropdown-content {
+    font-size: 1rem;
+  }
+
+  .item {
+    height: 1.75em;
+  }
+
   input {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .filter-white, .filter-gray  {
-    height: 1.5rem;
+    height: 1.25rem;
   }
 }
 

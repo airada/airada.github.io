@@ -13,134 +13,6 @@ p {
   line-height: 1.2;
 }
 
-@media only screen and (min-width: 2560px) {
-   h3 {
-    font-size: 4rem;
-  }
-
-  p {
-    font-size: 2rem;
-  }
-
-  .link {
-    font-size: 2rem;
-  }
-
-  .badge {
-    font-size: 1.75rem;
-  }
-  
-  .container-xxxl {
-    max-width: 90vw;
-  }
-
-  .fa-github, .fa-external-link-alt, i {
-    margin-right: 20px;
-  }
-
-  button {
-    font-size: 2rem;
-    padding: 2.5rem;
-  }
-}
-
-@media only screen and (min-width: 1825px) and (max-width: 2559px) {
-   h3 {
-    font-size: 3.5rem;
-  }
-  
-  p {
-    font-size: 1.75rem;
-  }
-
-  .link {
-    font-size: 1.75rem;
-  }
-
-  .badge {
-    font-size: 1.5rem;
-  }
-  
-  .container-xxxl {
-    max-width: 90vw;
-  }
-
-  .fa-github, .fa-external-link-alt, i {
-    margin-right: 20px;
-  }
-
-  button {
-    font-size: 1.75rem;
-    padding: 2rem;
-  }
-}
-
-
-
- @media only screen and (min-width: 601px) and (max-width: 1824px) {
-
-  h3{
-    font-size: xx-large;
-  }
-  
-  p {
-    font-size: large;
-  }
-
-  
-  .link {
-    font-size: small;
-  }
-
-  .badge {
-    font-size: initial;
-  }
-
-  .fa-github, .fa-external-link-alt, i {
-    margin-right: 10px;
-  }
-
-  button {
-    font-size: large;
-    padding: 1.25rem;
-  }
-
-}
-
-@media only screen and (max-width: 600px) {
-  h3 {
-    font-size: large;
-  }
-
-  p {
-    font-size: small;
-  }
-
-  .link {
-    font-size: x-small;
-  }
-
-  .badge {
-    font-size: x-small;
-  }
-
-  .fa-github, .fa-external-link-alt, i {
-    margin-right: 5px;
-  }
-
-  button {
-    font-size: small;
-    padding: 1rem;
-  }
-
-}
-
-/* .btn-portfolio {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-} */
-
 .container-xxxl {
   width: 100%;
   padding-right: 1.5rem;
@@ -149,35 +21,139 @@ p {
   margin-left: auto;
 }
 
-.portfolio-detail {
-  background-color: white;
-  border: 2px solid white;
+.badge {
+  background-color: darkgray;
 }
 
-.border-radius {
-  border-radius: 15px;
-}
+/* .btn-portfolio {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+} */
 
 .btn-shadow {
   box-shadow: 5px 5px 10px lightgray;
 }
 
-.bg-clam {
-  background-color: #ffa384;
-  /* background: url("src\assets\new_theme\mesh-gradient.png") no-repeat center center; */
+/* 
+MEDIA QUERIES
+ */
+
+@media only screen and (min-width: 2560px) {
+  h3 {
+   font-size: 4rem;
+ }
+
+ p {
+   font-size: 2rem;
+ }
+
+ .link {
+   font-size: 2rem;
+ }
+
+ .badge {
+   font-size: 1.75rem;
+ }
+ 
+ .container-xxxl {
+   max-width: 90vw;
+ }
+
+ .fa-github, .fa-external-link-alt, i {
+   margin-right: 20px;
+ }
+
+ button {
+   font-size: 2rem;
+   padding: 2.5rem;
+ }
 }
 
-.bg-sea {
-  background-color: #0b2228;
+@media only screen and (min-width: 1825px) and (max-width: 2559px) {
+  h3 {
+   font-size: 3.5rem;
+ }
+ 
+ p {
+   font-size: 1.75rem;
+ }
+
+ .link {
+   font-size: 1.75rem;
+ }
+
+ .badge {
+   font-size: 1.5rem;
+ }
+ 
+ .container-xxxl {
+   max-width: 90vw;
+ }
+
+ .fa-github, .fa-external-link-alt, i {
+   margin-right: 20px;
+ }
+
+ button {
+   font-size: 1.75rem;
+   padding: 2rem;
+ }
 }
 
-.badge {
-  background-color: darkgray;
-}
-.fa-tags {
-  color: lightgray;
+@media only screen and (min-width: 601px) and (max-width: 1824px) {
+
+ h3{
+   font-size: xx-large;
+ }
+ 
+ p {
+   font-size: large;
+ }
+ 
+ .link {
+   font-size: small;
+ }
+
+ .badge {
+   font-size: initial;
+ }
+
+ .fa-github, .fa-external-link-alt, i {
+   margin-right: 10px;
+ }
+
+ button {
+   font-size: large;
+   padding: 1.25rem;
+ }
+
 }
 
-.fa-github, .fa-external-link-alt {
-  color: gray;
+@media only screen and (max-width: 600px) {
+ h3 {
+   font-size: large;
+ }
+
+ p {
+   font-size: small;
+ }
+
+ .link {
+   font-size: x-small;
+ }
+
+ .badge {
+   font-size: x-small;
+ }
+
+ .fa-github, .fa-external-link-alt, i {
+   margin-right: 5px;
+ }
+
+ button {
+   font-size: small;
+   padding: 1rem;
+ }
+
 }

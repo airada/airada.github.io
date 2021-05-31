@@ -17,50 +17,73 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
+ul {
+  list-style-type: none;
+}
+
+/* 
+CARD
+ */
+
+.card {
+  border: none;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+/* 
+ICONS
+ */
+
 .filter-gray {
   filter: invert(75%) sepia(12%) saturate(5%) hue-rotate(333deg) brightness(90%) contrast(83%);
 }
 
+/* 
+MEDIA QUERIES
+ */
 
 @media only screen and (min-width: 2560px) {
   .card {
-    width: 75em;
+    width: 60em;
   }
 
   .filter-gray {
-    height: 2.5rem;
+    height: 2.25rem;
   }
 
   .badge {
-    font-size: 2rem;
+    font-size: 1.55rem;
     border-radius: 0.25em;
   }
 }
 
 @media only screen and (max-width: 2559px) {
   .card {
-    width: 50em;
+    width: 40em;
   }
 
   .filter-gray {
-    height: 2rem;
+    height: 1.5rem;
   }
 
   .badge {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
 @media only screen and (max-width: 1824px) {
   .card {
-    width: 20rem;
+    width: 30em;
   }
   .filter-gray {
-    height: 1rem;
+    height: 0.75rem;
   }
 
   .badge {
-    font-size: 0.75rem;
+    font-size: 0.60rem;
   }
 }
 
@@ -70,70 +93,3 @@ h4 {
   }
 }
 
-.card {
-  border: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.project {
-  cursor: pointer;
-  max-height: 250px;
-  max-width: 400px;
-  position: relative;
-}
-
-.project:hover .overlay, 
-.project:hover ~ .title, 
-.project:hover ~ .circle {
-  display: none;
-}
-
-.bg-shadow {
-  box-shadow: 10px 20px 20px rgba(128, 128, 128, 0.4);
-}
-
-.overlay {
-  bottom: 0;
-  left:0;
-  position: absolute;
-  right:0;
-  top:0;
-}
-
-.bg-overlay {
-  background-color: #0b2228af;
-  color: #0b2228af;
-  height: 100%;
-  width: 100%;
-}
-
-.circle {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 2px dotted white;
-  border-radius: 75px;
-  height: 100px;
-  position: absolute;
-  width: 100px;
-}
-
-.title {
-  position: absolute;
-  width: 75px;
-}
-
-.card-img-overlay {
-  background: rgb(2,2,2);
-  background: linear-gradient(180deg, rgba(2,2,2, 0.5) 0%, rgba(73,73,73,0) 30%, rgba(255,255,255,0) 100%);  
-  border-radius: 10px;
-}
-
-.card:hover > .card-img-overlay{
-  display: none;
-}
-
-.card:hover {
-  cursor: pointer;
-}

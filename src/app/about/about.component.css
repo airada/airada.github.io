@@ -1,23 +1,3 @@
-html, body {
-  /* background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
-}
-
-header {
-  /* background: url("src/assets/new_theme/header/p5.png") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover; */
-  background-color: transparent;
-  
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-}
-
-section {
-  z-index: 5;
-}
-
 h1,
 h2,
 h3,
@@ -31,16 +11,49 @@ h2 {
   font-weight: 900;
 }
 
-.filter-white {
-  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+p,
+.subheading {
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.2;
+  color: black;
 }
 
-.btn:hover .filter-black {
-  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+ul {
+  list-style: none;
+  list-style-type: none;
 }
 
-.btn:hover .filter-white {
-  filter: none;
+/* 
+NAVBAR 
+*/
+
+.navbar {
+  background-color: black;
+  color: #f5f5f7;
+}
+
+.navbar-nav, .nav-link, .navbar-brand {
+  margin-left: auto;
+  color: #f5f5f7;
+}
+
+.navbar-nav li a {
+  text-align: right;
+  font-weight: normal;
+}
+
+/* 
+HEADER 
+*/
+header {
+  height: 100vh;
+}
+
+header > .container-fluid {
+  height: 100%;
 }
 
 #header {
@@ -51,7 +64,6 @@ h2 {
   justify-content: center;
   align-items: center; */
 }
-
 
 #whitebg {
   position: absolute;
@@ -84,15 +96,6 @@ h2 {
   background: transparent;
 }
 
-@keyframes animStar {
-  from {
-      transform: translateY(0px);
-  }
-  to {
-      transform: translateY(-2000px);
-  }
-}
-
 #space {
   position: absolute;
   top: 0;
@@ -108,29 +111,54 @@ h2 {
   z-index: -4;
 }
 
-.navbar {
-  background-color: black;
-  color: #f5f5f7;
+/* 
+SECTION 
+*/
+
+section {
+  z-index: 5;
 }
 
-header {
-  height: 100vh;
+.container-xxxl {
+  width: 100%;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-header > .container-fluid {
-  height: 100%;
+.about {
+  background: linear-gradient(to top, lightgray 50%, transparent 50%);
+}
+
+.card {
+  border: none;
 }
 
 
-p,
-.subheading {
-  margin-bottom: 0.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  line-height: 1.2;
-  color: black;
+/* 
+ICONS
+ */
+
+.filter-white {
+  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
 }
+
+.btn:hover .filter-black {
+  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+}
+
+.btn:hover .filter-white {
+  filter: none;
+}
+
+.btn-outline-light, .btn-outline-dark {
+  border-radius: 50%;
+}
+
+/* 
+  MEDIA QUERIES
+ */
 
 @media only screen and (min-width: 2560px) {
   h1 {
@@ -232,7 +260,7 @@ p,
   }
 
   h2 {
-    font-size: large;
+    font-size: 2rem;
   }
 
   p {
@@ -287,162 +315,3 @@ p,
     padding: 1.5em;
   }
 }
-
-.container-xxxl {
-  width: 100%;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-ul {
-  list-style: none;
-  list-style-type: none;
-}
-
-.navbar-nav, .nav-link, .navbar-brand {
-  margin-left: auto;
-  color: #f5f5f7;
-}
-
-.text-shadow {
-  text-shadow: 0 0 5px #0b2228, 0 0 5px #0b2228, 0 0 5px #0b2228, 0 0 5px #0b2228;
-}
-
-.fab, .fas {
-  color: #ffffff;
-}
-
-.card {
-  border: none;
-}
-
-.dot-sm {
-  height: 7px;
-  width: 7px;
-  background-color: transparent;
-  border: 1px dotted black;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.bottom-align-text {
-  position: absolute;
-  bottom: 5vh;
-}
-
-.top-align {
-  position: absolute;
-  top: 10vh;
-}
-
-
-.fas, .fab, .btn-social-custom {
-  color:  black;
-}
-
-.navbar-nav li a {
-  text-align: right;
-  font-weight: normal;
-}
-
-.btn-outline-light, .btn-outline-dark {
-  border-radius: 50%;
-}
-
-/* a.badge:hover,
-a.badge-pill:hover {
-  background-color: transparent;
-  color: white;
-  font-weight: normal;
-}
-
-a.badge,
-a.badge-pill,
-a.border {
-  background-color: #fd7e14;
-  font-weight: normal;
-}
-
-i a {
-  color: #fd7e14;
-}
-
-i a:hover {
-  color: #803300;
-}
-.navbar-nav li a {
-  text-align: right;
-  font-weight: normal;
-}
-
-.overlay {
-  background-color: #164450;
-}
-
-.navbar-nav {
-  font-size: small;
-}
-
-.card {
-  background-color: #f8f9fa;
-}
-
-.copyright {
-  background-color: #051114ff;
-}
-
-.sidebar {
-  width: 100px;
-  position: fixed;
-  bottom: 75px;
-  left: 0;
-  overflow-x: hidden;
-}
-
-.sidebar a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #fd7e14;
-  display: block;
-}
-
-.sidebar a:hover {
-  color: #803300;
-}
-
-
-
-.card-size {
-  width: 13rem;
-  height: 20rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .card-size {
-    width: 10rem;
-    height: 15rem;
-  }
-}
-
-ul,
-li {
-  list-style-type: none;
-  margin: none;
-  padding: none;
-}
-
-.text-80 {
-  font-size: 80%;
-  margin: 0;
-  padding: 0;
-} */
