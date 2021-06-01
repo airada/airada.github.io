@@ -38,7 +38,8 @@ ICONS
  */
 
 .filter-gray {
-  filter: invert(75%) sepia(12%) saturate(5%) hue-rotate(333deg) brightness(90%) contrast(83%);
+  filter: none;
+  /* filter: invert(75%) sepia(12%) saturate(5%) hue-rotate(333deg) brightness(90%) contrast(83%); */
 }
 
 /* 

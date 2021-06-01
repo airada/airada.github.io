@@ -1,22 +1,22 @@
 <div data-aos="fade-up" data-aos-duration="1500"
         data-aos-once="true" data-aos-anchor-placement="top-center">
-        <div class="container-xxxl py-5 text-dark">
+        <div class="container-xxxl py-5 bg-white text-dark">
           <div class="row h-25">
             <div class="col-12 col-md-6 col-xl-6 d-flex align-items-center justify-content-center" style="z-index: 5;">
               <img style="max-width: 80%; border-radius: 10px;" [src]="image" alt="Project Preview" />
             </div>
             <div class="col" >
               <div class="container h-100 pb-5 pb-lg-0" style="position: relative;">
-                <h3 class="text-center text-uppercase my-3 my-md-0" >
+                <h2 class="text-center text-uppercase my-3 my-md-0" >
                   <span style="background: linear-gradient(to top, lightgray 50%, transparent 50%);">{{title}}</span>
-                </h3>
+                </h2>
                 
                 <!-- <h2 class="text-center">
                   {{date}}
                 </h2> -->
                 <div class="row pt-2 mt-2 text-white">
                   <ul class="d-flex flex-wrap align-items-center">
-                    <li class="badge text-light my-1 me-1" *ngFor="let skill of badges_list">{{skill}}</li>
+                    <li class="badge text-white my-1 me-1" *ngFor="let skill of badges_list">{{skill}}</li>
                   </ul>
                 </div>
                 <p class="text-left mt-md-4 mb-4">

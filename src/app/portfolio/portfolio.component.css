@@ -20,6 +20,10 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.small-txt {
+  font-size: small;
+}
+
 ul,
 li {
   list-style-type: none;
