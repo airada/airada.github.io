@@ -21,6 +21,10 @@ p,
   color: black;
 }
 
+.small-txt {
+  font-size: small;
+}
+
 ul {
   list-style: none;
   list-style-type: none;
@@ -125,10 +129,6 @@ section {
   padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
-}
-
-.about {
-  background: linear-gradient(to top, lightgray 50%, transparent 50%);
 }
 
 .card {

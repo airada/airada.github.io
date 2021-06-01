@@ -2,7 +2,7 @@
   <!-- Dropdown Inputs -->
     <div class="row bar d-flex justify-content-center">
       <div id="box" (click)="input.focus()" class="col-11 col-lg-6 box px-1 mt-2 d-flex flex-wrap">
-        <span class=" my-auto ms-3 me-2"><img class="filter-gray"
+        <span class=" my-auto ms-3 me-2"><img class="filter-gray" alt="Filter Icon"
           src="/assets/img/filter-solid.svg"></span>
 
         <!-- List of Selected Badges -->
@@ -16,7 +16,7 @@
 
         <!-- Clear Button -->
         <div title="Clear All" (click)="clear()" *ngIf="selected.length > 0" class="clear p-2 ml-auto my-auto">
-          <span class="pointer me-xxl-4"><img class="filter-gray"
+          <span class="pointer me-xxl-4"><img class="filter-gray" alt="Clear skills"
             src="/assets/img/times-circle-regular.svg"></span>
         </div>
 
@@ -46,7 +46,7 @@
       >
         <span title="Toggle Dropdown" class="my-auto mx-auto p-0">
           <img class="filter-white"
-          [src]="caret_img">
+          [src]="caret_img" alt="Toggle Dropdown">
         </span>
       </div>
     </div>
