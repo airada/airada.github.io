@@ -75,7 +75,7 @@ export class AboutComponent implements OnInit {
   onEnd(event) {
     if (this.state === "up") { this.state = "down" }
     else { this.state = "up" }
-    console.log("animation ended: state = ", this.state);
+    // console.log("animation ended: state = ", this.state);
   }
 
   private rng(min, max) {
