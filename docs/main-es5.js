@@ -110,9 +110,8 @@
               this.state = "down";
             } else {
               this.state = "up";
-            }
+            } // console.log("animation ended: state = ", this.state);
 
-            console.log("animation ended: state = ", this.state);
           }
         }, {
           key: "rng",

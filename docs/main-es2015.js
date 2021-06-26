@@ -66,7 +66,7 @@ class AboutComponent {
         else {
             this.state = "up";
         }
-        console.log("animation ended: state = ", this.state);
+        // console.log("animation ended: state = ", this.state);
     }
     rng(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
