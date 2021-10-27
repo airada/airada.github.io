@@ -16,7 +16,7 @@ import {
   animations: [
     trigger('starsAnim', [
       transition('down => up', [
-        animate("50s linear", keyframes([
+        animate("100s linear", keyframes([
           style({ transform: 'translateY(0vh)' }),
           style({ transform: 'translateY(-200vh)' })
         ]))
@@ -24,7 +24,7 @@ import {
     ]),
     trigger('starsAnim1', [
       transition('down => up', [
-        animate("100s linear", keyframes([
+        animate("125s linear", keyframes([
           style({ transform: 'translateY(0vh)' }),
           style({ transform: 'translateY(-200vh)' })
         ]))
@@ -36,7 +36,7 @@ import {
           style({ transform: 'translateY(0vh)' }),
           style({ transform: 'translateY(-200vh)' })
         ]))
-      ])
+      ]),
     ])
   ]
 })
@@ -62,7 +62,7 @@ export class AboutComponent implements OnInit {
   onWindowScroll(event) {
     let height = window.scrollY;
     let bg = document.getElementById("whitebg");
-
+   
     bg.style.top = height * 0.25 + 'px';
   }
 

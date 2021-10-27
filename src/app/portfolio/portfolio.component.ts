@@ -36,6 +36,7 @@ export class PortfolioComponent implements OnInit {
   skill_tags: any = [
     ["cs", "C#"],
     ["cpp", "C++"],
+    ["typescript", "TypeScript"],
     ["python", "PYTHON"],
     ["java", "JAVA"],
     ["unity", "UNITY"],

@@ -3,18 +3,21 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.navbar-brand,
-.nav-link { font-family: "Playfair Display"; font-style: normal; font-variant: normal;  }
+h6
+ { font-family: "Batang"; font-style: normal; font-variant: normal;  }
 
-h2 {
+/* h2 {
   font-weight: 900;
-}
+  font-family: "Playfair Display";
+
+} */
 
 p,
-.subheading {
+.subheading,
+.navbar-brand,
+.nav-link{
   margin-bottom: 0.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Calibri Light", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.2;
@@ -69,7 +72,7 @@ header > .container-fluid {
   align-items: center; */
 }
 
-#whitebg {
+#whitebg  {
   position: absolute;
   top: 0;
   left: 0;
@@ -84,6 +87,7 @@ header > .container-fluid {
   width: 0.05rem;
   height: 0.05rem;
   background: transparent;
+  z-index: -5;
 }
 
 #stars1 {
@@ -91,6 +95,7 @@ header > .container-fluid {
   height: 0.15rem;
   border-radius: 0.075rem;
   background: transparent;
+  z-index: -5;
 }
 
 #stars2 {
@@ -98,6 +103,7 @@ header > .container-fluid {
   height: 0.25rem;
   border-radius: 0.125rem;
   background: transparent;
+  z-index: -5;
 }
 
 #space {
@@ -110,7 +116,7 @@ header > .container-fluid {
   pointer-events: none;
   /* background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%); */
   background-image: 
-  radial-gradient(circle at bottom, #303e4eaf 0%, #1b2735 10%,black 70%), 
+  radial-gradient(circle at bottom, #303e4eaf 0%, #181a2c 10%,black 70%), 
   url("src/assets/new_theme/header/black.jpg");
   z-index: -4;
 }
@@ -118,6 +124,10 @@ header > .container-fluid {
 /* 
 SECTION 
 */
+a {
+  color: black;
+  font-weight: 900;
+}
 
 section {
   z-index: 5;
@@ -161,6 +171,10 @@ ICONS
  */
 
 @media only screen and (min-width: 2560px) {
+  .d-xxxl-block {
+    display: block;
+  }
+
   h1 {
     font-size: 5rem;
   }
@@ -206,6 +220,10 @@ ICONS
 }
 
 @media only screen and (max-width: 2559px) {
+  .d-xxxl-block {
+    display: none;
+  }
+  
   h1 {
     font-size: 4rem;
   }
@@ -251,6 +269,10 @@ ICONS
 }
 
 @media only screen and (max-width: 1824px) {
+  .d-xxxl-block {
+    display: none;
+  }
+
   h1 {
     font-size: xx-large;
   }
@@ -291,6 +313,10 @@ ICONS
 }
 
 @media only screen and (max-width: 600px) {
+  .d-xxxl-block {
+    display: none;
+  }
+  
   h1 {
     font-size: x-large;
   }

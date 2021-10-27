@@ -6,9 +6,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav ms-auto py-2">
-        <li><a class="nav-link active small-txt my-1 ms-auto mx-lg-3" routerLink="/About" routerLinkActive="active"
+        <li><a class="nav-link active small-txt my-1 ms-auto mx-lg-3" routerLink="/home" routerLinkActive="active"
           aria-current="page">./home</a></li>
-        <li><a class="nav-link small-txt my-1 ms-auto mx-lg-3" routerLink="/Portfolio"
+        <li><a class="nav-link small-txt my-1 ms-auto mx-lg-3" routerLink="/portfolio"
           routerLinkActive="active">./portfolio</a></li>
         <li><a class="nav-link small-txt my-1 ms-auto ms-lg-3 me-lg-5" target="_blank" rel="noopener noreferrer"
           href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">./resume</a></li>
@@ -19,7 +19,7 @@
 
 <header>
   <div id="header" class="container-fluid">
-    <img class="img-fluid" src="/assets/new_theme/header/white_bg_compressed.png" alt="White Upside Down Arch" id="whitebg">
+    <img class="img-fluid" src="/assets/new_theme/header/white_bg_only.png" alt="White Upside Down Arch" id="whitebg">
     <div [@starsAnim]="this.state" (@starsAnim.done)="onEnd($event)">
       <div id="stars"></div>
     </div>
@@ -28,13 +28,14 @@
     </div>
     <div [@starsAnim2]="this.state" (@starsAnim2.done)="onEnd($event)">
       <div id="stars2"></div>
-    </div>
-
+    </div> 
+    <img id="whitebg" class="d-xxxl-block" src="/assets/img/stars.png" alt="tiny stars">
     <div id="space"></div>
 
-    <div id="text" class="row m-0 pt-5" style="position: absolute; bottom: 15vh; left: 0; right: 0;">
+    <div id="text" class="row m-0 pt-5" style="position: absolute; top: 15vh; left: 0; right: 0;">
       <div class="col mb-0 pb-0 ms-3 text-center text-white">
-        <h1 class="text-white mb-3"><span>JASMINE IRADA</span></h1>
+        <!-- <img class="w-25 me-3 mb-3" src="/assets/circle.png"> -->
+        <h1 class="mb-3"><span>jasmine irada</span></h1>
         <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
           <li><a class="btn btn-outline-light me-2" target="_blank" rel="external" href="https://github.com/airada"
               ><img class="filter-white" alt="Checkout my GitHub"
@@ -54,30 +55,107 @@
       </div>
     </div>
 
+    <div id="text" class="row m-0 pt-5" style="position: absolute; bottom: 10vh; left: 15vw; right: 0;">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h2 class="text-uppercase " style="font-size:small;"><b>software engineer</b></h2>
+          <p class="mb-0 pb-0  text-left text-dark">
+              Over the past 9 years, as an art director and designer, <br>
+              I’ve worked with big companies and up-and-coming startups to successfully <br>
+              help them reach their full potential and attract new customers.
+              <br><br>
+              <a href="...">View Projects</a> or <a href="...">Read About Me</a>
+          </p>
+        </div>
+        <!-- <div class="col-12 col-md-6">
+          <h2 class="text-uppercase " style="font-size:small;"><b>front-end developer</b></h2>
+          <p class="mb-0 pb-0  text-left text-dark">
+            I’m also a front-end developer and general doodler with <br>
+            a keen eye for creating engaging UI, bringing products to life.
+              <br><br>
+              <a href="...">View Projects</a> or <a href="...">Read About Me</a>
+          </p>
+        </div> -->
+      </div>
+      
+    </div>
 
   </div>
 </header>
 
+
 <section class="page-section portfolio bg-white" id="portfolio">
-  <app-portfolio-featured badges="Angular,Bootstrap,Design" image="/assets/img/portfolio/personal/personal_mockup.jpg"
-    title="Personal Website" date="September 2019 - Ongoing"
-    description="Personal website with portfolio and accomplishments." code="https://github.com/airada/happy-for-you"
+  <app-portfolio-featured badges="Angular,TypeScript,Bootstrap,Design"
+    image="/assets/img/portfolio/personal/mockup_mobile.jpg"
+    image2="/assets/img/portfolio/personal/mockup_website.jpg"
+    title="personal website" date="June 2020 - Ongoing"
+    description="Personal website with portfolio and accomplishments."
+    problem="Creating a minimalist, accessible, responsive design while optimizing website performance."
+    solution="Heavy test-driven development using accessibility checkers, performance and network metrics, and user interface design theories and best practices."
+    features="Open-source portfolio multi-filter component, original interface and mockup designs."
+    code="https://github.com/airada/happy-for-you"
     link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+
+    <app-portfolio-featured badges="HTML, CSS, JavaScript, JQuery, API, Java, XML, MySQL, Android, AWS EC2, Apache Tomcat" image="/assets/img/portfolio/fabflix/mockup/mockup_mobile.jpg"
+    image2="/assets/img/portfolio/fabflix/mockup/mockup_mobile.jpg"
+    title="fabflix" 
+    date="March 2020 - October 2021"
+    description="Full-fledged e-commerce, movie-shopping website and mobile application." 
+    problem="Building a complete CRUD application from the ground up using HTML, CSS, JavaScript, and Java."
+    solution="Implemented modern data management techniques including database connectivity, microservice architecture, extending database functions, database administration, and XML."
+    notable features="Several layers of security measures, an admin dashboard, dynamic content, and a mobile application."
+    code="https://github.com/airada/happy-for-you"
+    link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+
+    <app-portfolio-featured badges="Angular,TypeScript, REST API,Design,JSON Schemas,Agile" image="/assets/img/portfolio/healthwise/mockup/mockup_website.jpg"
+    image2="/assets/img/portfolio/healthwise/mockup/mockup_website.jpg"
+    title="healthwise" 
+    date="January 2020 - June 2020"
+    description="Healthcare web app that provides medical and environmental data for ongoing field studies." 
+    problem="Improving experience design and building efficient, customizable tools for data analysis while navigating an extensive codebase."
+    solution="Collaborated closely with stakeholders and development teams to exceed design goals and expectations. Aptly researched core Angular principles and applied computer science fundamentals and software design techniques."
+    notable features="User-friendly design, auto-saving, caching data for offline access."
+    code="https://github.com/airada/happy-for-you"
+    link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+
 </section>
 
-<section class="bg-white py-5 my-5">
-  <h2 class="text-center text-uppercase mb-5">
-    <span style="background: linear-gradient(to top, lightgray 50%, transparent 50%);">ABOUT ME</span></h2>
+<!-- <section class="bg-white py-5 my-5">
+  <h2 class="text-center my-5">
+    about me
+    </h2>
+  <!-- <div class="container">
+    <div class="row">
+      <h2 class="text-center my-5">
+        about me
+        </h2>
+        <div class="col">
+          <p>Hello there!👋 <br>I'm <b>Jasmine Irada</b>, an <b>associate software engineer</b> focusing on frontend web development. <br><br>
+            <small><b>MY JOURNEY</b></small><br>
+            I've had a passion for technology the moment I threw my tiny hands onto the large, illuminated screen of my old CRT monitor. 
+            From coding my own profiles on MySpace and Tumblr with <b>HTML/CSS</b>, to taking my first programming course in high school--I 
+            finally graduated from the <b>University of California, Irvine</b> with a <b>Computer Science B.S.</b> specializing in modern data and information systems in the <b>summer of 2020</b>.
+            <br><br>
+            Currently, I build upon and regularly maintain portfolio projects, ready to tackle the unique challenges that continue to come with web development.
+            I value <b>adaptability</b> to help me grow as a developer, dedicating myself to learning the best, up-to-date software design practices in order to surpass client expectations.
+            <br><br>
+            <small><b>NOTABLE AWARDS & ACHIEVEMENTS</b></small><br><br>
+            <small><b>2019</b></small><br>
+            - <i>Building, Recruiting, And Inclusion for Diversity (BRAID) Grace Hopper Celebration Scholarship</i><br>
+            - <i>AthenaHacks Winner: Best Game Sponsored by Activision <small><a href="">View Project Details</a><br></small></i> 
+          </p>
+        </div>
+    </div>
+  </div> 
   <div class="container-xxxl d-flex flex-wrap">
     <div class="col-6 col-lg-3 p-0 mx-auto">
       <div class="card bg-white card-size">
-        <img class="card-img mx-auto" src="/assets/img/avataaars.svg" alt="Smiling Girl Avatar Icon from avataaars.com" />
+        <img class="card-img-top mt-4 mx-auto" src="/assets/img/user-circle-solid.svg" alt="Smiling Girl Avatar Icon from avataaars.com" />
 
         <div class="card-body">
           <p class="card-text text-center">
-            I'm Jasmine Irada.
-            (she/her)
-          </p>
+            👋 Hi, I'm Jasmine Irada!</p>
+            <p class="text-center small-txt">(she/her)</p>
         </div>
       </div>
     </div>
@@ -89,7 +167,7 @@
 
         <div class="card-body">
           <p class="card-text text-center">
-            UC Irvine
+            University of California, Irvine
           </p>
           <p class="text-center small-txt">
             Computer Science B.S.
@@ -128,13 +206,13 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <footer class="footer bg-white text-dark text-center">
   <div class="container">
     <div class="row">
       <div class="col mb-5 mb-lg-0">
-        <p class="name-custom mb-4">Let's Connect!</p>
+        <p class="name-custom mb-4">Thanks for stopping by. Let's connect!</p>
         <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
           <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://github.com/airada"
               ><img class="filter-black" alt="Checkout my GitHub"

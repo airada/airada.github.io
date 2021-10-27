@@ -6,9 +6,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav py-2">
-        <li><a class="nav-link small-txt my-1 ms-auto mx-lg-3" routerLink="/About" routerLinkActive="active"
+        <li><a class="nav-link small-txt my-1 ms-auto mx-lg-3" routerLink="/home" routerLinkActive="active"
           aria-current="page">./home</a></li>
-        <li><a class="nav-link active small-txt my-1 ms-auto mx-lg-3" routerLink="/Portfolio"
+        <li><a class="nav-link active small-txt my-1 ms-auto mx-lg-3" routerLink="/portfolio"
           routerLinkActive="active">./portfolio</a></li>
         <li><a class="nav-link small-txt my-1 ms-auto ms-lg-3 me-lg-5" target="_blank" rel="noopener noreferrer"
           href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">./resume</a></li>
@@ -19,13 +19,28 @@
 
 <section class="text-dark my-5 pb-5">
   <app-filters (filter_skill)="filter($event)"
-    skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,Unity"></app-filters>
+    skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,TypeScript,Unity"></app-filters>
 
   <div class="d-flex flex-wrap justify-content-center mt-3">
-    <app-project-preview class="htmlcss bootstrap angular design" title="PERSONAL WEBSITE"
-      skills="HTML/CSS,Bootstrap,Angular,Design" image_thumbnail="/assets/img/portfolio/personal/personal_mockup.jpg"
+    <app-project-preview class="htmlcss bootstrap angular design" title="Personal Website"
+      skills="HTML/CSS,Bootstrap,Angular,Design" image_thumbnail="/assets/img/portfolio/personal/mockup_mobile.jpg"
       link="https://jasmineirada.com/About">
+
     </app-project-preview>
+    <app-project-preview class="htmlcss js typescript java design" title="Fabflix"
+    skills="HTML/CSS,JavaScript,TypeScript,Java,Design" image_thumbnail="/assets/img/portfolio/fabflix/mockup/mockup_mobile.jpg"
+    link="https://ec2-3-17-183-130.us-east-2.compute.amazonaws.com:8443/cs122b-update/login.html">
+  </app-project-preview>
+
+    <app-project-preview class="htmlcss bootstrap typescript angular design" title="Healthwise"
+    skills="HTML/CSS,Bootstrap,TypeScript,Angular,Design" image_thumbnail="/assets/img/portfolio/healthwise/mockup/mockup_website.jpg"
+    link="https://jasmineirada.com/About">
+  </app-project-preview>
+
+  <app-project-preview class="unity cs design" title="Escaping the Negativity"
+    skills="Unity, C#, Design" image_thumbnail="/assets/img/portfolio/athenahacks/mockup_pc.jpg"
+    link="https://devpost.com/software/escaping-the-negativity">
+  </app-project-preview>
     <!-- <app-project-preview
       class="python flask js htmlcss bootstrap"
       title="MIMI AI: HAPPY FOR YOU"
@@ -68,7 +83,7 @@
     <div class="row">
       <!-- Footer Social Icons-->
       <div class="col mb-5 mb-lg-0">
-        <p class="name-custom mb-4">Let's Connect!</p>
+        <p class="name-custom mb-4">Thanks for stopping by. Let's Connect!</p>
         <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
           <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://github.com/airada"
               ><img class="filter-black" alt="Checkout my GitHub" src="/assets/img/github-brands.svg"></a>

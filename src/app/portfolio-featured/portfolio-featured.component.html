@@ -1,44 +1,58 @@
 <div data-aos="fade-up" data-aos-duration="1500"
         data-aos-once="true" data-aos-anchor-placement="top-center">
-        <div class="container-xxxl py-5 bg-white text-dark">
-          <div class="row h-25">
-            <div class="col-12 col-md-6 col-xl-6 d-flex align-items-center justify-content-center" style="z-index: 5;">
-              <img style="max-width: 80%; border-radius: 10px;" [src]="image" alt="Project Preview" />
+        <div class="container-xxxl py-5 text-dark">
+          <div class="row h-25 bg-white">
+            <div id="carouselExampleFade" class="col-12 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center carousel slide carousel-fade " data-bs-ride="carousel">
+              <div style="max-width: 80%; border-radius: 10px;" class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <img  [src]="image" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img [src]="image2" class="d-block w-100" alt="...">
+                </div>
+              </div>
             </div>
+            <!-- <div class="col-12 col-md-6 col-xl-6 d-flex align-items-center justify-content-center" style="z-index: 5;">
+              <img style="max-width: 80%; border-radius: 10px;" [src]="image" alt="Project Preview" />
+            </div> -->
             <div class="col" >
               <div class="container h-100 pb-5 pb-lg-0" style="position: relative;">
-                <h2 class="text-center text-uppercase my-3 my-md-0" >
-                  <span style="background: linear-gradient(to top, lightgray 50%, transparent 50%);">{{title}}</span>
+                <h2 class="text-center my-3 my-md-0" >
+                  {{title}}
+                  <!-- <span style="background: linear-gradient(to top, lightgray 50%, transparent 50%);">{{title}}</span> -->
                 </h2>
                 
-                <!-- <h2 class="text-center">
+                <!-- <h3 class="text-center">
                   {{date}}
-                </h2> -->
-                <div class="row pt-2 mt-2 text-white">
+                </h3> -->
+                <div class="row pt-2 mt-2">
                   <ul class="d-flex flex-wrap align-items-center">
-                    <li class="badge text-white my-1 me-1" *ngFor="let skill of badges_list">{{skill}}</li>
+                    <li class="badge text-uppercase my-1 me-1" *ngFor="let skill of badges_list">{{skill}}</li>
                   </ul>
                 </div>
-                <p class="text-left mt-md-4 mb-4">
+                <p class="text-left mt-md-2 mb-4 me-5">
                   {{description}}
+                  <br><br> <b><small>PROBLEM</small></b><br> {{problem}}
+                  <br><br> <b><small>SOLUTION</small></b><br> {{solution}}
+                  <br><br> <b><small>NOTABLE FEATURES</small></b><br> {{features}}
                 </p>
+                <!-- <div class="row">
+                  <div class="col d-flex justify-content-start">
+                    <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="code" aria-label="View the source code"><i
+                      class="fab fa-github fa-2x pr-2"></i></a>
+                      <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="link" aria-label="Checkout the project online"><i
+                      class="fas fa-external-link-alt fa-2x px-2" ></i></a>
+                  </div>
+                </div> -->
                 <!-- <div class="row mx-auto pb-4" >
                   <div [@alert]="skillExist ? 'closed' : 'open'" class="container alert alert-info mt-lg-0" role="alert">
                     <p><b class="mr-1">Sorry!</b> Page is under construction.</p>
                   </div>
-
-                </div> 
-                <button type="button" (click)="details()" class="btn btn-shadow bg-clam mb-5">
-                  View Details →
-                </button> -->
-                <!-- <div class="row btn-portfolio">
-                  <div class="col d-flex justify-content-start">
-                    <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="code" aria-label="View the source code"><i
-                      class="fab fa-github fa-2x"></i></a>
-                      <a class="link text-dark" target="_blank" rel="noopener noreferrer" [href]="link" aria-label="Checkout the project online"><i
-                      class="fas fa-external-link-alt fa-2x" ></i></a>
-                  </div>
-                </div> -->
+                </div>  -->
+                <button type="button" (click)="details()" class="btn mb-5">
+                  <b>VIEW DETAILS</b>
+                </button>
+                
               </div>
             </div>
 
