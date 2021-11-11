@@ -7,17 +7,17 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav py-2">
         <li><a class="nav-link small-txt my-1 ms-auto mx-lg-3" routerLink="/home" routerLinkActive="active"
-          aria-current="page">./home</a></li>
+          aria-current="page">HOME</a></li>
         <li><a class="nav-link active small-txt my-1 ms-auto mx-lg-3" routerLink="/portfolio"
-          routerLinkActive="active">./portfolio</a></li>
+          routerLinkActive="active">PORTFOLIO</a></li>
         <li><a class="nav-link small-txt my-1 ms-auto ms-lg-3 me-lg-5" target="_blank" rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">./resume</a></li>
+          href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">RESUME</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section class="text-dark my-5 pb-5">
+<section class="text-dark  pb-5">
   <app-filters (filter_skill)="filter($event)"
     skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,TypeScript,Unity"></app-filters>
 
@@ -40,6 +40,11 @@
   <app-project-preview class="unity cs design" title="Escaping the Negativity"
     skills="Unity, C#, Design" image_thumbnail="/assets/img/portfolio/athenahacks/mockup_pc.jpg"
     link="https://devpost.com/software/escaping-the-negativity">
+  </app-project-preview>
+  
+  <app-project-preview class="htmlcss bootstrap angular typescript design" title="Open-source Multifilter"
+    skills="HTML/CSS,Bootstrap,Angular,TypeScript,Design" image_thumbnail="/assets/img/portfolio/filter/mockup_website.jpg"
+    link="https://jasmineirada.com/project-filter/">
   </app-project-preview>
     <!-- <app-project-preview
       class="python flask js htmlcss bootstrap"
@@ -78,7 +83,7 @@
   </div>
 </section>
 
-<footer class="footer pt-5 mt-5 bg-white text-dark text-center">
+<footer class="footer pt-5 text-dark text-center">
   <div class="container">
     <div class="row">
       <!-- Footer Social Icons-->
@@ -101,9 +106,9 @@
   </div>
 </footer>
 
-<div class="copyright py-4 bg-white text-center text-dark">
+<div class="copyright py-4 text-center text-dark">
   <div class="container">
-    <p class="small-txt">©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <img style="height: 1rem;" alt="Love"
+    <p class="small-txt">©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <img class="filter-red" style="height: 1rem;" alt="Love"
       src="/assets/img/heart-solid.svg"></p>
   </div>
 </div>

@@ -1,31 +1,41 @@
+/* 
+FONTS
+*/
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6
- { font-family: "Batang"; font-style: normal; font-variant: normal;  }
+ { font-family: "Calibri Light"; font-weight: 900; font-variant: normal;  }
 
-/* h2 {
-  font-weight: 900;
-  font-family: "Playfair Display";
-
-} */
-
+a, 
 p,
 .subheading,
 .navbar-brand,
-.nav-link{
+.nav-link,
+.title {
   margin-bottom: 0.5rem;
   font-family: "Calibri Light", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.2;
-  color: black;
 }
 
-.small-txt {
+/* 
+CUSTOM TEXT SIZES
+*/
+.text-sm {
   font-size: small;
+}
+
+.text-rg {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: large;
 }
 
 ul {
@@ -34,22 +44,35 @@ ul {
 }
 
 /* 
+CUSTOM COLORS
+*/
+.text-dark {
+  color:  #2a2a2a !important;
+}
+
+.text-white {
+  color:  #faf9f7 !important;
+}
+
+.bg-white {
+  background-color: #faf9f7 !important;
+}
+
+.bg-dark {
+  background-color: #121212 !important;
+}
+
+/* 
 NAVBAR 
 */
 
-.navbar {
-  background-color: black;
-  color: #f5f5f7;
-}
-
 .navbar-nav, .nav-link, .navbar-brand {
   margin-left: auto;
-  color: #f5f5f7;
 }
 
 .navbar-nav li a {
   text-align: right;
-  font-weight: normal;
+  font-weight: 900;
 }
 
 /* 
@@ -67,9 +90,6 @@ header > .container-fluid {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 #whitebg  {
@@ -80,6 +100,11 @@ header > .container-fluid {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  z-index: 0;
+}
+
+.stars-position {
+  position: absolute;
   z-index: -1;
 }
 
@@ -87,15 +112,13 @@ header > .container-fluid {
   width: 0.05rem;
   height: 0.05rem;
   background: transparent;
-  z-index: -5;
 }
 
 #stars1 {
-  width: 0.15rem;
-  height: 0.15rem;
-  border-radius: 0.075rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  border-radius: 0.05rem;
   background: transparent;
-  z-index: -5;
 }
 
 #stars2 {
@@ -103,7 +126,6 @@ header > .container-fluid {
   height: 0.25rem;
   border-radius: 0.125rem;
   background: transparent;
-  z-index: -5;
 }
 
 #space {
@@ -112,25 +134,43 @@ header > .container-fluid {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-size: cover;
   pointer-events: none;
-  /* background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%); */
-  background-image: 
-  radial-gradient(circle at bottom, #303e4eaf 0%, #181a2c 10%,black 70%), 
-  url("src/assets/new_theme/header/black.jpg");
-  z-index: -4;
+  /* background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%); radial-gradient(circle at bottom, #303e4eaf 0%, #181a2c 10%,black 70%),  */
+  background-image: url("src/assets/gray.png");
+  z-index: -2;
+}
+
+#name {
+  position: absolute;
+  bottom: 45vh;
+  left: 0;
+  right: 0;
+}
+
+#introduction {
+  position: absolute;
+  bottom: 10vh;
 }
 
 /* 
 SECTION 
 */
 a {
-  color: black;
   font-weight: 900;
+  cursor: pointer;
+}
+
+p a {
+  color: #2a2a2a;
+}
+
+p a:hover {
+  color: gray;
 }
 
 section {
-  z-index: 5;
+  z-index: 1;
 }
 
 .container-xxxl {
@@ -141,9 +181,9 @@ section {
   margin-left: auto;
 }
 
-.card {
+/* .card {
   border: none;
-}
+} */
 
 
 /* 
@@ -151,11 +191,16 @@ ICONS
  */
 
 .filter-white {
-  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+  filter: invert(99%) sepia(53%) saturate(329%) hue-rotate(41deg) brightness(112%) contrast(98%); /* #faf9f7 */
+}
+
+
+.filter-red {
+  filter: invert(9%) sepia(71%) saturate(5688%) hue-rotate(4deg) brightness(97%) contrast(117%);
 }
 
 .btn:hover .filter-black {
-  filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+  filter: invert(99%) sepia(53%) saturate(329%) hue-rotate(41deg) brightness(112%) contrast(98%); /* #faf9f7 */
 }
 
 .btn:hover .filter-white {

@@ -2,8 +2,10 @@
   <!-- Dropdown Inputs -->
     <div class="row bar d-flex justify-content-center">
       <div id="box" (click)="input.focus()" class="col-11 col-lg-6 box px-1 mt-2 d-flex flex-wrap">
-        <span class=" my-auto ms-3 me-2"><img class="filter-gray" alt="Filter Icon"
-          src="/assets/img/filter-solid.svg"></span>
+        <span class=" my-auto ms-3 me-2">
+          <!-- <img class="filter-gray" alt="Filter Icon"
+          src="/assets/img/filter-solid.svg"> -->
+        </span>
 
         <!-- List of Selected Badges -->
         <ul id="badges" class="d-inline-flex align-items-center p-0 m-0" *ngFor="let selected_item of selected">
@@ -24,7 +26,7 @@
         <input 
           #input
           type="text"
-          placeholder="Search"
+          placeholder="Search for a skill"
           [size]="search_size"
           (focus)="content('show')"
           (keydown)="keydown($event)"
@@ -45,7 +47,7 @@
         class="col-1 caret pointer p-0 mt-2 d-flex justify-content-end"
       >
         <span title="Toggle Dropdown" class="my-auto mx-auto p-0">
-          <img class="filter-white"
+          <img class="filter-gray"
           [src]="caret_img" alt="Toggle Dropdown">
         </span>
       </div>

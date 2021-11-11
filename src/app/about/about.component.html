@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark text-white">
   <div class="container-fluid">
     <button class="navbar-toggler ms-auto" title="Toggle navigation" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,12 +6,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav ms-auto py-2">
-        <li><a class="nav-link active small-txt my-1 ms-auto mx-lg-3" routerLink="/home" routerLinkActive="active"
-          aria-current="page">./home</a></li>
-        <li><a class="nav-link small-txt my-1 ms-auto mx-lg-3" routerLink="/portfolio"
-          routerLinkActive="active">./portfolio</a></li>
-        <li><a class="nav-link small-txt my-1 ms-auto ms-lg-3 me-lg-5" target="_blank" rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">./resume</a></li>
+        <li><a class="nav-link active text-sm my-1 ms-auto mx-lg-3" routerLink="/home" routerLinkActive="active"
+          aria-current="page">HOME</a></li>
+        <li><a class="nav-link text-sm my-1 ms-auto mx-lg-3" routerLink="/portfolio"
+          routerLinkActive="active">PORTFOLIO</a></li>
+        <li><a class="nav-link text-sm my-1 ms-auto ms-lg-3 me-lg-5" target="_blank" rel="noopener noreferrer"
+          href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">RESUME</a></li>
       </ul>
     </div>
   </div>
@@ -19,72 +19,97 @@
 
 <header>
   <div id="header" class="container-fluid">
-    <img class="img-fluid" src="/assets/new_theme/header/white_bg_only.png" alt="White Upside Down Arch" id="whitebg">
-    <div [@starsAnim]="this.state" (@starsAnim.done)="onEnd($event)">
-      <div id="stars"></div>
+    <img id="whitebg" class="img-fluid" src="/assets/new_theme/header/white_bg_only.png" alt="White, upside-down arch with checkered and diagonal cross patterns.">
+    <div class="stars-position" [@starsAnim]="this.state" (@starsAnim.done)="onEnd($event)">
+      <div id="stars" alt=""></div>
     </div>
-    <div [@starsAnim1]="this.state" (@starsAnim1.done)="onEnd($event)">
-      <div id="stars1"></div>
+    <div class="stars-position" [@starsAnim1]="this.state" (@starsAnim1.done)="onEnd($event)">
+      <div id="stars1" alt=""></div>
     </div>
-    <div [@starsAnim2]="this.state" (@starsAnim2.done)="onEnd($event)">
-      <div id="stars2"></div>
+    <div class="stars-position" [@starsAnim2]="this.state" (@starsAnim2.done)="onEnd($event)">
+      <div id="stars2" alt=""></div>
     </div> 
-    <img id="whitebg" class="d-xxxl-block" src="/assets/img/stars.png" alt="tiny stars">
-    <div id="space"></div>
+    <img id="whitebg" class="d-xxxl-block" src="/assets/img/stars.png" alt="Tiny stars placed all over the background.">
+    <div id="space" class="img-fluid" alt="Black background."></div>
 
-    <div id="text" class="row m-0 pt-5" style="position: absolute; top: 15vh; left: 0; right: 0;">
-      <div class="col mb-0 pb-0 ms-3 text-center text-white">
-        <!-- <img class="w-25 me-3 mb-3" src="/assets/circle.png"> -->
-        <h1 class="mb-3"><span>jasmine irada</span></h1>
+    <div id="name" class="row m-0 pt-lg-5">
+      <div class="col mb-0 pb-0 ms-3 text-center">
+        <div data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
+          <h1 class="text-white mb-3">JASMINE IRADA</h1>
+        </div>
+        
         <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
-          <li><a class="btn btn-outline-light me-2" target="_blank" rel="external" href="https://github.com/airada"
-              ><img class="filter-white" alt="Checkout my GitHub"
+          <div data-aos="zoom-in-down" data-aos-duration="1000" data-aos-once="true">
+            <li><a class="btn btn-outline-light me-2" target="_blank" rel="external" href="https://github.com/airada"
+              ><img class="filter-white" alt="Checkout my GitHub!"
                 src="/assets/img/github-brands.svg"></a>
-          </li>
-          <li><a class="btn btn-outline-light me-2" target="_blank" rel="external" href="https://www.linkedin.com/in/jasmineirada/"
-              ><img class="filter-white" alt="Connect with me on Linkedin"
+            </li>
+          </div>
+          <div data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true">
+            <li><a class="btn btn-outline-light me-2" target="_blank" rel="external" href="https://www.linkedin.com/in/jasmineirada/"
+              ><img class="filter-white" alt="Connect with me on Linkedin!"
                 src="/assets/img/linkedin-brands.svg"></a>
-          </li>
-          <li><a class="btn btn-outline-light me-2" target="_blank" rel="nofollow" href="mailto:jasmineirada@gmail.com"
-              ><img class="filter-white" alt="Send me an email"
+            </li>
+          </div>
+          <div data-aos="zoom-in-down" data-aos-duration="2000" data-aos-once="true">
+            <li><a class="btn btn-outline-light me-2" target="_blank" rel="nofollow" href="mailto:jasmineirada@gmail.com"
+              ><img class="filter-white" alt="Send me an email!"
                 src="/assets/img/envelope-solid.svg"></a>
-          </li>
+            </li>
+          </div>
         </ul>
         <br>
 
       </div>
     </div>
 
-    <div id="text" class="row m-0 pt-5" style="position: absolute; bottom: 10vh; left: 15vw; right: 0;">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <h2 class="text-uppercase " style="font-size:small;"><b>software engineer</b></h2>
-          <p class="mb-0 pb-0  text-left text-dark">
-              Over the past 9 years, as an art director and designer, <br>
-              I’ve worked with big companies and up-and-coming startups to successfully <br>
-              help them reach their full potential and attract new customers.
-              <br><br>
-              <a href="...">View Projects</a> or <a href="...">Read About Me</a>
-          </p>
+    <div id="introduction" class="m-0 pt-lg-5 px-0">
+        <div class="row p-0 m-0">
+          <div class="d-none d-lg-block col-lg-1"></div>
+          <div class="col-12 col-lg-5 px-5 px-lg-0">
+            <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+              <h2 class="text-dark title text-lg"><b>SOFTWARE ENGINEER</b></h2>
+              <p class="text-dark mb-0 pb-0 text-left text-dark">
+                  As a recent graduate with a keen eye for design and problem-solving,
+                  I’ve worked with large research groups and small project teams 
+                  to successfully help them reach their full potential in
+                  satisfying clients and stakeholders by bringing products 
+                  to life.
+                  <br><br>
+              </p>
+              <p class="text-dark text-rg">
+                <a routerLink="/portfolio"
+                    routerLinkActive="active">VIEW PROJECTS</a> or <a href="...">READ ABOUT ME</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-none d-lg-block px-lg-5">
+            
+              <div class="astrokitty d-flex align-items-end justify-content-end flex-column pt-3">
+                <div data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true">
+                  <ul class="d-flex justify-content-start ">
+                    <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://github.com/airada"
+                        ><img class="filter-black" alt="Checkout my GitHub"
+                          src="/assets/img/github-brands.svg"></a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div data-aos="zoom-in-up" data-aos-duration="1500" data-aos-once="true">
+                  <p class="text-sm text-end">I've visited space <b>0</b> times in <b>2021</b>. <br>
+                    Will you help me reach for the stars?<br><br></p>
+                </div>
+                
+              </div>
+            
+          </div>
         </div>
-        <!-- <div class="col-12 col-md-6">
-          <h2 class="text-uppercase " style="font-size:small;"><b>front-end developer</b></h2>
-          <p class="mb-0 pb-0  text-left text-dark">
-            I’m also a front-end developer and general doodler with <br>
-            a keen eye for creating engaging UI, bringing products to life.
-              <br><br>
-              <a href="...">View Projects</a> or <a href="...">Read About Me</a>
-          </p>
-        </div> -->
-      </div>
-      
     </div>
-
   </div>
 </header>
 
 
-<section class="page-section portfolio bg-white" id="portfolio">
+<section id="portfolio" class="page-section portfolio bg-white">
   <app-portfolio-featured badges="Angular,TypeScript,Bootstrap,Design"
     image="/assets/img/portfolio/personal/mockup_mobile.jpg"
     image2="/assets/img/portfolio/personal/mockup_website.jpg"
@@ -96,7 +121,7 @@
     code="https://github.com/airada/happy-for-you"
     link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
 
-    <app-portfolio-featured badges="HTML, CSS, JavaScript, JQuery, API, Java, XML, MySQL, Android, AWS EC2, Apache Tomcat" image="/assets/img/portfolio/fabflix/mockup/mockup_mobile.jpg"
+    <!-- <app-portfolio-featured badges="HTML, CSS, JavaScript, JQuery, API, Java, XML, MySQL, Android, AWS EC2, Apache Tomcat" image="/assets/img/portfolio/fabflix/mockup/mockup_mobile.jpg"
     image2="/assets/img/portfolio/fabflix/mockup/mockup_mobile.jpg"
     title="fabflix" 
     date="March 2020 - October 2021"
@@ -105,7 +130,7 @@
     solution="Implemented modern data management techniques including database connectivity, microservice architecture, extending database functions, database administration, and XML."
     notable features="Several layers of security measures, an admin dashboard, dynamic content, and a mobile application."
     code="https://github.com/airada/happy-for-you"
-    link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+    link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured> -->
 
     <app-portfolio-featured badges="Angular,TypeScript, REST API,Design,JSON Schemas,Agile" image="/assets/img/portfolio/healthwise/mockup/mockup_website.jpg"
     image2="/assets/img/portfolio/healthwise/mockup/mockup_website.jpg"
@@ -208,7 +233,7 @@
   </div>
 </section> -->
 
-<footer class="footer bg-white text-dark text-center">
+<footer class="footer bg-white text-center text-dark">
   <div class="container">
     <div class="row">
       <div class="col mb-5 mb-lg-0">
@@ -232,9 +257,9 @@
   </div>
 </footer>
 
-<div class="copyright py-4 bg-white text-center text-dark">
+<div class="copyright bg-white text-center text-dark py-4">
   <div class="container">
-    <p class="small-txt">©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <img style="height: 1rem;" alt="Love"
+    <p class="text-sm">©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <img class="filter-red" style="height: 1rem;" alt="Love"
       src="/assets/img/heart-solid.svg"></p>
   </div>
 </div>
