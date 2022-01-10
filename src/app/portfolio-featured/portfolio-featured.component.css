@@ -2,7 +2,9 @@ h1,
 h2,
 h4,
 h5,
-h6 { font-family: "Calibri Light"; font-weight: 900; font-style: normal; font-variant: normal;}
+h6 { font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-style: normal; font-variant: normal;}
 
 p, h3, button, .badge {
   margin-bottom: 0.5rem;
