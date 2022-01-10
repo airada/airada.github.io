@@ -18,9 +18,8 @@ p,
 .nav-link,
 .title {
   margin-bottom: 0.5rem;
-  font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Calibri Light", "Calibri", "Candara", "Segoe", "Optima", "Arial", "sans-serif", -apple-system, BlinkMacSystemFont,
+  Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.2;
 }
 
