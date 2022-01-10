@@ -49,6 +49,8 @@ export class PortfolioComponent implements OnInit {
   ];
   chosen_skill: any = [];
   selected_skill: any;
+  public year = (new Date()).getFullYear();
+
 
   constructor() {}
 

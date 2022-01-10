@@ -38,8 +38,8 @@ export class PortfolioFeaturedComponent implements OnInit {
   @Input() problem: string;
   @Input() solution: string;
   @Input() features: string;
-  @Input() code: string;
-  @Input() link: string;
+  // @Input() code: string;
+  // @Input() link: string;
   badges_list: Array<string>;
   skillExist = true;
 

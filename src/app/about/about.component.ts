@@ -47,6 +47,8 @@ export class AboutComponent implements OnInit {
   private stars1: string;
   private stars2: string;
   public state = 'down';
+  public reach_the_stars: number = 0;
+  public year = (new Date()).getFullYear();
   private colors: Array<string> = ["#3C4F6C75", "#1A4C4A75", "#FED3B7", "#FF925E80", "#FF7A66", "#ABA3D275", "#FFD9EE50", "#FFD96C", "#D65F9150"]
 
 
@@ -96,5 +98,9 @@ export class AboutComponent implements OnInit {
     }
 
     return box_shadow_str
+  }
+
+  public add_trip() {
+    this.reach_the_stars += 1;
   }
 }

@@ -11,7 +11,7 @@
         <li><a class="nav-link text-sm my-1 ms-auto mx-lg-3" routerLink="/portfolio"
           routerLinkActive="active">PORTFOLIO</a></li>
         <li><a class="nav-link text-sm my-1 ms-auto ms-lg-3 me-lg-5" target="_blank" rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/1H18dQx-U2BO1mgFXNuwFs9mMy0ebcHDu/view?usp=sharing">RESUME</a></li>
+          href="https://drive.google.com/file/d/1juvooQNMBCzWMf_cCjyGVTFOwWlOVk3i/view?usp=sharing">RESUME</a></li>
       </ul>
     </div>
   </div>
@@ -70,12 +70,11 @@
             <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
               <h2 class="text-dark title text-lg"><b>SOFTWARE ENGINEER</b></h2>
               <p class="text-dark mb-0 pb-0 text-left text-dark">
-                  As a recent graduate with a keen eye for design and problem-solving,
-                  I’ve worked with large research groups and small project teams 
-                  to successfully help them reach their full potential in
-                  satisfying clients and stakeholders by bringing products 
-                  to life.
-                  <br><br>
+                As a developer with a keen eye for design and problem-solving, 
+                I’ve helped large organizations and small project teams successfully 
+                reach their full potential by satisfying clients 
+                and bringing products to life.
+                <br><br>
               </p>
               <p class="text-dark text-rg">
                 <a routerLink="/portfolio"
@@ -83,25 +82,24 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-lg-6 d-none d-lg-block px-lg-5">
-            
-              <div class="astrokitty d-flex align-items-end justify-content-end flex-column pt-3">
-                <div data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true">
+          <div class="col-12 col-lg-6 d-none d-lg-block px-5">
+              <div class="astrokitty d-flex align-items-end justify-content-end flex-column pt-3 px-5">
+                <!-- <div data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true">
                   <ul class="d-flex justify-content-start ">
-                    <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://github.com/airada"
-                        ><img class="filter-black" alt="Checkout my GitHub"
-                          src="/assets/img/github-brands.svg"></a>
+                    <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" (click)="add_trip()"
+                        ><img class="filter-black" alt="Click to see Rocket Animation" 
+                              src="/assets/img/rocket-solid.svg"></a>
                     </li>
                   </ul>
                 </div>
                 
                 <div data-aos="zoom-in-up" data-aos-duration="1500" data-aos-once="true">
-                  <p class="text-sm text-end">I've visited space <b>0</b> times in <b>2021</b>. <br>
+                  <p class="text-sm text-end">
+                    I've visited space <b>{{reach_the_stars}}</b> times in <b>{{year}}</b>. <br>
                     Will you help me reach for the stars?<br><br></p>
-                </div>
+                </div> -->
                 
               </div>
-            
           </div>
         </div>
     </div>
@@ -111,26 +109,24 @@
 
 <section id="portfolio" class="page-section portfolio bg-white">
   <app-portfolio-featured badges="Angular,TypeScript,Bootstrap,Design"
-    image="/assets/img/portfolio/personal/mockup_mobile.jpg"
-    image2="/assets/img/portfolio/personal/mockup_website.jpg"
+    image="/assets/img/portfolio/personal/mockup_website_01.jpg"
+    image2="/assets/img/portfolio/personal/mockup_website_01.jpg"
     title="personal website" date="June 2020 - Ongoing"
     description="Personal website with portfolio and accomplishments."
     problem="Creating a minimalist, accessible, responsive design while optimizing website performance."
     solution="Heavy test-driven development using accessibility checkers, performance and network metrics, and user interface design theories and best practices."
     features="Open-source portfolio multi-filter component, original interface and mockup designs."
-    code="https://github.com/airada/happy-for-you"
-    link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+    ></app-portfolio-featured>
 
     <!-- <app-portfolio-featured badges="HTML, CSS, JavaScript, JQuery, API, Java, XML, MySQL, Android, AWS EC2, Apache Tomcat" image="/assets/img/portfolio/fabflix/mockup/mockup_mobile.jpg"
     image2="/assets/img/portfolio/fabflix/mockup/mockup_mobile.jpg"
     title="fabflix" 
-    date="March 2020 - October 2021"
+    date="March 2020 - Present"
     description="Full-fledged e-commerce, movie-shopping website and mobile application." 
     problem="Building a complete CRUD application from the ground up using HTML, CSS, JavaScript, and Java."
     solution="Implemented modern data management techniques including database connectivity, microservice architecture, extending database functions, database administration, and XML."
     notable features="Several layers of security measures, an admin dashboard, dynamic content, and a mobile application."
-    code="https://github.com/airada/happy-for-you"
-    link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured> -->
+    ></app-portfolio-featured>
 
     <app-portfolio-featured badges="Angular,TypeScript, REST API,Design,JSON Schemas,Agile" image="/assets/img/portfolio/healthwise/mockup/mockup_website.jpg"
     image2="/assets/img/portfolio/healthwise/mockup/mockup_website.jpg"
@@ -140,8 +136,7 @@
     problem="Improving experience design and building efficient, customizable tools for data analysis while navigating an extensive codebase."
     solution="Collaborated closely with stakeholders and development teams to exceed design goals and expectations. Aptly researched core Angular principles and applied computer science fundamentals and software design techniques."
     notable features="User-friendly design, auto-saving, caching data for offline access."
-    code="https://github.com/airada/happy-for-you"
-    link="https://mimi-ai.herokuapp.com/"></app-portfolio-featured>
+    ></app-portfolio-featured> -->
 
 </section>
 
@@ -259,7 +254,7 @@
 
 <div class="copyright bg-white text-center text-dark py-4">
   <div class="container">
-    <p class="text-sm">©2020 - 2021 <br> JASMINE IRADA <br> MADE WITH <img class="filter-red" style="height: 1rem;" alt="Love"
+    <p class="text-sm">©{{year}} <br> JASMINE IRADA <br> MADE WITH <img class="filter-red" style="height: 1rem;" alt="Love"
       src="/assets/img/heart-solid.svg"></p>
   </div>
 </div>
