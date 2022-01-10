@@ -16,7 +16,7 @@ import {
   animations: [
     trigger('starsAnim', [
       transition('down => up', [
-        animate("50s linear", keyframes([
+        animate("100s linear", keyframes([
           style({ transform: 'translateY(0vh)' }),
           style({ transform: 'translateY(-200vh)' })
         ]))
@@ -24,7 +24,7 @@ import {
     ]),
     trigger('starsAnim1', [
       transition('down => up', [
-        animate("100s linear", keyframes([
+        animate("125s linear", keyframes([
           style({ transform: 'translateY(0vh)' }),
           style({ transform: 'translateY(-200vh)' })
         ]))
@@ -36,7 +36,7 @@ import {
           style({ transform: 'translateY(0vh)' }),
           style({ transform: 'translateY(-200vh)' })
         ]))
-      ])
+      ]),
     ])
   ]
 })
@@ -47,12 +47,15 @@ export class AboutComponent implements OnInit {
   private stars1: string;
   private stars2: string;
   public state = 'down';
+  public reach_the_stars: number = 0;
+  public year = (new Date()).getFullYear();
+  private colors: Array<string> = ["#3C4F6C75", "#1A4C4A75", "#FED3B7", "#FF925E80", "#FF7A66", "#ABA3D275", "#FFD9EE50", "#FFD96C", "#D65F9150"]
 
 
   ngOnInit() {
-    this.stars = this.box_shadow(400, 250);
-    this.stars1 = this.box_shadow(125, 200);
-    this.stars2 = this.box_shadow(50, 200);
+    this.stars = this.box_shadow(400, 250, 7, 8);
+    this.stars1 = this.box_shadow(200, 200, 2, 6);
+    this.stars2 = this.box_shadow(75, 200, 0, 1);
     document.getElementById("stars").style.boxShadow = this.stars;
     document.getElementById("stars1").style.boxShadow = this.stars1;
     document.getElementById("stars2").style.boxShadow = this.stars2;
@@ -62,7 +65,7 @@ export class AboutComponent implements OnInit {
   onWindowScroll(event) {
     let height = window.scrollY;
     let bg = document.getElementById("whitebg");
-
+   
     bg.style.top = height * 0.25 + 'px';
   }
 
@@ -82,11 +85,11 @@ export class AboutComponent implements OnInit {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  private box_shadow(num_stars, vh_height) {
+  private box_shadow(num_stars, vh_height, color1, color2) {
     let box_shadow_str = "";
 
     for (let i = 0; i <= num_stars; i++) {
-      box_shadow_str += this.rng(0, 100).toString() + "vw " + this.rng(0, vh_height).toString() + "vh " + "white"
+      box_shadow_str += this.rng(0, 100).toString() + "vw " + this.rng(0, vh_height).toString() + "vh " + "#faf9f7"
 
       if (i != num_stars) {
         box_shadow_str += ","
@@ -95,5 +98,9 @@ export class AboutComponent implements OnInit {
     }
 
     return box_shadow_str
+  }
+
+  public add_trip() {
+    this.reach_the_stars += 1;
   }
 }

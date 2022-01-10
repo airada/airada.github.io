@@ -15,7 +15,7 @@ export class FiltersComponent implements OnInit {
   input_focused: boolean = false;
   skills_list: Array<string> = [];
   private scroll_position: number = 0;
-  search_size: number = 7;
+  search_size: number = 12;
   selected: Array<string> = [];
   suggestions: Array<string> = [];
 

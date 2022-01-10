@@ -36,6 +36,7 @@ export class PortfolioComponent implements OnInit {
   skill_tags: any = [
     ["cs", "C#"],
     ["cpp", "C++"],
+    ["typescript", "TypeScript"],
     ["python", "PYTHON"],
     ["java", "JAVA"],
     ["unity", "UNITY"],
@@ -48,6 +49,8 @@ export class PortfolioComponent implements OnInit {
   ];
   chosen_skill: any = [];
   selected_skill: any;
+  public year = (new Date()).getFullYear();
+
 
   constructor() {}
 

@@ -31,11 +31,15 @@ import {
 export class PortfolioFeaturedComponent implements OnInit {
   @Input() badges: string;
   @Input() image: string;
+  @Input() image2: string;
   @Input() title: string
   @Input() date: string;
   @Input() description: string;
-  @Input() code: string;
-  @Input() link: string;
+  @Input() problem: string;
+  @Input() solution: string;
+  @Input() features: string;
+  // @Input() code: string;
+  // @Input() link: string;
   badges_list: Array<string>;
   skillExist = true;
 
