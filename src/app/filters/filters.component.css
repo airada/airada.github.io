@@ -52,7 +52,8 @@ input {
   border: none;
   color: #0b2228;
   display: inline-block;
-  font-family: "Calibri Light";
+  font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe", "Helvetica Neue", "Arial", "sans-serif", 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 900;
   margin: 0;
   padding: 0;
