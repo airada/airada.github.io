@@ -7,7 +7,7 @@ h6,
 .navbar-brand,
 .nav-link { font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Segoe UI",
   "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-style: normal; font-variant: normal;  }
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-weight:700; font-style: normal; font-variant: normal;  }
 
 h2 {
   font-weight: normal;
@@ -20,6 +20,7 @@ p {
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.2;
   margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
 .small-txt {
