@@ -23,7 +23,7 @@
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: gray;
+  color: rgb(196, 196, 196);
   opacity: 1; /* Firefox */
 }
 
@@ -82,7 +82,7 @@ ul {
   color: #faf9f7;
   cursor: text;
   min-height: 40px;
-  box-shadow: 2px 2px 5px #e8e6e1;
+  box-shadow: 2px 2px 5px lightgray;
 }
 
 .box-bottom {
@@ -109,7 +109,7 @@ ul {
   background-color: #faf9f7;
   border: 5px darkgray;
   border-radius: 0px 15px 15px 0px;
-  box-shadow: 2px 2px 5px #e8e6e1;
+  box-shadow: 2px 2px 5px lightgray;
 }
 
 .caret-bottom {
@@ -135,7 +135,10 @@ ul {
   border: 2px solid #f5f5f7;
   border-radius: 0px 0px 15px 15px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  font-family: "Calibri Light";
+  font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
   max-height: 25vh;
   overflow-y: auto;
   position: absolute;
@@ -145,7 +148,7 @@ ul {
 }
 
 .bg-selected {
-  background-color: darkgray;
+  background-color: #343a40;
   color: #f5f5f7;
   font-weight: bold;
 }
@@ -156,14 +159,13 @@ ul {
 
 .active,
 .dropdown-item.active,
-.dropdown-item:active,
 .dropdown-item:hover {
   background-color: lightgrey;
 }
 
 .active.bg-selected,
 .dropdown-item:hover.bg-selected {
-  background-color: #343a40;
+  background-color: darkgray;
   color: #f5f5f7;
 }
 
