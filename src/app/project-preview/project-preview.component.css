@@ -29,6 +29,7 @@ CARD
   color: gray;
   box-shadow: 2px 2px 5px #e8e6e1;
   font-size: x-small;
+  font-weight: bold;
 }
 
 .card {
