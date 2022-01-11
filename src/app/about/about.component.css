@@ -7,19 +7,23 @@ h2,
 h3,
 h4,
 h5,
-h6
- { font-family: "Calibri Light", "Calibri", "Candara", "Segoe", "Optima", "Arial", "sans-serif", -apple-system, BlinkMacSystemFont,
-  Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-variant: normal;  }
+h6,
+.navbar-brand,
+.nav-link
+ { font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe", "Helvetica Neue", "Arial", "sans-serif", 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-variant: normal;  }
 
 a, 
 p,
+p a,
 .subheading,
+.navbar,
 .navbar-brand,
 .nav-link,
 .title {
   margin-bottom: 0.5rem;
-  font-family: "Calibri Light", "Calibri", "Candara", "Segoe", "Optima", "Arial", "sans-serif", -apple-system, BlinkMacSystemFont,
-  Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe", "Helvetica Neue", "Arial", "sans-serif", 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.2;
 }
 

@@ -5,7 +5,8 @@ h4,
 h5,
 h6,
 .navbar-brand,
-.nav-link { font-family: "Calibri Light"; font-style: normal; font-variant: normal;  }
+.nav-link { font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe", "Helvetica Neue", "Arial", "sans-serif", 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-style: normal; font-variant: normal;  }
 
 h2 {
   font-weight: normal;
@@ -13,9 +14,8 @@ h2 {
 }
 
 p {
-  font-family: "Calibri Light", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Calibri Light", "Calibri", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe", "Helvetica Neue", "Arial", "sans-serif", 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
