@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
-
+import { RouterTestingModule } from "@angular/router/testing";
 import { AboutComponent } from "./about.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 describe("AboutComponent", () => {
   let component: AboutComponent;
@@ -10,6 +12,7 @@ describe("AboutComponent", () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [AboutComponent],
+        imports: [RouterTestingModule, BrowserAnimationsModule],
       }).compileComponents();
     })
   );

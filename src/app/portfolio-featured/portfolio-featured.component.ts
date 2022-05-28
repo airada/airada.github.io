@@ -29,7 +29,7 @@ import {
   ]
 })
 export class PortfolioFeaturedComponent implements OnInit {
-  @Input() badges: string;
+  @Input() badges: string = "";
   @Input() image: string;
   @Input() image2: string;
   @Input() title: string

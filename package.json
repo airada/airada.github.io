@@ -11,9 +11,23 @@
   },
   "private": true,
   "dependencies": {
-    
+    "@angular-devkit/build-angular": "^13.3.7",
+    "@angular/core": "^13.3.10",
+    "@angular/material": "^13.3.8",
+    "@angular/platform-browser-dynamic": "^13.3.10",
+    "@angular/router": "^13.3.10",
+    "@types/jasmine": "^4.0.3",
+    "animate.css": "^4.1.1",
+    "karma": "^6.3.20",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^5.0.1",
+    "karma-jasmine-html-reporter": "^2.0.0"
   },
   "devDependencies": {
-    
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-config-google": "^0.14.0"
   }
 }

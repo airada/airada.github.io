@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { ProjectPreviewComponent } from "./project-preview.component";
 
 describe("ProjectPreviewComponent", () => {

@@ -4,6 +4,8 @@ import { PortfolioFeaturedComponent } from '../portfolio-featured/portfolio-feat
 import { AboutComponent } from './about.component'
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "../app-routing.module";
+import { RouterTestingModule } from "@angular/router/testing";
+
 
 @NgModule({
   exports: [AppRoutingModule,PortfolioFeaturedComponent, AboutComponent],
@@ -11,7 +13,8 @@ import { AppRoutingModule } from "../app-routing.module";
   imports: [
     CommonModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterTestingModule
   ]
 })
 export class AboutModule { }

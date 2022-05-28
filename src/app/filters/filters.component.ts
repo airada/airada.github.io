@@ -7,7 +7,7 @@ import { Component, Input, Output, ViewChild, Renderer2, ElementRef, EventEmitte
 })
 
 export class FiltersComponent implements OnInit {
-  @Input() skills: string;
+  @Input() skills: string = "";
   @Output() filter_skill = new EventEmitter<string>();
   @ViewChild("input") input: ElementRef;
   arrowkey_position: number = -1;
