@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { RouterTestingModule } from "@angular/router/testing";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
@@ -19,6 +19,7 @@ import { PortfolioModule } from "./portfolio/portfolio.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterTestingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,

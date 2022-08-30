@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./project-preview.component.css"],
 })
 export class ProjectPreviewComponent implements OnInit {
-  @Input() skills: string;
+  @Input() skills: string = "";
   @Input() image_thumbnail: any;
   @Input() title: string;
   @Input() link: string;
