@@ -18,7 +18,8 @@
   </div>
 </nav>
 
-<section class="text-dark  pb-5">
+
+<section class="text-dark py-5">
   <app-filters (filter_skill)="filter($event)"
     skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,TypeScript,Unity"></app-filters>
 
@@ -72,35 +73,31 @@
       skills="HTML/CSS,JavaScript, Design"
       image_thumbnail="/assets/new_theme/test_projects/899.jpg"
       link="https://jasmineirada.com/digitalroot/"></app-project-preview> -->
-
   </div>
-</section>
-
-<footer class="footer pt-5 text-dark text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col mb-5 mb-lg-0">
-        <p class="mb-4">Thanks for stopping by. <br>If you'd like to know more, I'd be happy to connect ♥</p>
-        <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
-          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://github.com/airada"><img
-                class="filter-black" alt="Checkout my GitHub" src="/assets/img/github-brands.svg"></a>
-          </li>
-          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external"
-              href="https://www.linkedin.com/in/jasmineirada/"><img class="filter-black"
-                alt="Connect with me on Linkedin" src="/assets/img/linkedin-brands.svg"></a>
-          </li>
-          <li><a class="btn btn-outline-dark me-2" target="_blank" rel="nofollow"
-              href="mailto:jasmineirada@gmail.com"><img class="filter-black" alt="Send me an email"
-                src="/assets/img/envelope-solid.svg"></a>
-          </li>
-        </ul>
+  
+  <footer class="footer pt-5 text-dark text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="mb-4">Thanks for stopping by. <br>If you'd like to know more, I'd be happy to connect ♥</p>
+          <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
+            <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external" href="https://github.com/airada"><img
+                  class="filter-black" alt="Checkout my GitHub" src="/assets/img/github-brands.svg"></a>
+            </li>
+            <li><a class="btn btn-outline-dark me-2" target="_blank" rel="external"
+                href="https://www.linkedin.com/in/jasmineirada/"><img class="filter-black"
+                  alt="Connect with me on Linkedin" src="/assets/img/linkedin-brands.svg"></a>
+            </li>
+            <li><a class="btn btn-outline-dark me-2" target="_blank" rel="nofollow"
+                href="mailto:jasmineirada@gmail.com"><img class="filter-black" alt="Send me an email"
+                  src="/assets/img/envelope-solid.svg"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyright pt-4 text-center text-dark">
+        <p class="small-txt">©{{year}} <br> JASMINE IRADA <br> MADE WITH ♥</p>
       </div>
     </div>
-  </div>
-</footer>
-
-<div class="copyright py-4 text-center text-dark">
-  <div class="container">
-    <p class="small-txt">©{{year}} <br> JASMINE IRADA <br> MADE WITH ♥</p>
-  </div>
-</div>
+  </footer>
+</section>
