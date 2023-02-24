@@ -63,7 +63,7 @@ export class PortfolioComponent implements OnInit {
       return;
     }
 
-    this.selected_skill = $event;
+    this.selected_skill = $event; //event emitted by filters component
 
     if (this.chosen_skill.includes(this.selected_skill)) {
       this.chosen_skill.splice(

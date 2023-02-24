@@ -20,12 +20,12 @@
 
 
 <section class="text-dark py-5">
-  <app-filters (filter_skill)="filter($event)"
-    skills="Angular,Bootstrap,C#,Design,Flask,HTML/CSS,Java,JavaScript,Python,TypeScript,Unity"></app-filters>
+  <app-filters (filter_skill)="filter($event)" platforms="Windows,MacOS,Android,iOS,Web Browser" languages="Python,C#,Java,JavaScript,TypeScript,SQL,HTML/CSS"
+    skills="Angular,Bootstrap,Design,Unity,2D,3D"></app-filters>
 
-  <div class="d-flex flex-wrap justify-content-center mt-3">
-    <app-project-preview class="htmlcss bootstrap angular design" title="Personal Website"
-      skills="HTML/CSS,Bootstrap,Angular,Design" image_thumbnail="/assets/img/portfolio/personal/mockup_website_01.jpg"
+  <div class="d-flex flex-wrap justify-content-center mt-5">
+    <app-project-preview class="htmlcss bootstrap angular design windows" title="Personal Website"
+      skills="HTML/CSS,Bootstrap,Angular,Design,Windows" image_thumbnail="/assets/img/portfolio/personal/mockup_website_01.jpg"
       link="https://jasmineirada.com/About">
     </app-project-preview>
 
@@ -77,7 +77,7 @@
   
   <footer class="footer pt-5 text-dark text-center">
     <div class="container">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col">
           <p class="mb-4">Thanks for stopping by. <br>If you'd like to know more, I'd be happy to connect ♥</p>
           <ul class="d-flex justify-content-center p-0 mx-0 mt-2">
@@ -94,7 +94,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <div class="row copyright pt-4 text-center text-dark">
         <p class="small-txt">©{{year}} <br> JASMINE IRADA <br> MADE WITH ♥</p>
       </div>

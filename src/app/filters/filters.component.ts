@@ -7,23 +7,35 @@ import { Component, Input, Output, ViewChild, Renderer2, ElementRef, EventEmitte
 })
 
 export class FiltersComponent implements OnInit {
+  @Input() platforms: string = "";
+  @Input() languages: string = "";
   @Input() skills: string = "";
   @Output() filter_skill = new EventEmitter<string>();
   @ViewChild("input") input: ElementRef;
   arrowkey_position: number = -1;
-  caret_img: string = "/assets/img/caret-down-solid.svg"
+  caret_down: string = "assets/img/caret-down.svg"
+  caret_up: string = "assets/img/caret-up.svg"
   input_focused: boolean = false;
   skills_list: Array<string> = [];
+  platforms_list: Array<string> = [];
+  languages_list: Array<string> = [];
   private scroll_position: number = 0;
   search_size: number = 12;
   selected: Array<string> = [];
   suggestions: Array<string> = [];
+  sortBy: string = "Newest"
+  all_skills: string = "";
 
   constructor(private renderer: Renderer2) {  }
 
   ngOnInit() { 
-    this.skills_list = this.skills.split(",");
+    this.all_skills = this.skills.concat(","+this.platforms, ","+this.languages);
+    this.skills_list = this.all_skills.split(",");
     this.suggestions = this.skills_list.slice(); 
+
+    this.skills_list = this.skills.split(",");
+    this.platforms_list = this.platforms.split(",");
+    this.languages_list = this.languages.split(",");
   }
 
   private input_resize() {
@@ -51,7 +63,7 @@ export class FiltersComponent implements OnInit {
   }
 
   private set_scroll(position) {
-    document.getElementById("dropdown-content").scrollTop = position;
+    // document.getElementById("dropdown-content").scrollTop = position;
   }
 
   private reset_scroll() {
@@ -122,7 +134,7 @@ export class FiltersComponent implements OnInit {
   }
 
   toggle_skill(item) {
-    this.reset_input();
+    // this.reset_input();
     this.reset_suggestions();
     if (this.selected.indexOf(item) == -1) {
       this.selected.push(item);
@@ -177,43 +189,61 @@ export class FiltersComponent implements OnInit {
     this.reset_suggestions();
   }
 
-  content(mode) {
+  content(type, mode) {
     this.reset_scroll();
-    let inputValue = <HTMLInputElement>(document.getElementById("dropdown-content"));
-    let box = <HTMLInputElement>(document.getElementById("box"));
-    let caret = <HTMLInputElement>(document.getElementById("caret"));
+    let inputValue = <HTMLInputElement>(document.getElementById(type+"-dropdown-content"));
+    let caret = <HTMLImageElement>(document.getElementById(type+"-caret"));
+    
+    let type_list = this.get_other_types(type);
+    this.hide_content(type_list[0]);
+    this.hide_content(type_list[1]);
+
 
     switch(mode){
       case "show":
         inputValue.classList.remove("hide");
-        box.classList.add("box-bottom");
-        caret.classList.add("caret-bottom");
-        this.caret_img = "/assets/img/caret-up-solid.svg";
-        this.input_focused = true;
+        caret.src = this.caret_up;
         break;
       case "hide":
         inputValue.classList.add("hide");
-        box.classList.remove("box-bottom");
-        caret.classList.remove("caret-bottom");
-        this.caret_img = "/assets/img/caret-down-solid.svg";
-        this.input_focused = false;
+        caret.src = this.caret_down;
         break;
       case "toggle":
         inputValue.classList.toggle("hide");
-        box.classList.toggle("box-bottom");
-        caret.classList.toggle("caret-bottom");
-        if (this.caret_img == "/assets/img/caret-down-solid.svg") {
-          this.caret_img = "/assets/img/caret-up-solid.svg";
+
+        if (caret.src.includes(this.caret_down)) {
+          caret.src = this.caret_up;
         } else {
-          this.caret_img = "/assets/img/caret-down-solid.svg";
+          caret.src = this.caret_down;
         }
         break;
     }
+  }
 
+  get_other_types(type) {
+    switch(type){
+      case "platform":
+        return ["language", "skill"];
+      case "language":
+        return ["platform", "skill"];
+      case "skill":
+        return ["platform", "language"];
+    }
+  }
+
+  hide_content(type){
+    let typeValue = <HTMLInputElement>(document.getElementById(type+"-dropdown-content"));
+    let caret = <HTMLImageElement>(document.getElementById(type+"-caret"));
+
+
+    if (!typeValue.classList.contains("hide")) {
+      typeValue.classList.add("hide");
+      caret.src = this.caret_down;
+    }
   }
 
   modelChange(str) {
-    this.content('show');
+    // this.content('show');
     if (!str) {
       this.reset_suggestions();
       return;
