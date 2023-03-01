@@ -69,7 +69,7 @@
 </div> -->
 
 <nav class="navbar-expand-lg fixed pt-md-4 bg-light pt-2">
-  <ul class="navbar-nav m-0 d-flex flex-row align-items-end justify-content-end">
+  <ul class="navbar-nav m-0 d-flex flex-row align-items-center justify-content-center">
     <li class="me-md-0 me-lg-1">
           <button type="button" class="p-md-2 me-auto m-md-0"
           (click)="input_focused ? content('platform','hide') : content('platform','toggle')">Platform 
@@ -126,14 +126,14 @@
           </ul>
         </div>  
   </li>
-    <li class="ms-md-0 ms-lg-1 margin-right-skill">
+    <li class="ms-md-0 ms-lg-1">
       <button type="button" class="p-md-2 ms-auto m-md-0"
       (click)="input_focused ? content('skill','hide') : content('skill','toggle')">Skill
         <span title="Toggle Dropdown" class="my-auto ms-1 p-0">
         <img id="skill-caret" class="filter-dark"
         [src]="caret_down" alt="Toggle Dropdown">
       </span></button> 
-      <div id="skill-dropdown-content" class="dropdown-content float-right hide">
+      <div id="skill-dropdown-content" class="dropdown-content hide">
         <ul class="p-0 m-0">
           <li
             [id]="skills_list.indexOf(item)"
