@@ -1,0 +1,15 @@
+footer {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index: -1;
+}
+
+.filter-black {
+    filter: invert(99%) sepia(53%) saturate(329%) hue-rotate(41deg) brightness(112%) contrast(98%); /* #faf9f7 */
+  }
+
+img {
+    height: 1rem;
+}
