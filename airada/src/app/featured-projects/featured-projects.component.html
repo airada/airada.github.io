@@ -1,0 +1,20 @@
+<div class="row px-0 mx-0 me-lg-5 py-3" *ngFor="let project of projects">
+  <div class="col-12 col-lg-6 d-flex justify-content-center align-items-lg-end">
+    <img [src]="project.img" class="w-100">
+  </div>
+  <div class="col-12 col-lg-6 m-0 p-0 text-black">
+    <h3 class="my-3 fs-5 fw-bold text-center">{{project.title | uppercase}}</h3>
+    <ul class="d-flex flex-wrap align-items-center justify-content-center p-0">
+      <li class="btn btn-white me-2 my-1 p-2 fw-bold text-uppercase" *ngFor="let item of buttons">{{item | split:"_":1}}</li>
+    </ul>
+    <div class="container description">
+      <p>{{project.summary}}</p>
+      <h4 class="fs-6 fw-bold">PROBLEM</h4>
+      <p>{{project.problem}}</p>
+      <h4 class="fs-6 fw-bold">SOLUTION</h4>
+      <p>{{project.solution}}</p>
+      <h4 class="fs-6 fw-bold">NOTABLE FEATURES</h4>
+      <p>{{project.features}}</p>
+    </div>
+  </div>
+</div>

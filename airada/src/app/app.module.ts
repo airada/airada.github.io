@@ -7,6 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { FeaturedProjectsComponent } from './featured-projects/featured-projects.component';
+import { PortfolioGridComponent } from './portfolio-grid/portfolio-grid.component';
+import { FilterComponent } from './filter/filter.component';
+import { SplitPipe } from './pipes/split.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    FeaturedProjectsComponent,
+    PortfolioGridComponent,
+    FilterComponent,
+    SplitPipe
   ],
   imports: [
     BrowserModule,

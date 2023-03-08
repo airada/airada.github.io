@@ -1,0 +1,31 @@
+<div class="container m-0 p-0">
+    <div class="btn-group btn-group-sm border-1 border-bottom d-flex justify-content-center" role="group" aria-label="Dropdown Filter Buttons">
+        <div class="dropdown">
+            <button id="start_button" type="button" class="btn dropdown-toggle pt-4 pb-3 py-md-2 pe-2 pe-md-3" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Platform
+                <i class="fa-sharp fa-solid fa-caret-down mx-1 fa-2xs"></i>
+            </button>
+            <ul class="dropdown-menu m-0">
+                <li (click)="getItem('platform', item)" *ngFor="let item of platform_filters"><button [id]="item" class="dropdown-item border-bottom p-3 px-md-3 py-md-2" type="button">{{item}}</button></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle pt-4 pb-3 py-md-2 px-2 px-md-3" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Language
+                <i class="fa-sharp fa-solid fa-caret-down  mx-1 fa-2xs"></i>
+            </button>
+            <ul class="dropdown-menu m-0">
+                <li (click)="getItem('language', item)" *ngFor="let item of language_filters"><button [id]="item" class="dropdown-item border-bottom p-3 px-md-3 py-md-2" type="button">{{item}}</button></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle pt-4 pb-3 py-md-2 ps-2 ps-md-3" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Skill
+                <i class="fa-sharp fa-solid fa-caret-down mx-1 fa-2xs"></i>
+            </button>
+            <ul class="dropdown-menu m-0">
+                <li (click)="getItem('skill', item)" *ngFor="let item of skill_filters"><button [id]="item" class="dropdown-item border-bottom p-3 px-md-3 py-md-2" type="button">{{item}}</button></li>
+            </ul>
+        </div>
+    </div>
+</div>

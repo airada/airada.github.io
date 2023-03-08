@@ -1,0 +1,68 @@
+img {
+    max-width: 750px;
+    object-fit: contain;
+    background-color: #faf9f7;
+}
+
+.btn-shadow {
+    box-shadow: 5px 5px 10px #e8e6e1;
+}
+
+.btn-white {
+    background-color: #faf9f7;
+    color: #121212;
+    box-shadow: 2px 2px 5px #e8e6e1;
+    padding: 0.75em;
+}
+
+@media only screen and (max-width: 480px) {
+    img {
+        max-width: 75vw;
+        object-fit: contain;
+    }
+
+    li {
+        font-size: 0.75rem;
+    }
+
+    .description {
+        font-size: 0.85rem;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    img {
+        max-width: 75vw;
+    }
+
+    li, .description {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 760px) {
+    img {
+        max-width: 60vw;
+    }
+
+    li, .description {
+        font-size: 1.15rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    img {
+        max-width: 35vw;
+    }
+    
+    li, .description {
+        font-size: 1.15rem;
+    }
+
+}

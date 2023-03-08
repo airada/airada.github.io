@@ -1,0 +1,12 @@
+<div class="row row-cols-1 row-cols-md-3 m-0">
+    <div class="col" *ngFor="let project of projects">
+        <div class="card">
+            <img [src]="project.img" class="card-img-top" alt="...">
+            <div class="card-body border-1 border-top">
+                <ul class="d-flex flex-wrap align-items-center justify-content-center p-0">
+                    <li class="badge me-2 my-1 p-2 fw-bold text-uppercase" *ngFor="let item of project.skills">{{item | split:"_":1}}</li>
+                </ul>
+            </div>
+        </div>  
+    </div>
+</div>
