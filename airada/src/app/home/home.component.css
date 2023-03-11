@@ -1,3 +1,74 @@
-.container {
-    height: 80vh;
+.header {
+    min-height: 100vh;
+}
+
+.bg-image-1 {
+	background-image: url("/assets/d814eb34-252b-44e6-abca-5bebea45aaab_desktop.png");
+	background-size: 100%;
+}
+
+#title {
+	min-height: 70vh;
+	position: relative;
+}
+
+.border-line {
+	position: absolute;
+	background-color: transparent;
+	bottom: 30vh;
+	height: 100%;
+	width: 0px;
+}
+
+button {
+	position: absolute;
+	bottom: 25vh;
+	height: 5em;
+	width: 5em;
+}
+
+i {
+	color: #faf9f7;
+}
+
+button:hover i {
+	color: gray;
+}
+
+h1 {
+	position: absolute;
+	bottom: 15vh;
+}
+/* header {
+	background: linear-gradient(black, #faf9f7);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
+} */
+
+/* @keyframes gradient {
+	0% {
+		background-position: 25% 25%;
+	}
+	25% {
+		background-position: 50% 50%;
+	}
+	50% {
+		background-position: 75% 75%;
+	}
+    75% {
+		background-position: 50% 50%;
+	}
+    100% {
+		background-position: 25% 25%;
+	}
+} */
+
+a {
+    color: #faf9f7;
+    font-weight: bolder;
+}
+
+.bg-transparent {
+    background-color: transparent;
 }

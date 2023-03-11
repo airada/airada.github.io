@@ -11,4 +11,10 @@ import { PROJECT_SKILLS} from '../project/project-skills.function';
 export class FeaturedProjectsComponent {
   projects: Project[] = FEATURED_PROJECTS;
   buttons = PROJECT_SKILLS;
+
+  showTags = true;
+
+ alterDivHeight() {
+    this.showTags = !this.showTags;
+ }
 }

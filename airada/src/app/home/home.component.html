@@ -1,7 +1,38 @@
-<div class="container-body">
+<div class="container-body px-0 mx-0">
     <app-navbar></app-navbar>
-    <div class="container mt-5 pt-5"></div>
-    
+    <header id="header" class="header bg-black pb-5">
+        <div class="container">
+            <div id="title" class="row d-flex justify-content-center text-center bg-transparent text-white">
+                <div class="border-line d-inline-flex">
+                    <div class="col-6 border-none">
+                    </div>
+                    <div class="col-6 border border-start border-light border-1">
+                    </div>
+                </div>
+                <button type="button" (click)="changeBG()" class="btn btn-black bg-black">
+                    <span><i class="fa-solid fa-lightbulb fa-2xl fa-rotate-180"></i></span>
+                </button>
+                <h1 class="fs-4 fw-bold">JASMINE IRADA</h1>
+            </div>
+            <div class="row bg-transparent text-white">
+                <div class="col">
+                    <h2 class="fs-5 fw-bold">SOFTWARE ENGINEER</h2>
+                    <p>
+                        As a developer with a keen eye for design and problem-solving, 
+                        I’ve helped large organizations and rising startups successfully 
+                        reach their full potential by satisfying clients 
+                        and bringing products to life.
+                    </p>
+                    
+                    <p><a routerLink="/portfolio"
+                        routerLinkActive="active">VIEW PROJECTS</a> or <a href="...">READ ABOUT ME</a>
+                    </p>
+                </div>
+                <div class="col col-12 col-md-6">
+                </div>
+            </div>
+        </div>
+    </header>
     <app-featured-projects></app-featured-projects>
     <app-footer></app-footer>
 

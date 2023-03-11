@@ -4,10 +4,18 @@
   </div>
   <div class="col-12 col-lg-6 m-0 p-0 text-black">
     <h3 class="my-3 fs-5 fw-bold text-center">{{project.title | uppercase}}</h3>
-    <ul class="d-flex flex-wrap align-items-center justify-content-center p-0">
+    <ul [ngClass]="{'show-less': showTags}" class="container d-flex flex-wrap align-items-center justify-content-center p-0 mb-0">
       <li class="btn btn-white me-2 my-1 p-2 fw-bold text-uppercase" *ngFor="let item of buttons">{{item | split:"_":1}}</li>
     </ul>
-    <div class="container description">
+    <div class="d-grid col-6 mx-auto my-0 py-1">
+      <button type="button" (click)="alterDivHeight()" class="btn btn-light text-muted d-md-none my-0"
+      style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        {{ showTags ? 'SHOW ALL': 'SHOW LESS' }}
+        <i *ngIf="showTags; else hideTags" class="fa-sharp fa-solid fa-caret-down mx-1 fa-2xs"></i>
+        <ng-template #hideTags><i class="fa-sharp fa-solid fa-caret-up mx-1 fa-2xs"></i></ng-template>
+      </button>
+    </div>
+    <div class="container description mt-3">
       <p>{{project.summary}}</p>
       <h4 class="fs-6 fw-bold">PROBLEM</h4>
       <p>{{project.problem}}</p>

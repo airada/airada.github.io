@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+
+  changeBG() {
+    var element = document.getElementById("header")!;
+    element.classList.toggle("bg-image-1");
+  }
 }

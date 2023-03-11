@@ -15,6 +15,12 @@ img {
     padding: 0.75em;
 }
 
+.show-less {
+    height: 3.25rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+
 @media only screen and (max-width: 480px) {
     img {
         max-width: 75vw;
