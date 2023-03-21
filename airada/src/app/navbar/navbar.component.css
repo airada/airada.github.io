@@ -1,3 +1,14 @@
-.active {
-    font-weight: bold;
+.active, .navbar-brand {
+    font-weight: 500 !important;
+}
+
+@media only screen and (max-width: 319px) {
+	.navbar-brand {
+        font-size: medium;
+    }
+
+    button {
+        padding: none;
+        margin: none;
+    }
 }

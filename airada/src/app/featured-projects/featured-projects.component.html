@@ -3,9 +3,9 @@
     <img [src]="project.img" class="w-100">
   </div>
   <div class="col-12 col-lg-6 m-0 p-0 text-black">
-    <h3 class="my-3 fs-5 fw-bold text-center">{{project.title | uppercase}}</h3>
+    <h3 class="my-3 fs-5 calibri text-center">{{project.title | uppercase}}</h3>
     <ul [ngClass]="{'show-less': showTags}" class="container d-flex flex-wrap align-items-center justify-content-center p-0 mb-0">
-      <li class="btn btn-white me-2 my-1 p-2 fw-bold text-uppercase" *ngFor="let item of buttons">{{item | split:"_":1}}</li>
+      <li class="btn btn-white me-2 my-1 p-2 text-uppercase calibri" *ngFor="let item of buttons">{{item | split:"_":1}}</li>
     </ul>
     <div class="d-grid col-6 mx-auto my-0 py-1">
       <button type="button" (click)="alterDivHeight()" class="btn btn-light text-muted d-md-none my-0"
@@ -17,11 +17,11 @@
     </div>
     <div class="container description mt-3">
       <p>{{project.summary}}</p>
-      <h4 class="fs-6 fw-bold">PROBLEM</h4>
+      <h4 class="fs-6 calibri">PROBLEM</h4>
       <p>{{project.problem}}</p>
-      <h4 class="fs-6 fw-bold">SOLUTION</h4>
+      <h4 class="fs-6 calibri">SOLUTION</h4>
       <p>{{project.solution}}</p>
-      <h4 class="fs-6 fw-bold">NOTABLE FEATURES</h4>
+      <h4 class="fs-6 calibri">NOTABLE FEATURES</h4>
       <p>{{project.features}}</p>
     </div>
   </div>
