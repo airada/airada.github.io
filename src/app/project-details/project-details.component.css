@@ -1,0 +1,109 @@
+.footer {
+    position: absolute;
+    bottom: 52.2px;
+    left:0;
+    width:100%;
+    z-index: 0;
+}
+
+a i {
+	color: #121212;
+}
+
+a:hover i {
+	color: lightgray;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a {
+    color: #6C757D;
+    text-decoration: none;
+}
+
+a:hover, p:hover {
+    color: #121212;
+}
+
+li.active, span {
+    color: #121212;
+}
+
+@media only screen and (max-width: 321px) {
+	h1 {
+		font-size: 1rem;
+	}
+
+	h2, h3,
+	p,
+	ul {
+		font-size: 0.75rem;
+	}
+
+	li {
+		font-size: 0.85rem;
+	}
+
+}
+
+
+@media only screen and (min-width: 321px) {
+	h1 {
+		font-size: 1.25rem;
+	}
+
+	h2, h3,
+	p {
+		font-size: 1rem;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	.footer {
+		position: absolute;
+		bottom: 52.2px;
+		left:0;
+		width:100%;
+		z-index: 0;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+}
+
+@media only screen and (min-width: 1440px) {
+	
+}
+
+@media only screen and (min-width: 1680px) {
+	
+}
+
+@media only screen and (min-width: 1919px) {
+
+}
+
+@media only screen and (min-width: 2559px) {
+	
+}
+
+@media only screen and (min-width: 3200px) {
+	
+}
+
+@media only screen and (min-width: 3840px) {
+	
+}

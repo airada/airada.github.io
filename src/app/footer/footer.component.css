@@ -1,0 +1,27 @@
+footer {
+    width:100%;
+}
+
+p:hover span {
+    color: red;
+}
+
+a, p {
+    color: #4E555A !important;
+}
+
+a:hover {
+    color: lightgray !important;
+}
+
+.filter-black {
+    filter: invert(99%) sepia(53%) saturate(329%) hue-rotate(41deg) brightness(112%) contrast(98%); /* #faf9f7 */
+  }
+
+img {
+    height: 1rem;
+}
+
+.fs-small {
+    font-size: 0.85rem;
+}

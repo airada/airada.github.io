@@ -1,0 +1,42 @@
+<div class="container-body pb-0">
+    <app-navbar></app-navbar>
+
+    <header class="header">
+        <div class="col d-flex flex-column align-items-center">
+            <div class="row blurb">
+                <p class="mb-0">HI, I'M</p>
+                <h1 class="mb-0">JASMINE IRADA,</h1>
+                <h2>A SOFTWARE ENGINEER</h2>
+                <p> I'm passionate about coding clean, agile experiences for all.</p>
+            </div>
+            <div class="col d-flex justify-content-center w-100">
+                <ul class="d-flex flex-row">
+                    <li class="btn btn-outline-gray me-2"><a target="_blank" rel="external"
+                            href="https://github.com/airada" aria-label="airada">
+                            <i class="fa-brands fa-github" alt="Checkout my GitHub"></i>
+                            <div class="d-none d-md-inline-block ms-2">airada</div>
+                        </a></li>
+                    <li class="btn btn-outline-gray me-2"><a target="_blank" rel="external"
+                            href="https://www.linkedin.com/in/jasmineirada/" aria-label="linkedin.com/in/jasmineirada">
+                            <i class="fa-brands fa-linkedin" alt="Connect with me on LinkedIn"></i>
+                            <div class="d-none d-md-inline-block ms-2">linkedin.com/in/jasmineirada/</div>
+                        </a></li>
+                    <li class="btn btn-outline-gray" (click)="copyEmail()"><a target="_blank" rel="nofollow"
+                            aria-label="jasmineirada&#64;gmail.com" alt="Copy my email address">
+                            <i class="d-md-none fa-solid fa-envelope" alt="Send me an email"></i>
+                            <i class="d-none d-md-inline-block fa-regular fa-copy" alt="Send me an email"></i>
+                            <div class="d-none d-md-inline-block ms-2">jasmineirada&#64;gmail.com</div>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="d-flex justify-content-center align-items-center ms-3 pb-5">
+        <app-featured-projects
+            class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 w-100 pb-5 pb-md-0"></app-featured-projects>
+    </section>
+
+    <app-footer class="footer"></app-footer>
+
+</div>
