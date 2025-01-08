@@ -1,0 +1,49 @@
+<div class="container-body pb-0">
+    <app-navbar></app-navbar>
+    <div class="container mt-5 py-5">
+        <p><a routerLink="/home" routerLinkActive="active">Home</a> / <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a> / <span>Personal Website</span></p>
+        
+        
+
+        <div class="row row-cols-1 row-cols-lg-2 mb-5">
+            <div class="col d-flex justify-content-center align-items-center border border-1 rounded">
+                <img class="img-fluid" src={{img_src}}>
+            </div>
+            <div class="col ps-md-4">
+                <h2 class="text-center mt-5 mt-lg-0"> {{project.title | uppercase}}</h2>
+                <br>
+                <h3>OBJECTIVE</h3>
+                <p>{{project.objective}} </p>
+                <br>
+                <h3>RESULTS</h3>
+                <p>{{project.result}}</p>
+                <br>
+                <h3>NOTABLE FEATURES</h3>
+                <p>{{project.features}}</p>
+                <br>
+                <h3>TECHNOLOGIES</h3>
+                <p>{{skills}}</p>
+                <br>
+                <a href={{project.repo}}><i class="fa-brands fa-github-alt fa-xl" alt="Checkout my project on GitHub"></i></a>
+
+            </div>
+        </div>
+
+        <!-- <h2 class="mt-5">WHERE I STARTED</h2>
+        <div class="row row-cols-1 row-cols-md-3 d-flex justify-content-center d-md-flex justify-content-md-start grid pb-5 mb-5">
+            <div class="col me-2 mt-2 d-flex justify-content-center border border-1 rounded">
+                <img src="/assets/personal_2019.jpg">
+            </div>
+            <div class="col me-2 mt-2 d-flex justify-content-center border border-1 rounded">
+                <img src="/assets/personal_2020.jpg">
+            </div>
+            <div class="col me-2 mt-2 d-flex justify-content-center border border-1 rounded">
+                <img src="/assets/personal_2021.jpg">
+            </div>
+            <div class="col me-2 mt-2 d-flex justify-content-center border border-1 rounded">
+                <img src="/assets/personal_2022.jpg">
+            </div>
+        </div> -->
+    </div>
+    <app-footer class="footer"></app-footer>
+</div>

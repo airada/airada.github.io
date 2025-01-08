@@ -1,26 +1,27 @@
-import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
-import { RouterTestingModule } from '@angular/router/testing';
-import { PortfolioComponent } from "./portfolio.component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-describe("PortfolioComponent", () => {
+import { PortfolioComponent } from './portfolio.component';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { FilterComponent } from '../filter/filter.component';
+import { PortfolioGridComponent } from '../portfolio-grid/portfolio-grid.component';
+import { FooterComponent } from '../footer/footer.component';
+
+describe('PortfolioComponent', () => {
   let component: PortfolioComponent;
   let fixture: ComponentFixture<PortfolioComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [PortfolioComponent],
-      }).compileComponents();
-    })
-  );
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+    imports: [PortfolioComponent, NavbarComponent, FilterComponent, PortfolioGridComponent, FooterComponent]
+})
+    .compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(PortfolioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

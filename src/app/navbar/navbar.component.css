@@ -1,0 +1,27 @@
+
+.active, .navbar-brand {
+    font-weight: 500 !important;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+}
+
+i {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.resume:hover i {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (max-width: 319px) {
+	.navbar-brand {
+        font-size: medium;
+    }
+
+    button {
+        padding: none;
+        margin: none;
+    }
+}

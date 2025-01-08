@@ -1,129 +1,77 @@
-import { Component, OnInit } from "@angular/core";
-import { FormControl } from "@angular/forms";
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
-
+import { Component, OnInit } from '@angular/core';
+import { Project } from '../project/project';
+import { ProjectService } from '../project/project.service';
+import { PROJECT_SKILLS, project_skills } from '../project/project-skills.function';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { PortfolioGridComponent } from '../portfolio-grid/portfolio-grid.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
-  selector: "app-portfolio",
-  templateUrl: "./portfolio.component.html",
-  styleUrls: ["./portfolio.component.css"],
-  animations: [
-    trigger('alert', [
-      state('open', style({
-        opacity: 1
-      })),
-      state('closed', style({
-        opacity: 0,
-      })),
-      transition('open => closed', [
-        animate('1s ease-out')
-      ]),
-      transition('closed => open', [
-        animate('0.5s ease-in')
-      ]),
-    ]),
-  ]
-  
+  selector: 'app-portfolio',
+  templateUrl: './portfolio.component.html',
+  standalone: true,
+  imports: [NavbarComponent, PortfolioGridComponent, FooterComponent],
+  styleUrls: ['./portfolio.component.css']
 })
-export class PortfolioComponent implements OnInit {
-  skillExist = true;
-  skill_tags: any = [
-    ["cs", "C#"],
-    ["cpp", "C++"],
-    ["typescript", "TypeScript"],
-    ["python", "PYTHON"],
-    ["java", "JAVA"],
-    ["unity", "UNITY"],
-    ["unreal", "UNREAL"],
-    ["design", "DESIGN"],
-    ["backend", "BACKEND"],
-    ["mobile", "MOBILE"],
-    ["vr", "VIRTUAL REALITY"],
-    ["clear", "CLEAR ALL"],
-  ];
-  chosen_skill: any = [];
-  selected_skill: any;
-  public year = (new Date()).getFullYear();
+export class PortfolioComponent implements OnInit{
+  projects: Project[] = [];
+  readonly filters: string[] = PROJECT_SKILLS;
+  readonly project_skills: Map<string, number[]> = project_skills;
 
+  filtered_projects: Project[] = [];
+  selected_filters: string[] = [];
 
-  constructor() {}
+  constructor(private projectService: ProjectService) {}
 
-  ngOnInit() {}
-
-  filter($event) {
-    if($event == "invalid"){
-      this.alert_fadein();
-      this.alert_fadeout();
-      return;
-    }
-
-    this.selected_skill = $event;
-
-    if (this.chosen_skill.includes(this.selected_skill)) {
-      this.chosen_skill.splice(
-        this.chosen_skill.indexOf(this.selected_skill),
-        1
-      );
-    } else {
-      this.chosen_skill.push(this.selected_skill);
-    }
-
-    console.log(this.chosen_skill);
-
-    this.filter_skill();
+  ngOnInit(): void {
+    this.getProjects();
+    this.filtered_projects = this.projects;
   }
 
-  filter_skill() {
-    let len = this.chosen_skill.length;
+  private getProjects(): void {
+    this.projects = this.projectService.getProjects();
+  }
 
-    for (let i = 0; i < this.skill_tags.length; i++) {
-      if (len === 0) {
-        this.toggle_class(this.skill_tags[i][0], false); //removes hidden class, if it exists
-      } else if (len >= 1) {
-        this.toggle_class(this.skill_tags[i][0], true); //adds hidden class to all projects
+  filter($event: string) {
+    const filtered_item: string = $event; //event emitted by filters component
+    console.log(filtered_item);
+    this.updateFilters(filtered_item);
+    this.updateFilteredProjects();
+  }
+
+  private updateFilters(filtered_item: string): void {
+    if (this.selected_filters.includes(filtered_item)) {
+      const index = this.selected_filters.indexOf(filtered_item);
+      this.selected_filters.splice(index, 1);
+    } else {
+      this.selected_filters.push(filtered_item);
+    }
+  }
+
+  private getVisibleProjects(): number[] {
+    let visible_projects: number[] = this.project_skills.get(this.selected_filters[0])!;
+    
+    for (let i = 1; i < this.selected_filters.length; i++){
+      const projects = this.project_skills.get(this.selected_filters[i])!;
+      visible_projects = visible_projects.filter(element => projects.includes(element));
+    }
+
+    return visible_projects;
+  }
+
+  private updateFilteredProjects(): void {
+    if (this.selected_filters.length == 0) {
+      this.filtered_projects = this.projects;
+    } else {
+      this.filtered_projects = [];
+      const projects: Set<number> = new Set(this.getVisibleProjects());
+  
+      for (let i = 0; i < this.projects.length; i++){
+        if (projects.has(this.projects[i].id)){
+          this.filtered_projects.push(this.projects[i]);
+        }
       }
     }
-
-    if (len === 1) {
-      this.toggle_class(this.chosen_skill[0], false);
-    } else if (len > 1) {
-      let elements = document.querySelectorAll("." + this.chosen_skill[0]);
-
-      elements.forEach((element) => {
-        const result = this.chosen_skill.every((val) =>
-          element.classList.contains(val)
-        );
-        if (result) {
-          element.classList.remove("hidden");
-        }
-      });
-    }
   }
 
-  toggle_class(skill, flag) {
-    let elements = document.querySelectorAll("." + skill);
-    elements.forEach((element) => {
-      element.classList.toggle("hidden", flag);
-    });
-  }
-
-  alert_fadein() {
-    let alert = <HTMLElement>(document.getElementById("alert"));
-    alert.classList.remove("d-none");
-    this.skillExist = false;
-  }
-
-  alert_fadeout() {
-    let alert = <HTMLElement>(document.getElementById("alert"));
-    setTimeout( () => {
-          this.skillExist = true;
-          setTimeout( () => { alert.classList.add("d-none");}, 1000)
-        }, 3000);
-   }
 }

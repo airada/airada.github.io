@@ -1,0 +1,44 @@
+.container-fluid {
+    position: relative;
+}
+
+.filterbar {
+    position:fixed;
+    background-color: #faf9f7;
+    width: 100%;
+    z-index: 10;
+}
+
+.btn-group {
+    background-color: #faf9f7;
+}
+
+.btn {
+    /* position: fixed; */
+    border-radius: 0;
+    border-color: lightgray;
+    background-color: #faf9f7;
+    margin-top: 0.5rem;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+   border: 1px solid lightgray;
+}
+
+@media only screen and (max-width: 319px) {
+
+}
+
+ @media only screen and (min-width: 320px) {
+
+}
+
+
+@media only screen and (min-width: 760px) {
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+}
