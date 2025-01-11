@@ -80,7 +80,7 @@ img {
 /* IMAGE OVERLAY TEXT AND BUTTONS */
 
 .bg-gradient {
-    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.2)) !important;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)) !important;
     border-radius: 0.25rem;
 }
 
