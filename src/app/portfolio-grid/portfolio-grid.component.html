@@ -6,10 +6,10 @@
                   <a class="details" [routerLink]="['/details', project.id]" routerLinkActive="active"></a>
 
                   <ul class="bg-gradient tags">
-                    <li class="btn btn-outline-transparent rounded-1 github">
+                    <!-- <li class="btn btn-outline-transparent rounded-1 github">
                       <a target="_blank" rel="external" href={{project.repo}} aria-label="GitHub Repository">
                       <i class="fa-brands fa-github-alt" alt="Checkout my project on GitHub"></i></a>
-                    </li>
+                    </li> -->
                     <li class="btn btn-outline-light rounded-1 tag" *ngFor="let item of project.type">{{item}}</li>
                   </ul>
                 </div>
